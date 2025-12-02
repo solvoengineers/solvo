@@ -79,7 +79,7 @@ export default function CustomSelect({
         onChange={onChange}
         required={required}
         disabled={disabled}
-        className="hidden"
+        className="hidden bg-transparent"
       >
         {placeholder && (
           <option value="" disabled>
@@ -98,7 +98,7 @@ export default function CustomSelect({
         type="button"
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
-        className="w-full px-3 py-1 pr-8 border border-footer-border rounded-lg text-base  text-footer-text font-normal font-poppins bg-white outline-none cursor-pointer focus:border-primary-blue disabled:opacity-50 disabled:cursor-not-allowed text-left flex items-center justify-between"
+        className="w-full !bg-transparent px-3 py-1 pr-8 border border-footer-border rounded-lg text-base  text-footer-text font-normal font-poppins bg-white outline-none cursor-pointer focus:border-primary-blue disabled:opacity-50 disabled:cursor-not-allowed text-left flex items-center justify-between"
       >
         <span className={value ? "" : "text-footer-text"}>
           {displayText.includes(" *") ? (
