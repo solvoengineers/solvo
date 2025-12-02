@@ -1,9 +1,10 @@
 "use client";
 
+import classNames from "classnames";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-const OurTechnologySection = () => {
+const OurTechnologySection = ({ topBorder = false }) => {
   const technologyLogos = [
     "/images/technology-images/tech1.webp",
     "/images/technology-images/tech2.webp",
@@ -17,6 +18,9 @@ const OurTechnologySection = () => {
     <section className="w-full flex max-w-desktop mx-auto flex-col items-center gap-6 pb-section-spacing relative sm:px-side-space">
       {/* Gradient Border Bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#FAFAFA] via-[#8A8A8A] to-[#FAFAFA]"></div>
+      {topBorder && (
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-[#FAFAFA] via-[#8A8A8A] to-[#FAFAFA]"></div>
+      )}
 
       <div className="w-full max-w-desktop mx-auto flex flex-col items-center gap-[1.875rem]">
         {/* Title */}
@@ -38,15 +42,24 @@ const OurTechnologySection = () => {
               return (
                 <div
                   key={`logo-${index}`}
-                  className="shrink-0 flex items-center mx-[2.1875rem]"
+                  className="shrink-0 flex items-center h-auto mx-[2.1875rem]"
                 >
-                  <Image
+                  <img
+                    className={classNames("h-8", {
+                      "!h-7": originalIndex === 1,
+                      "!h-10": originalIndex === 0,
+                      "!h-14": originalIndex === 2,
+                      "!h-9": originalIndex === 3,
+                      "!h-11": originalIndex === 5,
+                      // "h-7": originalIndex === 0,
+                      // "h-7": originalIndex === 1,
+                      // "h-7": originalIndex === 2,
+                      // "h-10": originalIndex === 3,
+                      // "h-11": originalIndex === 4,
+                      // "h-12": originalIndex === 5,
+                    })}
                     src={logo}
                     alt={`Technology ${originalIndex + 1}`}
-                    width={200}
-                    height={42}
-                    className="w-auto h-[2.609375rem] object-contain"
-                    loading="lazy"
                   />
                 </div>
               );

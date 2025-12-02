@@ -147,12 +147,7 @@ const MethodSteps: FunctionComponent<MethodStepsProps> = () => {
   const circleTopOffsetPx = remToPx(1.5 + 0.7); // 1.5rem = 24px (fixed distance from top)
 
   return (
-    <div
-      className="w-full flex flex-col relative"
-      style={{
-        boxShadow: "0px 18px 28px 0px #0000000F",
-      }}
-    >
+    <div className="w-full flex flex-col relative" style={{}}>
       {/* SVG Lines and Circles Container - Mobile Only */}
       {measurements.length > 0 && (
         <svg

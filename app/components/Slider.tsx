@@ -128,7 +128,7 @@ export default function Slider({
               type="button"
               onClick={handlePrevious}
               disabled={isFirstSlide || disabled}
-              className={`flex items-center justify-center h-[2.9375rem] px-4 rounded-xl border transition-all ${
+              className={`flex items-center justify-center h-10 w-10 px-4 rounded-xl border transition-all ${
                 isFirstSlide || disabled
                   ? "border-primary-blue text-primary-blue cursor-not-allowed opacity-50"
                   : "border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white cursor-pointer"
@@ -142,7 +142,7 @@ export default function Slider({
               type="button"
               onClick={handleNext}
               disabled={isLastSlide || disabled}
-              className={`flex items-center justify-center h-[2.9375rem] px-4 rounded-xl border transition-all ${
+              className={`flex items-center justify-center h-10 w-10 px-4 rounded-xl border transition-all ${
                 isLastSlide || disabled
                   ? "border-primary-blue text-primary-blue cursor-not-allowed opacity-50"
                   : "border-primary-blue bg-primary-blue text-white hover:opacity-90 cursor-pointer"
