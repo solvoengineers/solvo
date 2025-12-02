@@ -45,7 +45,7 @@ export default function BlogCardLandscape({
         </div>
 
         {/* Title */}
-        <div className="text-base text-footer-heading font-medium font-poppins">
+        <div className="text-lg text-footer-heading font-semibold font-poppins">
           {blog.title}
         </div>
 

@@ -43,7 +43,7 @@ export default function BlogCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-3 w-full">
+      <div className="flex flex-col gap-3 w-full flex-1">
         <div className="w-fit">
           <div className="px-4 border border-footer-border rounded-2xl">
             <span className="text-sm  text-primary-blue font-normal font-poppins">
@@ -52,40 +52,42 @@ export default function BlogCard({
           </div>
         </div>
         {/* Title */}
-        <div className="!text-[1rem]  text-footer-text font-medium font-poppins">
+        <div className="  text-footer-text font-semibold font-poppins">
           {blog.title}
         </div>
 
         {/* Description */}
         <div className="flex flex-col gap-2">
           <p className="text-sm  text-footer-text font-normal font-poppins">
-            {blog.description}
+            {blog.description}{" "}
+            <span className="text-sm  text-primary-blue font-normal font-poppins whitespace-nowrap">
+              Read more
+            </span>
           </p>
-          <span className="text-sm  text-primary-blue font-normal font-poppins whitespace-nowrap">
-            Read more
-          </span>
         </div>
 
         {/* Author Section */}
-        <div className="flex flex-row items-center gap-[0.625rem]">
-          {/* Avatar */}
-          <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
-            <Image
-              src={blog.author.avatar}
-              alt={blog.author.name}
-              className="object-cover"
-              fill
-              loading="lazy"
-            />
-          </div>
+        <div className="flex flex-col flex-1 justify-end h-full">
+          <div className="flex flex-row items-center gap-[0.625rem] ">
+            {/* Avatar */}
+            <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
+              <Image
+                src={blog.author.avatar}
+                alt={blog.author.name}
+                className="object-cover"
+                fill
+                loading="lazy"
+              />
+            </div>
 
-          {/* Author Name and Date */}
-          <div className="flex flex-col">
-            <span className="text-sm  text-footer-border font-normal font-poppins whitespace-pre-line">
-              {blog.author.name}
-              {"\n"}
-              {blog.date}
-            </span>
+            {/* Author Name and Date */}
+            <div className="flex flex-col">
+              <span className="text-sm  text-footer-border font-normal font-poppins whitespace-pre-line">
+                {blog.author.name}
+                {"\n"}
+                {blog.date}
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
             className="absolute  -translate-y-[309px] left-0 h-[950px] w-[675px] object-contain -translate-x-2/3"
           /> */}
           {/* Swiper Container */}
-          <div className="flex flex-col gap-3 sm:px-side-space">
+          <div className="flex flex-col sm:gap-3 gap-6 sm:px-side-space">
             {/* Badge */}
             <GreenBadge
               icon={"/images/zap-icon.svg"}
@@ -121,7 +121,7 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
             alt="Client Reviews Background"
             className="absolute  -translate-y-[309px] left-0 h-[950px] w-[675px] object-contain -translate-x-2/3"
           />
-          <div className="flex flex-col gap-3 ">
+          <div className="flex flex-col sm:gap-3  gap-6 ">
             {/* Badge */}
             <GreenBadge
               icon={"/images/zap-icon.svg"}

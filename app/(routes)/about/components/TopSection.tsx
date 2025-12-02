@@ -71,12 +71,12 @@ const TopSection = () => {
 
       {/* Section 2: Building Practical Innovation */}
       <section className="w-full flex flex-col items-center justify-center gap-[3.75rem] sm:px-side-space ">
-        <div className="w-full max-w-desktop mx-auto flex flex-col justify-center gap-3 sm:w-full">
+        <div className="w-full max-w-desktop mx-auto flex flex-col gap-6 justify-center sm:gap-3 sm:w-full">
           <GreenBadge
             icon="/images/zap-icon.svg"
             text="Who we are"
           ></GreenBadge>
-          <div className="grid grid-cols-2  sm:gap-section-spacing gap-[6.25rem] h-full sm:grid-cols-1">
+          <div className="grid grid-cols-2 items-start  sm:gap-section-spacing gap-[6.25rem] h-full sm:grid-cols-1">
             {/* Left Content */}
             <div className="flex flex-col justify-center gap-6 flex-1">
               {/* Badge and Title */}

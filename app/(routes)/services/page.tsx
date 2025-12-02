@@ -7,6 +7,7 @@ import ClientFocusSolutions from "./components/ClientFocusSolutions";
 import WelcomeToSolvoEnngineers from "./components/WelcomeToSolvoEnngineers";
 import ProductDetailsSection from "@/app/components/ProductDetailsSection";
 import ProjectListSection from "@/app/components/ProjectListSection";
+import Divider from "@/app/components/Divider";
 
 interface AboutProps {}
 
@@ -18,6 +19,7 @@ const About: React.FC<AboutProps> = () => {
       <ClientFocusSolutions></ClientFocusSolutions>
 
       <OurTechnologySection></OurTechnologySection>
+
       <WelcomeToSolvoEnngineers></WelcomeToSolvoEnngineers>
       <ProductDetailsSection></ProductDetailsSection>
       <ProjectListSection></ProjectListSection>

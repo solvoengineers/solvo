@@ -73,7 +73,7 @@ const CustomerSimulationSection: React.FC<
     <section className="w-full flex flex-col items-center gap-6 relative">
       <div className="w-full max-w-desktop mx-auto flex flex-col gap-6 relative">
         {/* Desktop View */}
-        <div className="flex flex-col gap-3 sm:px-side-space">
+        <div className="flex flex-col sm:gap-3  gap-6 sm:px-side-space">
           {/* Badge */}
           <GreenBadge
             icon="/images/zap-icon.svg"

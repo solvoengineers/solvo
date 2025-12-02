@@ -51,12 +51,6 @@ const OurTechnologySection = ({ topBorder = false }) => {
                       "!h-14": originalIndex === 2,
                       "!h-9": originalIndex === 3,
                       "!h-11": originalIndex === 5,
-                      // "h-7": originalIndex === 0,
-                      // "h-7": originalIndex === 1,
-                      // "h-7": originalIndex === 2,
-                      // "h-10": originalIndex === 3,
-                      // "h-11": originalIndex === 4,
-                      // "h-12": originalIndex === 5,
                     })}
                     src={logo}
                     alt={`Technology ${originalIndex + 1}`}

@@ -147,7 +147,13 @@ const MethodSteps: FunctionComponent<MethodStepsProps> = () => {
   const circleTopOffsetPx = remToPx(1.5 + 0.7); // 1.5rem = 24px (fixed distance from top)
 
   return (
-    <div className="w-full flex flex-col relative" style={{}}>
+    <div
+      className="w-full flex flex-col relative"
+      style={{
+        boxShadow: "0px 18px 28px 0px #0000000F",
+      }}
+    >
+      {/* <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#FAFAFA] via-[#8A8A8A] to-[#FAFAFA]"></div> */}
       {/* SVG Lines and Circles Container - Mobile Only */}
       {measurements.length > 0 && (
         <svg
@@ -227,7 +233,7 @@ const MethodSteps: FunctionComponent<MethodStepsProps> = () => {
             height: `${2909 / 16}rem`,
             left: `${172 / 16}rem`,
           }}
-          className="h-full absolute w-auto top-16 sm:bh-auto"
+          className="h-full absolute w-auto top-16 sm:h-auto z-10"
         />
       </div>
 
@@ -238,7 +244,7 @@ const MethodSteps: FunctionComponent<MethodStepsProps> = () => {
             containerRefs.current[index] = el;
           }}
           className={classNames("w-full relative", {
-            "bg-primary-blue/10": index % 2 === 0,
+            "bg-primary-light-blue": index % 2 === 0,
           })}
         >
           <div
@@ -246,7 +252,7 @@ const MethodSteps: FunctionComponent<MethodStepsProps> = () => {
           >
             <div
               className={classNames(
-                `relative w-full   flex items-center sm:items-start !sm:h-auto`,
+                `relative w-full  flex items-center sm:items-start !sm:h-auto`,
                 {
                   "justify-end pr-30 sm:justify-start sm:pr-0": index % 2 === 1,
                   "justify-start pl-10 sm:justify-start sm:pl-0":

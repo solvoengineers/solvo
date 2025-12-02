@@ -36,7 +36,7 @@ const HeroSectionItem: React.FC<HeroSectionItemProps> = ({
 
             {/* Title */}
             <h1
-              className="text-[3rem]  text-footer-heading font-semibold mt-12"
+              className="text-[3rem]  text-footer-heading font-semibold mt-10"
               style={{ fontFamily: "Obviously, sans-serif" }}
             >
               {data.title.split("-")[0]}

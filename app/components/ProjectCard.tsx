@@ -33,17 +33,17 @@ export default function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-3 w-full">
+      <div className="flex flex-col gap-3 w-full justify-between h-full flex-1">
         {/* Title */}
-        <h3 className="text-base  text-footer-heading font-medium font-poppins">
+        <h3 className=" font-semibold  text-footer-heading  font-poppins">
           {project.title}
         </h3>
 
         {/* Description and Read More */}
         <div className="flex flex-row items-end w-full">
-          <p className="text-sm  text-footer-text font-normal font-poppins flex-1">
+          <p className="text-base  text-footer-text font-normal font-poppins flex-1">
             {project.description.slice(0, 80)}...{" "}
-            <span className="text-sm  text-primary-blue font-normal font-poppins">
+            <span className="text-base  text-primary-blue font-normal font-poppins">
               Read more
             </span>
           </p>
