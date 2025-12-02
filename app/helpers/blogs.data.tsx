@@ -966,41 +966,41 @@ export const blogCategories: IBlogCategory[] = [
   {
     id: "1",
     name: "Aerospace & Defense",
-    icon: "/images/about/industries/aerospace-defense.webp",
+    icon: "/images/about/industries/aerospace-defense.png",
   },
   {
     id: "2",
     name: "Automotive & Transportation",
-    icon: "/images/about/industries/automotive-transportation.webp",
+    icon: "/images/about/industries/automotive-transportation.png",
   },
   {
     id: "3",
     name: "Energy",
-    icon: "/images/about/industries/energy.webp",
+    icon: "/images/about/industries/energy.png",
   },
   {
     id: "4",
     name: "Consumer Products",
-    icon: "/images/about/industries/consumer-products.webp",
+    icon: "/images/about/industries/consumer-products.png",
   },
   {
     id: "5",
     name: "Machinery & Robotics",
-    icon: "/images/about/industries/machinery-robotics.webp",
+    icon: "/images/about/industries/machinery-robotics.png",
   },
   {
     id: "6",
     name: "Manufacturing",
-    icon: "/images/about/industries/manufacturing.webp",
+    icon: "/images/about/industries/manufacturing.png",
   },
   {
     id: "7",
     name: "Marine",
-    icon: "/images/about/industries/marine.webp",
+    icon: "/images/about/industries/marine.png",
   },
   {
     id: "8",
     name: "Medical",
-    icon: "/images/about/industries/medical.webp",
+    icon: "/images/about/industries/medical.png",
   },
 ];
