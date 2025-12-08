@@ -296,6 +296,73 @@ li::before {
 
 .btn-primary {
   @apply bg-primary-blue text-white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
+  box-shadow: 0 2px 6px -2px rgba(2, 115, 189, 0.15);
+}
+
+.btn-primary > * {
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #015a94, #0273bd);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px -4px rgba(2, 115, 189, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  background: linear-gradient(135deg, #015a94, #0273bd);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-primary:hover > * {
+  filter: brightness(1.1);
+}
+
+.btn-primary:active {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px -3px rgba(2, 115, 189, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, #014a7a, #015a94);
 }
 
 .btn {
@@ -304,4 +371,75 @@ li::before {
 
 .btn-secondary {
   @apply bg-white text-primary-blue border border-primary-blue;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
+  box-shadow: 0 2px 6px -2px rgba(2, 115, 189, 0.08);
+}
+
+.btn-secondary > * {
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 115, 189, 0.05),
+    rgba(2, 115, 189, 0.08)
+  );
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #0273bd, #0390e8);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  border-color: #015a94;
+  color: #015a94;
+  background: rgba(2, 115, 189, 0.02);
+  box-shadow: 0 4px 12px -4px rgba(2, 115, 189, 0.2),
+    0 0 0 1px rgba(2, 115, 189, 0.1) inset;
+}
+
+.btn-secondary:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary:hover::after {
+  opacity: 1;
+}
+
+.btn-secondary:hover > * {
+  filter: brightness(1.15);
+  color: #015a94;
+}
+
+.btn-secondary:active {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px -3px rgba(2, 115, 189, 0.15),
+    0 0 0 1px rgba(2, 115, 189, 0.15) inset;
+  transition: all 0.2s ease;
+  border-color: #014a7a;
+  background: rgba(2, 115, 189, 0.05);
 }

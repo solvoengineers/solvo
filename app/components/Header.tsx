@@ -10,8 +10,32 @@ import classNames from "classnames";
 import Link from "next/link";
 
 interface HeaderProps {
-  activeRoute?: "home" | "about" | "services" | "projects" | "career" | "blogs";
+  activeRoute?:
+    | "home"
+    | "about"
+    | "services"
+    | "projects"
+    | "career"
+    | "blogs"
+    | "case-study";
 }
+
+interface NavigationItem {
+  id:
+    | "home"
+    | "about"
+    | "services"
+    | "projects"
+    | "career"
+    | "blogs"
+    | "case-study";
+  label: string;
+  href?: string;
+  hasDropdown?: boolean;
+  dropdownComponent?: React.ReactNode;
+  refKey?: string;
+}
+
 export default function Header({ activeRoute = undefined }: HeaderProps) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -19,6 +43,48 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
   const servicesRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
+
+  const navigationItems: NavigationItem[] = [
+    {
+      id: "home",
+      label: "Home",
+      href: "/",
+    },
+    {
+      id: "about",
+      label: "About Us",
+      hasDropdown: true,
+      refKey: "about",
+      dropdownComponent: <AboutDropdown isVisible={isAboutOpen} />,
+    },
+    {
+      id: "services",
+      label: "Services",
+      hasDropdown: true,
+      refKey: "services",
+      dropdownComponent: <ServicesDropdown isVisible={isServicesOpen} />,
+    },
+    {
+      id: "projects",
+      label: "Projects",
+      href: "/projects",
+    },
+    {
+      id: "career",
+      label: "Career",
+      href: "/careers",
+    },
+    {
+      id: "blogs",
+      label: "Blogs",
+      href: "/blogs",
+    },
+    {
+      id: "case-study",
+      label: "Case Studies",
+      href: "/case-study",
+    },
+  ];
 
   // Close services dropdown when clicking outside
   useEffect(() => {
@@ -93,6 +159,26 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
     setIsAboutOpen(!isAboutOpen);
   };
 
+  const toggleDropdown = (itemId: string) => {
+    if (itemId === "services") {
+      setIsServicesOpen(!isServicesOpen);
+    } else if (itemId === "about") {
+      setIsAboutOpen(!isAboutOpen);
+    }
+  };
+
+  const isDropdownOpen = (itemId: string) => {
+    if (itemId === "services") return isServicesOpen;
+    if (itemId === "about") return isAboutOpen;
+    return false;
+  };
+
+  const getRef = (refKey?: string) => {
+    if (refKey === "services") return servicesRef;
+    if (refKey === "about") return aboutRef;
+    return null;
+  };
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -107,115 +193,120 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
         {/* Logo */}
         <Link
           href="/"
-          className="w-[8.625rem] h-[2.65rem] relative flex-shrink-0"
+          className="w-[8.625rem] h-[2.65rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]"
         >
           <Image
             src="/images/logo-176606.webp"
             alt="Logo"
             fill
-            className="object-contain"
+            className="object-contain transition-opacity duration-300 hover:opacity-90"
           />
         </Link>
 
         {/* Navigation */}
-
         <nav className="flex sm:hidden items-center justify-end gap-3 flex-1 h-6">
-          <Link
-            href="/"
-            className={classNames("text-base font-normal font-poppins", {
-              "text-primary-blue": activeRoute === "home",
-              "text-text-gray": activeRoute !== "home",
-            })}
-          >
-            Home
-          </Link>
+          {navigationItems.map((item) => {
+            const isActive = activeRoute === item.id;
+            const isOpen = isDropdownOpen(item.id);
+            const itemRef = getRef(item.refKey);
 
-          <div
-            ref={aboutRef}
-            className="relative flex items-center gap-1 px-2 py-2"
-          >
-            <button
-              onClick={toggleAbout}
-              className={classNames(
-                "flex items-center gap-2 text-base font-normal font-poppins cursor-pointer",
-                {
-                  "text-primary-blue": activeRoute === "about",
-                  "text-text-gray": activeRoute !== "about",
-                }
-              )}
-            >
-              About Us
-            </button>
-            <div className="w-4 h-4 text-text-gray">
-              {allIcons.chevronDown(16, 16)}
-            </div>
-            <AboutDropdown isVisible={isAboutOpen} />
-          </div>
+            const baseClassName = classNames(
+              "relative text-base font-normal font-poppins px-3 py-2 transition-all duration-500 ease-out overflow-hidden",
+              {
+                "text-primary-blue": isActive,
+                "text-text-gray": !isActive,
+              }
+            );
 
-          <div
-            ref={servicesRef}
-            className="relative flex items-center gap-1 px-2 py-2"
-          >
-            <button
-              onClick={toggleServices}
-              className={classNames(
-                "flex items-center gap-2 text-base font-normal font-poppins cursor-pointer",
-                {
-                  "text-primary-blue": activeRoute === "services",
-                  "text-text-gray": activeRoute !== "services",
-                }
-              )}
-            >
-              Services
-            </button>
-            <div className="w-4 h-4 text-text-gray">
-              {allIcons.chevronDown(16, 16)}
-            </div>
-            <ServicesDropdown isVisible={isServicesOpen} />
-          </div>
-          <div className="flex items-center justify-center gap-2.5 px-2 py-2">
-            <Link
-              href="/projects"
-              className={classNames("text-base font-normal font-poppins", {
-                "text-primary-blue": activeRoute === "projects",
-                "text-text-gray": activeRoute !== "projects",
-              })}
-            >
-              Projects
-            </Link>
-          </div>
+            if (item.hasDropdown) {
+              return (
+                <div
+                  key={item.id}
+                  ref={itemRef}
+                  className="relative flex items-center gap-1 group"
+                >
+                  <button
+                    onClick={() => toggleDropdown(item.id)}
+                    className={classNames(
+                      baseClassName,
+                      "cursor-pointer group-hover:text-primary-blue"
+                    )}
+                  >
+                    <span className="relative z-10 inline-block transition-all duration-500 group-hover:-translate-y-0.5">
+                      {item.label}
+                    </span>
+                    {/* Animated underline - slides from left to right */}
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-blue transition-all duration-500 ease-out group-hover:w-full"></span>
+                    {/* Shimmer effect */}
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
+                  </button>
+                  <div
+                    className={classNames(
+                      "w-4 h-4 text-text-gray transition-all duration-500 group-hover:text-primary-blue",
+                      {
+                        "text-primary-blue rotate-180": isOpen,
+                      }
+                    )}
+                  >
+                    {allIcons.chevronDown(16, 16)}
+                  </div>
+                  {item.dropdownComponent}
+                </div>
+              );
+            }
 
-          <div className="flex items-center justify-center gap-2.5 px-2 py-2">
-            <a
-              href="/careers"
-              className={classNames("text-base font-normal font-poppins", {
-                "text-primary-blue": activeRoute === "career",
-                "text-text-gray": activeRoute !== "career",
-              })}
-            >
-              Career
-            </a>
-          </div>
-
-          <div className="flex items-center justify-center gap-2.5 px-2 py-2">
-            <Link
-              href="/blogs"
-              className={classNames("text-base font-normal font-poppins", {
-                "text-primary-blue": activeRoute === "blogs",
-                "text-text-gray": activeRoute !== "blogs",
-              })}
-            >
-              Blogs
-            </Link>
-          </div>
+            return (
+              <div key={item.id} className="flex items-center justify-center">
+                {item.href?.startsWith("http") ? (
+                  <a
+                    href={item.href}
+                    className={classNames(
+                      baseClassName,
+                      "group hover:text-primary-blue"
+                    )}
+                  >
+                    <span className="relative z-10 inline-block transition-all duration-500 group-hover:-translate-y-0.5">
+                      {item.label}
+                    </span>
+                    {/* Animated underline - slides from left to right */}
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-blue transition-all duration-500 ease-out group-hover:w-full"></span>
+                    {/* Shimmer effect */}
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href || "#"}
+                    className={classNames(
+                      baseClassName,
+                      "group hover:text-primary-blue"
+                    )}
+                  >
+                    <span className="relative z-10 inline-block transition-all duration-500 group-hover:-translate-y-0.5">
+                      {item.label}
+                    </span>
+                    {/* Animated underline - slides from left to right */}
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-blue transition-all duration-500 ease-out group-hover:w-full"></span>
+                    {/* Shimmer effect */}
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
+                  </Link>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Contact Button */}
-        <Link href="/contact-us" className="btn btn-primary sm:!hidden">
-          <span className="text-sm font-normal font-poppins">Contact us</span>
-          <div className="w-5 h-5 text-white">
+        <Link
+          href="/contact-us"
+          className="btn btn-primary sm:!hidden group relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-blue/30"
+        >
+          <span className="text-sm font-normal font-poppins relative z-10 transition-transform duration-300 group-hover:translate-x-[-2px]">
+            Contact us
+          </span>
+          <div className="w-5 h-5 text-white relative z-10 transition-transform duration-300 group-hover:translate-x-1">
             {allIcons.chevronRight(20, 20)}
           </div>
+          <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
         </Link>
         <button
           onClick={toggleSidebar}
