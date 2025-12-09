@@ -38,7 +38,7 @@ export default function ProductDetailCard({
             loading="lazy"
             className={classNames(
               "h-[1.5rem] w-auto object-left object-contain",
-              { "h-[2rem]": index === 1 }
+              { "h-[2rem]": index === 0, "h-[1.25rem]": index === 2 }
             )}
           />
 

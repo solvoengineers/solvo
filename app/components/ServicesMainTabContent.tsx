@@ -53,7 +53,7 @@ export default function ServicesContent({
               key={`${selectedServiceIndex}-${index}-${subItem.tabText}`}
               onClick={() => handleSubItemClick(index)}
               className={classNames(
-                `flex flex-row items-center w-full cursor-pointer gap-[0.625rem] px-3 py-2 rounded-[0.625rem] border border-[#BDBCC7] transition-all
+                `flex flex-row items-center w-full cursor-pointer service-tab-btn gap-[0.625rem] px-3 py-2 rounded-[0.625rem] border border-[#BDBCC7] transition-all
                 sm:border-t-0 sm:border-x-0  sm:text-footer-border !sm:border-b sm:rounded-none sm:px-0 sm:py-1  sm:w-fit 
                 `,
                 {
@@ -65,7 +65,15 @@ export default function ServicesContent({
               )}
             >
               {/* Icon */}
-              {subItem.tabIcon && !isSelected && (
+              <div
+                className={classNames("h-5 w-5 service-icon sm:hidden", {
+                  "text-white": isSelected,
+                  "text-primary-blue": !isSelected,
+                })}
+              >
+                {subItem.tabIcon}
+              </div>
+              {/* {subItem.tabIcon && !isSelected && (
                 <img
                   src={subItem.tabIcon}
                   alt={subItem.tabText}
@@ -80,7 +88,7 @@ export default function ServicesContent({
                   className="object-contain sm:hidden"
                   loading="lazy"
                 />
-              )}
+              )} */}
 
               {/* Tab Text */}
               <span className="text-base font-semibold font-poppins text-center w-full sm:font-normal">

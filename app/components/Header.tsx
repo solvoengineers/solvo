@@ -298,15 +298,15 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
         {/* Contact Button */}
         <Link
           href="/contact-us"
-          className="btn btn-primary sm:!hidden group relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-blue/30"
+          className="btn btn-primary sm:!hidden group !pr-2 relative overflow-hidden transition-all  "
         >
-          <span className="text-sm font-normal font-poppins relative z-10 transition-transform duration-300 group-hover:translate-x-[-2px]">
+          <span className="text-sm font-normal font-poppins relative z-10 transition-transform duration-300 ">
             Contact us
           </span>
           <div className="w-5 h-5 text-white relative z-10 transition-transform duration-300 group-hover:translate-x-1">
             {allIcons.chevronRight(20, 20)}
           </div>
-          <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+          <span className="absolute inset-0 bg-white/10 translate-y-full "></span>
         </Link>
         <button
           onClick={toggleSidebar}

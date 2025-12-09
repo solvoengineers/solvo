@@ -7,7 +7,7 @@ interface SocialMediaIconsProps {
 
 const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({ small }) => {
   const myClass =
-    "flex h-10 w-10 bg-primary-blue rounded-xl items-center justify-center cursor-pointer" +
+    "flex h-10 w-10 bg-primary-blue rounded-xl items-center justify-center cursor-pointer hover:bg-white hover:text-primary-blue transition-all duration-600 ease-in-out border border transprent hover:border-primary-blue" +
     (small ? " social-media-small" : "");
   return (
     <div className="flex flex-row items-center gap-3 ">

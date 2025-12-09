@@ -17,9 +17,7 @@ const About: React.FC<AboutProps> = () => {
       <Header activeRoute="services" />
       <TopSection></TopSection>
       <ClientFocusSolutions></ClientFocusSolutions>
-
       <OurTechnologySection></OurTechnologySection>
-
       <WelcomeToSolvoEnngineers></WelcomeToSolvoEnngineers>
       <ProductDetailsSection></ProductDetailsSection>
       <ProjectListSection></ProjectListSection>
