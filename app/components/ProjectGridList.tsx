@@ -41,7 +41,7 @@ export default function ProjectGridList({
       className={`w-full flex flex-col gap-6 max-w-desktop mx-auto ${className} sm:px-side-space`}
     >
       {/* Grid Container */}
-      <div className="w-full grid  grid-cols-3 gap-6 sm:grid-cols-1 place-items-center">
+      <div className="w-full grid  grid-cols-3 gap-6 sm:grid-cols-2 place-items-center">
         {paginatedProjects.map((project, index) => (
           <ProjectCard
             ref={
