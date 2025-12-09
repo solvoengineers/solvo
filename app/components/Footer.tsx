@@ -134,19 +134,6 @@ function RightSection() {
                 contact@solvoengineers.com
               </a>
             </div>
-            <div className="flex flex-row items-center gap-2.5 w-full">
-              <div className="w-5 h-5 text-primary-blue flex-shrink-0">
-                {allIcons.footer.location(20, 20)}
-              </div>
-              <a
-                href="https://maps.google.com/?q=Block+C2+Johar+Town,+Lahore"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-base text-footer-text font-normal font-poppins"
-              >
-                Block C2 Johar Town, Lahore
-              </a>
-            </div>
           </div>
         </div>
       </div>
