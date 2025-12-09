@@ -2,6 +2,7 @@
 
 import { allIcons } from "../helpers/icons";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import CustomSelect from "./CustomSelect";
 
 // Select options from Figma
@@ -45,6 +46,7 @@ const servicesOptions = [
 ];
 
 export default function GetInTouchForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     lookingFor: "",
     fullName: "",
@@ -90,23 +92,8 @@ export default function GetInTouchForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message:
-            "Message sent successfully! We'll get back to you within 24 hours.",
-        });
-        // Reset form
-        setFormData({
-          lookingFor: "",
-          fullName: "",
-          services: "",
-          email: "",
-          software: "",
-          budget: "",
-          message: "",
-          requiresNDA: false,
-          file: null,
-        });
+        // Redirect to thank you page
+        router.push("/thank-you");
       } else {
         setSubmitStatus({
           type: "error",
