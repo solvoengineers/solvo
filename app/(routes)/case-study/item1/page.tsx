@@ -104,11 +104,11 @@ export default function CaseStudyFEAPage() {
                 necessary to meet these targets.
               </p>
             </div>
-            <CaseStudyImageWrapper
+            {/* <CaseStudyImageWrapper
               src="/images/case-studies/item1/img6.png"
               alt="The Challenge"
               className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
-            />
+            /> */}
           </div>
           <div className="">
             <div className="flex flex-col gap-6">
