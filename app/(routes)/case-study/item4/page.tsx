@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import GetInTouch from "@/app/components/GetInTouch";
 import Header from "@/app/components/Header";
 import ProjectListSection from "@/app/components/ProjectListSection";
-import Image from "next/image";
+import CaseStudyImageWrapper from "../components/CaseStudyImageWrapper";
 
 export default function CaseStudyGasTurbinePage() {
   return (
@@ -15,7 +15,7 @@ export default function CaseStudyGasTurbinePage() {
         <img
           src="/images/case-studies/item4/img1.png"
           alt="Hero Image"
-          className="w-auto object-cover h-12 absolute top-0 left-0 z-10"
+          className="w-auto object-cover h-10 absolute top-0 left-0 z-10 sm:left-side-space"
         />
         <h1 className="text-footer-heading font-bold font-obviously mt-20">
           CFD Design optimization to achieve self-sustaining combustion in a
@@ -62,7 +62,7 @@ export default function CaseStudyGasTurbinePage() {
       <div className="w-full bg-gradient-to-t from-transparent via-[rgba(136,216,232,0.2)] to-[rgba(136,216,232,0.4)] pt-section-spacing">
         <div className="w-full max-w-desktop mx-auto  sm:px-side-space flex flex-col gap-6">
           {/* The Challenge Section */}
-          <div className="flex flex-row items-center gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-center gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 The Challenge
@@ -102,14 +102,11 @@ export default function CaseStudyGasTurbinePage() {
                 </ul>
               </div>
             </div>
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item4/img2.png"
-                alt="The Challenge"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item4/img2.png"
+              alt="The Challenge"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
           </div>
 
           {/* Performance Evaluation Section */}
@@ -121,7 +118,7 @@ export default function CaseStudyGasTurbinePage() {
               We first simulated the engine's behaviour at three key RPM points,
               idle (18k), mid (50k) and max (85k):
             </p>
-            <div className="flex flex-row items-start gap-[6.25rem] sm:grid sm:grid-cols-1 sm:gap-6">
+            <div className="flex flex-row items-start gap-[1.5rem] sm:grid sm:grid-cols-1 sm:gap-6">
               <div className="flex-1 flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
                   <p className="text-base leading-[1.5em] text-footer-heading font-semibold font-poppins">
@@ -193,38 +190,29 @@ export default function CaseStudyGasTurbinePage() {
                   phases.
                 </p>
               </div>
-              <div className="flex-1 relative w-full h-[36rem] sm:max-h-[20rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                <Image
-                  src="/images/case-studies/item4/img3.png"
-                  alt="Performance Evaluation"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
+              <CaseStudyImageWrapper
+                src="/images/case-studies/item4/img3.png"
+                alt="Performance Evaluation"
+                className="flex-1 w-full h-[36rem] sm:max-h-[20rem] sm:max-w-[25rem] sm:mx-auto"
+              />
             </div>
           </div>
           <div className="flex gap-8">
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item4/img4.png"
-                alt="Compressor Comparison"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item4/img4b.png"
-                alt="Compressor Comparison"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item4/img4.png"
+              alt="Compressor Comparison"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item4/img4b.png"
+              alt="Compressor Comparison"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
           </div>
 
           {/* Compressor Redesign Section */}
           <div className="flex flex-col gap-6">
-            <div className="flex flex-row items-start gap-[6.25rem] sm:grid sm:grid-cols-1 sm:gap-6">
+            <div className="flex flex-row items-start gap-[1.5rem] sm:grid sm:grid-cols-1 sm:gap-6">
               <div className="flex-1 flex flex-col gap-[1.375rem]">
                 <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                   B. Redesign of the Compressor
@@ -252,14 +240,11 @@ export default function CaseStudyGasTurbinePage() {
                   </li>
                 </ul>
               </div>
-              <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                <Image
-                  src="/images/case-studies/item4/img5.png"
-                  alt="Compressor Redesign"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
+              <CaseStudyImageWrapper
+                src="/images/case-studies/item4/img5.png"
+                alt="Compressor Redesign"
+                className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+              />
             </div>
             <div className="text-base text-footer-text font-normal font-poppins">
               A micro gas turbine engine targeting 50 kg of thrust was
@@ -274,22 +259,22 @@ export default function CaseStudyGasTurbinePage() {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-1 gap-4">
-            <img
+            <CaseStudyImageWrapper
               src="/images/case-studies/item4/img6.png"
               alt="Compressor Performance"
-              className="object-contain  w-full h-auto rounded-3xl"
+              className="w-full h-auto"
             />
             <div className="flex flex-col gap-8">
-              <img
+              <CaseStudyImageWrapper
                 src="/images/case-studies/item4/img7.png"
                 alt="Tip Velocity"
-                className="object-contain  w-full h-auto rounded-3xl"
+                className="w-full h-auto"
               />
 
-              <img
+              <CaseStudyImageWrapper
                 src="/images/case-studies/item4/img8.png"
                 alt="Stats"
-                className="object-contain  w-full h-auto rounded-3xl"
+                className="w-full h-auto"
               />
             </div>
           </div>

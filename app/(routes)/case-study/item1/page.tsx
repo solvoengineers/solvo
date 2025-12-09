@@ -4,7 +4,7 @@ import GetInTouch from "@/app/components/GetInTouch";
 import Header from "@/app/components/Header";
 import PageHeading from "@/app/components/PageHeading";
 import ProjectListSection from "@/app/components/ProjectListSection";
-import Image from "next/image";
+import CaseStudyImageWrapper from "../components/CaseStudyImageWrapper";
 
 export default function CaseStudyFEAPage() {
   return (
@@ -16,7 +16,7 @@ export default function CaseStudyFEAPage() {
         <img
           src="/images/case-studies/item1/img1.png"
           alt="Hero Image"
-          className="w-auto object-cover h-12 absolute top-0 left-0 z-10"
+          className="w-auto object-cover h-12 absolute top-0 left-0 z-10 sm:left-side-space"
         />
         <h1 className="text-footer-heading font-bold font-obviously mt-20">
           FEA Analysis to Enhancing Stiffness & Fatigue Life of Rubber-to-Metal
@@ -24,7 +24,7 @@ export default function CaseStudyFEAPage() {
         </h1>
         <img
           src="/images/about/hero-dots2.webp"
-          className="absolute top-0 left-0 -translate-y-[13rem] sm:h-[10rem] h-[15rem] "
+          className="absolute top-0 left-0 -translate-y-[13rem] sm:h-[10rem] h-[15rem]  "
           alt="Background Pattern"
         ></img>
       </div>
@@ -62,7 +62,7 @@ export default function CaseStudyFEAPage() {
       <div className="w-full bg-gradient-to-t from-transparent via-[rgba(136,216,232,0.2)] to-[rgba(136,216,232,0.4)] py-section-spacing">
         <div className="w-full max-w-desktop mx-auto  sm:px-side-space flex flex-col gap-6">
           {/* Results & Benefits Section */}
-          <div className="flex flex-row items-center gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-center gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 The Challenge
@@ -104,14 +104,11 @@ export default function CaseStudyFEAPage() {
                 necessary to meet these targets.
               </p>
             </div>
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item1/img6.png"
-                alt="The Challenge"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item1/img6.png"
+              alt="The Challenge"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
           </div>
           <div className="">
             <div className="flex flex-col gap-6">
@@ -128,7 +125,7 @@ export default function CaseStudyFEAPage() {
             </div>
           </div>
           {/* Advanced FEA Modeling Section */}
-          <div className="flex flex-row items-center gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-center gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Advanced FEA Modeling
@@ -160,18 +157,15 @@ export default function CaseStudyFEAPage() {
                 traditional linear elastic assumptions.
               </p>
             </div>
-            <div className="flex-1 relative w-[15rem]  h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] mx-auto sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item1/img2.png"
-                alt="Advanced FEA Modeling"
-                fill
-                className="object-contain p-4 mx-auto"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item1/img2.png"
+              alt="Advanced FEA Modeling"
+              className="flex-1 w-[15rem] h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] mx-auto sm:mx-auto"
+            />
           </div>
 
           {/* Stiffness Evaluation Section */}
-          <div className="flex flex-row items-center gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-center gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Stiffness Evaluation
@@ -194,18 +188,15 @@ export default function CaseStudyFEAPage() {
                 region of the part.
               </p>
             </div>
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item1/img3.png"
-                alt="Stiffness Evaluation"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item1/img3.png"
+              alt="Stiffness Evaluation"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
           </div>
 
           {/* Fatigue & Durability Analysis Section */}
-          <div className="flex flex-row items-center gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-center gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Fatigue & Durability Analysis
@@ -231,18 +222,15 @@ export default function CaseStudyFEAPage() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item1/img4.png"
-                alt="Fatigue & Durability Analysis"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item1/img4.png"
+              alt="Fatigue & Durability Analysis"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
           </div>
 
           {/* Final Reporting & Approval Section */}
-          <div className="flex flex-row items-center gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-center gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Final Reporting & Approval
@@ -273,14 +261,11 @@ export default function CaseStudyFEAPage() {
                 production use.
               </p>
             </div>
-            <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-              <Image
-                src="/images/case-studies/item1/img5.png"
-                alt="Final Reporting & Approval"
-                fill
-                className="object-contain p-4"
-              />
-            </div>
+            <CaseStudyImageWrapper
+              src="/images/case-studies/item1/img5.png"
+              alt="Final Reporting & Approval"
+              className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+            />
           </div>
         </div>
       </div>

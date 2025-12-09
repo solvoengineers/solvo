@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import GetInTouch from "@/app/components/GetInTouch";
 import Header from "@/app/components/Header";
 import ProjectListSection from "@/app/components/ProjectListSection";
-import Image from "next/image";
+import CaseStudyImageWrapper from "../components/CaseStudyImageWrapper";
 
 export default function CaseStudyVFCPage() {
   return (
@@ -15,7 +15,7 @@ export default function CaseStudyVFCPage() {
         <img
           src="/images/case-studies/item3/img1.png"
           alt="Hero Image"
-          className="w-auto object-cover h-8 absolute top-0 left-0 z-10"
+          className="w-auto object-cover h-8 absolute top-0 left-0 z-10 sm:left-side-space"
         />
         <h1 className="text-footer-heading font-bold font-obviously mt-20">
           Design Optimizing and CFD Analysis for Radial Vortex Flow Controls
@@ -79,7 +79,7 @@ export default function CaseStudyVFCPage() {
       <div className="w-full bg-gradient-to-t from-transparent via-[rgba(136,216,232,0.2)] to-[rgba(136,216,232,0.4)] py-section-spacing">
         <div className="w-full max-w-desktop mx-auto  sm:px-side-space flex flex-col gap-6">
           {/* The Challenge Section */}
-          <div className="flex flex-row items-start gap-[6.25rem]  sm:grid sm:grid-cols-1 sm:gap-6">
+          <div className="flex flex-row items-start gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">
             <div className="flex-1 flex flex-col gap-[1.375rem]">
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 The Challenge
@@ -136,22 +136,16 @@ export default function CaseStudyVFCPage() {
             </div>
 
             <div className="flex flex-1 flex-col gap-4">
-              <div className="relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                <Image
-                  src="/images/case-studies/item3/img2.png"
-                  alt="The Challenge"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
-              <div className=" relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                <Image
-                  src="/images/case-studies/item3/img3.png"
-                  alt="The Challenge"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
+              <CaseStudyImageWrapper
+                src="/images/case-studies/item3/img2.png"
+                alt="The Challenge"
+                className="w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+              />
+              <CaseStudyImageWrapper
+                src="/images/case-studies/item3/img3.png"
+                alt="The Challenge"
+                className="w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+              />
             </div>
           </div>
 
@@ -162,7 +156,7 @@ export default function CaseStudyVFCPage() {
             </h2>
 
             {/* Geometric and Performance Modeling */}
-            <div className="flex flex-row items-start gap-[6.25rem] sm:grid sm:grid-cols-1 sm:gap-6">
+            <div className="flex flex-row items-start gap-[1.5rem] sm:grid sm:grid-cols-1 sm:gap-6">
               <div className="flex-1 flex flex-col gap-[1.375rem]">
                 <h3 className="text-[1.25rem] leading-[1.4em] text-footer-heading font-semibold font-poppins">
                   Geometric and Performance Modeling
@@ -214,36 +208,22 @@ export default function CaseStudyVFCPage() {
                 </ul>
               </div>
               <div className="flex flex-col gap-4 flex-1">
-                <div className="relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                  <Image
-                    src="/images/case-studies/item3/img4.png"
-                    alt="Geometric and Performance Modeling"
-                    fill
-                    className="object-contain p-4"
-                  />
-                </div>
+                <CaseStudyImageWrapper
+                  src="/images/case-studies/item3/img4.png"
+                  alt="Geometric and Performance Modeling"
+                  className="w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+                />
 
-                <div className="relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                  <Image
-                    src="/images/case-studies/item3/img5.png"
-                    alt="Geometric and Performance Modeling"
-                    fill
-                    className="object-contain p-4"
-                  />
-                </div>
+                <CaseStudyImageWrapper
+                  src="/images/case-studies/item3/img5.png"
+                  alt="Geometric and Performance Modeling"
+                  className="w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+                />
               </div>
             </div>
 
             {/* Simulation Setup and Parameters */}
-            <div className="flex flex-row items-start gap-[6.25rem] sm:grid sm:grid-cols-1 sm:gap-6">
-              <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                <Image
-                  src="/images/case-studies/item3/img6.png"
-                  alt="Simulation Setup"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
+            <div className="flex flex-row items-start gap-[1.5rem] sm:grid sm:grid-cols-1 sm:gap-6">
               <div className="flex-1 flex flex-col gap-[1.375rem]">
                 <h3 className="text-[1.25rem] leading-[1.4em] text-footer-heading font-semibold font-poppins">
                   Simulation Setup and Parameters
@@ -271,10 +251,15 @@ export default function CaseStudyVFCPage() {
                   generation, and minimal dead zones.
                 </p>
               </div>
+              <CaseStudyImageWrapper
+                src="/images/case-studies/item3/img6.png"
+                alt="Simulation Setup"
+                className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+              />
             </div>
 
             {/* Development of Predictive Tool */}
-            <div className="flex flex-row items-start gap-[6.25rem] sm:grid sm:grid-cols-1 sm:gap-6">
+            <div className="flex flex-row items-start gap-[1.5rem] sm:grid sm:grid-cols-1 sm:gap-6">
               <div className="flex-1 flex flex-col gap-[1.375rem]">
                 <h3 className="text-[1.25rem] leading-[1.4em] text-footer-heading font-semibold font-poppins">
                   Development of Predictive Tool
@@ -307,14 +292,11 @@ export default function CaseStudyVFCPage() {
                   quoted quickly with simulation-backed accuracy.
                 </p>
               </div>
-              <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
-                <Image
-                  src="/images/case-studies/item3/img7.png"
-                  alt="Predictive Tool"
-                  fill
-                  className="object-contain p-4"
-                />
-              </div>
+              <CaseStudyImageWrapper
+                src="/images/case-studies/item3/img7.png"
+                alt="Predictive Tool"
+                className="flex-1 w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto"
+              />
             </div>
 
             {/* Additional Images */}
