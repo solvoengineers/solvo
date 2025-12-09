@@ -84,12 +84,12 @@ const TopSection = () => {
                 </div>
                 <Link
                   href={service.link}
-                  className="w-[10.75rem] h-10 bg-primary-blue rounded-xl flex flex-row items-center justify-center gap-2 px-4 py-4 sm:w-full"
+                  className=" btn btn-primary w-[10.75rem] h-10  flex flex-row items-center justify-center gap-2 px-4 py-4 sm:w-full"
                 >
-                  <span className="text-base text-white font-normal font-poppins text-center">
+                  <span className="text-base  font-normal font-poppins text-center">
                     Read More
                   </span>
-                  <div className="w-5 h-5 text-white">
+                  <div className="w-5 h-5 ">
                     {allIcons.chevronRight(20, 20)}
                   </div>
                 </Link>
