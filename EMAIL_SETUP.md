@@ -11,9 +11,8 @@ Create a `.env.local` file in the root directory with the following variables:
 GMAIL_USER=your-email@gmail.com
 GMAIL_PASS=your-app-password
 
-# Recipient Email Addresses (optional - defaults to GMAIL_USER if not set)
-CONTACT_RECIPIENT_EMAIL=contact@yourcompany.com
-JOB_RECIPIENT_EMAIL=careers@yourcompany.com
+# Recipient Email Address (for both contact and job applications)
+RECIEVER_MAIL=recipient@yourcompany.com
 ```
 
 ## Gmail App Password Setup

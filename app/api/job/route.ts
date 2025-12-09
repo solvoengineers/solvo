@@ -31,12 +31,20 @@ export async function POST(request: NextRequest) {
 		// Get environment variables
 		const gmailUser = process.env.GMAIL_USER;
 		const gmailPass = process.env.GMAIL_PASS;
-		const recipientEmail = process.env.JOB_RECIPIENT_EMAIL || gmailUser;
+		const recipientEmail = process.env.RECIEVER_MAIL;
 
 		if (!gmailUser || !gmailPass) {
 			console.error("Missing Gmail credentials in environment variables");
 			return NextResponse.json(
 				{ error: "Email service not configured" },
+				{ status: 500 }
+			);
+		}
+
+		if (!recipientEmail) {
+			console.error("Missing RECIEVER_MAIL in environment variables");
+			return NextResponse.json(
+				{ error: "Recipient email not configured" },
 				{ status: 500 }
 			);
 		}
@@ -53,20 +61,22 @@ export async function POST(request: NextRequest) {
 		// Prepare email content
 		const emailSubject = `Job Application from ${name}${jobId ? ` - Job ID: ${jobId}` : ""}`;
 		const emailHtml = `
-      <h2>New Job Application</h2>
-      ${jobId ? `<p><strong>Job ID:</strong> ${jobId}</p>` : ""}
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Education:</strong> ${education || "Not specified"}</p>
-      <p><strong>Current Salary:</strong> ${currentSalary || "Not specified"}</p>
-      <p><strong>Experience:</strong> ${experience || "Not specified"}</p>
-      <p><strong>LinkedIn Profile:</strong> <a href="${linkedin}">${linkedin || "Not provided"}</a></p>
-      <p><strong>City & Country:</strong> ${cityCountry || "Not specified"}</p>
-      <p><strong>Software Skills:</strong> ${software || "Not specified"}</p>
-      <p><strong>Current Company:</strong> ${companyName || "Not specified"}</p>
-      <p><strong>Reason for Switching:</strong> ${switchReason || "Not specified"}</p>
-      <p><strong>CV/Resume:</strong> Attached below</p>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; ">
+        <h2 style="color: #0273bd; margin-bottom: 20px;">New Job Application</h2>
+        ${jobId ? `<p><strong style="color: #0273bd;">Job ID:</strong> ${jobId}</p>` : ""}
+        <p><strong style="color: #0273bd;">Name:</strong> ${name}</p>
+        <p><strong style="color: #0273bd;">Email:</strong> ${email}</p>
+        <p><strong style="color: #0273bd;">Phone:</strong> ${phone}</p>
+        <p><strong style="color: #0273bd;">Education:</strong> ${education || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Current Salary:</strong> ${currentSalary || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Experience:</strong> ${experience || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">LinkedIn Profile:</strong> <a href="${linkedin}" style="color: #0273bd;">${linkedin || "Not provided"}</a></p>
+        <p><strong style="color: #0273bd;">City & Country:</strong> ${cityCountry || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Software Skills:</strong> ${software || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Current Company:</strong> ${companyName || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Reason for Switching:</strong> ${switchReason || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">CV/Resume:</strong> Attached below</p>
+      </div>
     `;
 
 		// Convert CV file to buffer
@@ -86,8 +96,45 @@ export async function POST(request: NextRequest) {
 			],
 		};
 
-		// Send email
+		// Send email to recipient
 		await transporter.sendMail(mailOptions);
+
+		// Send confirmation email to the applicant
+		const confirmationSubject = "Thank you for your job application - Solvo Engineers";
+		const confirmationHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px;">
+        <h2 style="color: #0273bd; margin-bottom: 20px;">Application Received!</h2>
+        <p>Dear ${name},</p>
+        <p>Thank you for applying to Solvo Engineers. We have successfully received your job application and our HR team will review it shortly. We will contact you soon regarding the next steps in the hiring process.</p>
+        
+        <h3 style="color: #0273bd; margin-top: 30px; margin-bottom: 15px;">Your Application Details:</h3>
+        ${jobId ? `<p><strong style="color: #0273bd;">Job ID:</strong> ${jobId}</p>` : ""}
+        <p><strong style="color: #0273bd;">Name:</strong> ${name}</p>
+        <p><strong style="color: #0273bd;">Email:</strong> ${email}</p>
+        <p><strong style="color: #0273bd;">Phone:</strong> ${phone}</p>
+        <p><strong style="color: #0273bd;">Education:</strong> ${education || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Current Salary:</strong> ${currentSalary || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Experience:</strong> ${experience || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">LinkedIn Profile:</strong> <a href="${linkedin}" style="color: #0273bd;">${linkedin || "Not provided"}</a></p>
+        <p><strong style="color: #0273bd;">City & Country:</strong> ${cityCountry || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Software Skills:</strong> ${software || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Current Company:</strong> ${companyName || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">Reason for Switching:</strong> ${switchReason || "Not specified"}</p>
+        <p><strong style="color: #0273bd;">CV/Resume:</strong> Received and attached to your application</p>
+        
+        <p style="margin-top: 30px;">We appreciate your interest in joining our team!</p>
+        <p>Best regards,<br><strong>Solvo Engineers HR Team</strong></p>
+      </div>
+    `;
+
+		const confirmationMailOptions = {
+			from: gmailUser,
+			to: email,
+			subject: confirmationSubject,
+			html: confirmationHtml,
+		};
+
+		await transporter.sendMail(confirmationMailOptions);
 
 		return NextResponse.json(
 			{ message: "Application submitted successfully" },
