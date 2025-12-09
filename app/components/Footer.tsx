@@ -62,13 +62,13 @@ function RightSection() {
             >
               Blogs
             </Link>
+
             <Link
-              href="/careers"
+              href="/case-study"
               className="text-base text-footer-text font-normal font-poppins"
             >
-              Careers
+              Case Studies
             </Link>
-
             <Link
               href="/faqs"
               className="text-base text-footer-text font-normal font-poppins"
@@ -196,7 +196,7 @@ function BottomSection() {
 // Main Footer Component
 export default function Footer() {
   return (
-    <footer className="w-full bg-white bg-gradient-to-b from-[rgba(136,216,232,0.4)] via-[rgba(136,216,232,0.1)] to-transparent py-[3.125rem] px-[10.75rem] sm:px-side-space flex flex-col gap-6">
+    <footer className="w-full bg-white bg-gradient-to-b from-[rgba(136,216,232,0.4)] via-[rgba(136,216,232,0.1)] to-transparent py-[3.125rem]  sm:px-side-space flex flex-col gap-6">
       <div className="w-full max-w-desktop mx-auto flex flex-col gap-6 ">
         {/* Main Content */}
         <div className="flex flex-row sm:flex-col gap-[3.75rem] sm:gap-section-spacing w-full ">
