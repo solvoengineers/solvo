@@ -67,7 +67,6 @@ const CustomerSimulationItem: React.FC<CustomerSimulationItemProps> = ({
                   src={data.leftPhase.stepImage}
                   alt={`Step ${data.leftPhase.stepNumber}`}
                   className="object-contain h-full w-auto"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -105,7 +104,6 @@ const CustomerSimulationItem: React.FC<CustomerSimulationItemProps> = ({
                   alt={`Step ${data.rightPhase.stepNumber}`}
                   fill
                   className="object-contain"
-                  loading="lazy"
                 />
               </div>
             </div>
