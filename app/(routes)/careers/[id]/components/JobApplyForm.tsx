@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { allIcons } from "@/app/helpers/icons";
 
-export default function JobApplyForm() {
+interface JobApplyFormProps {
+  jobId?: string;
+}
+
+export default function JobApplyForm({ jobId }: JobApplyFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -19,6 +23,12 @@ export default function JobApplyForm() {
     switchReason: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -33,10 +43,74 @@ export default function JobApplyForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("education", formData.education);
+      formDataToSend.append("currentSalary", formData.currentSalary);
+      formDataToSend.append("experience", formData.experience);
+      formDataToSend.append("linkedin", formData.linkedin);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("cityCountry", formData.cityCountry);
+      formDataToSend.append("software", formData.software);
+      formDataToSend.append("companyName", formData.companyName);
+      formDataToSend.append("switchReason", formData.switchReason);
+      if (formData.cv) {
+        formDataToSend.append("cv", formData.cv);
+      }
+      if (jobId) {
+        formDataToSend.append("jobId", jobId);
+      }
+
+      const response = await fetch("/api/job", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            "Application submitted successfully! We'll review your application and get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          phone: "",
+          education: "",
+          currentSalary: "",
+          experience: "",
+          linkedin: "",
+          email: "",
+          cv: null,
+          cityCountry: "",
+          software: "",
+          companyName: "",
+          switchReason: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message:
+            data.error || "Failed to submit application. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -261,15 +335,36 @@ export default function JobApplyForm() {
               </div>
             </div>
 
+            {/* Submit Status Message */}
+            {submitStatus.type && (
+              <div
+                className={`p-4 rounded-lg ${
+                  submitStatus.type === "success"
+                    ? "bg-green-50 text-green-800 border border-green-200"
+                    : "bg-red-50 text-red-800 border border-red-200"
+                }`}
+              >
+                <p className="text-base font-normal font-poppins">
+                  {submitStatus.message}
+                </p>
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="flex flex-col items-center gap-3 pt-[0.75rem]">
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                disabled={isSubmitting}
+              >
                 <span className="text-sm  text-white font-normal font-poppins">
-                  Submit your application
+                  {isSubmitting ? "Submitting..." : "Submit your application"}
                 </span>
-                <div className="w-5 h-5 text-white">
-                  {allIcons.chevronRight(20, 20)}
-                </div>
+                {!isSubmitting && (
+                  <div className="w-5 h-5 text-white">
+                    {allIcons.chevronRight(20, 20)}
+                  </div>
+                )}
               </button>
             </div>
           </form>

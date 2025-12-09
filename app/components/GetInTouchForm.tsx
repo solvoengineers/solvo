@@ -57,10 +57,70 @@ export default function GetInTouchForm() {
     file: null as File | null,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("lookingFor", formData.lookingFor);
+      formDataToSend.append("fullName", formData.fullName);
+      formDataToSend.append("services", formData.services);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("software", formData.software);
+      formDataToSend.append("budget", formData.budget);
+      formDataToSend.append("message", formData.message);
+      formDataToSend.append("requiresNDA", formData.requiresNDA.toString());
+      if (formData.file) {
+        formDataToSend.append("file", formData.file);
+      }
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            "Message sent successfully! We'll get back to you within 24 hours.",
+        });
+        // Reset form
+        setFormData({
+          lookingFor: "",
+          fullName: "",
+          services: "",
+          email: "",
+          software: "",
+          budget: "",
+          message: "",
+          requiresNDA: false,
+          file: null,
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -269,14 +329,35 @@ export default function GetInTouchForm() {
           </div>
         </div>
 
-        {/* Submit Button */}
-        <button type="submit" className="btn btn-primary w-fit">
-          <span className="text-base text-white font-normal font-poppins">
-            Send as a message!
-          </span>
-          <div className="w-6 h-6 text-white">
-            {allIcons.chevronRight(24, 24)}
+        {/* Submit Status Message */}
+        {submitStatus.type && (
+          <div
+            className={`p-4 rounded-lg ${
+              submitStatus.type === "success"
+                ? "bg-green-50 text-green-800 border border-green-200"
+                : "bg-red-50 text-red-800 border border-red-200"
+            }`}
+          >
+            <p className="text-base font-normal font-poppins">
+              {submitStatus.message}
+            </p>
           </div>
+        )}
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="btn btn-primary w-fit"
+          disabled={isSubmitting}
+        >
+          <span className="text-base text-white font-normal font-poppins">
+            {isSubmitting ? "Sending..." : "Send as a message!"}
+          </span>
+          {!isSubmitting && (
+            <div className="w-6 h-6 text-white">
+              {allIcons.chevronRight(24, 24)}
+            </div>
+          )}
         </button>
       </div>
     </form>

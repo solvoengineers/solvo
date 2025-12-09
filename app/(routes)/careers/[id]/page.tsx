@@ -22,7 +22,7 @@ const JobPage = () => {
       <Header activeRoute="career" />
       <TopSection />
       <JobDetails job={job} />
-      <JobApplyForm />
+      <JobApplyForm jobId={id as string} />
       <Footer />
     </div>
   );
