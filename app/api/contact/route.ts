@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
       <div style="font-family: Arial, sans-serif; max-width: 600px;">
         <h2 style="color: #0273bd; margin-bottom: 20px;">Thank You for Your Inquiry!</h2>
         <p>Dear ${fullName},</p>
-        <p>We have successfully received your inquiry and will get back to you within 24 hours. Our team of CAE Engineers account managers will review your request and contact you soon.</p>
+        <p>We have successfully received your inquiry and will get back to you within 1 hour. Our team of CAE Engineers account managers will review your request and contact you soon.</p>
         
         <h3 style="color: #0273bd; margin-top: 30px; margin-bottom: 15px;">Your Submission Details:</h3>
         <p><strong style="color: #0273bd;">Full Name:</strong> ${fullName}</p>
