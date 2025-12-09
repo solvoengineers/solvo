@@ -37,7 +37,7 @@ export default function CaseStudyFEAPage() {
               Project Overview
             </h2>
             <div className="flex flex-col gap-4">
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 Bony Polymers, a trusted manufacturer of precision
                 rubber-to-metal bonded parts in India, approached us to improve
                 the performance of a critical side bumper assembly. The goal was
@@ -45,7 +45,7 @@ export default function CaseStudyFEAPage() {
                 displacement range of 5–10 mm, while also ensuring that the part
                 could reliably withstand at least 600,000 load cycles.
               </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 The application demanded not just mechanical integrity, but also
                 longevity under fatigue, especially given the repeated stress
                 such components experience in real-world use. Our task was to
@@ -67,7 +67,7 @@ export default function CaseStudyFEAPage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 The Challenge
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 The initial version of the side bumper exhibited suboptimal
                 stiffness and unclear fatigue behaviour. While the basic
                 geometry and material selection were in place, there was a lack
@@ -79,26 +79,25 @@ export default function CaseStudyFEAPage() {
                 The specific challenges included:
               </p>
               <div className="flex flex-row gap-4">
-                <div className="w-[0.625rem] h-[0.625rem] bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                <ul className="">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Achieving a static stiffness of 0.7 kN/mm between 5 mm and
                     10 mm deflection
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Ensuring consistent load response across a broad force range
                     (up to 18 kN)
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Modeling complex rubber behavior accurately
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Validating that the component could withstand 600,000
                     fatigue cycles, especially in high-strain zones
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </div>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins mt-4">
+              <p className="text-base  text-footer-text font-normal font-poppins mt-4">
                 It became clear that a deep dive into hyperelastic material
                 modeling, fatigue simulation, and load path optimization was
                 necessary to meet these targets.
@@ -115,7 +114,7 @@ export default function CaseStudyFEAPage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Our Solution
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 We began by reviewing the initial simulation model and
                 identified several areas for refinement. These included boundary
                 conditions, material definitions, and how loads were applied.
@@ -130,27 +129,26 @@ export default function CaseStudyFEAPage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Advanced FEA Modeling
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 The updated simulation model was built in ANSYS, and it
                 included:
               </p>
               <div className="flex flex-row gap-4">
-                <div className="w-[0.625rem] h-[0.625rem] bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                <ul className="">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Fixing inaccuracies in the initial geometry setup
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Applying realistic boundary conditions (fixed face and
                     precise load application)
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Assigning the correct elastic modulus (12.4 MPa) for the
                     bottom rubber plate
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </div>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins mt-4">
+              <p className="text-base  text-footer-text font-normal font-poppins mt-4">
                 To capture the true non-linear response of rubber, we introduced
                 hyperelastic material models, including Neo-Hookean and Marlow,
                 both of which are better suited for elastomeric simulations than
@@ -170,18 +168,18 @@ export default function CaseStudyFEAPage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Stiffness Evaluation
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 We conducted multiple FEA iterations to optimize the design. A
                 key outcome was when a 7 kN force produced exactly 10 mm of
                 deformation, confirming that the stiffness had reached:
               </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 7 kN / 10 mm = 0.7 kN/mm
               </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 This value met the exact target set by the client.
               </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 We also extended the load range to verify behavior under higher
                 forces. Simulations ran up to 18 kN, showing deformation
                 behavior stayed within safe limits without overstressing any
@@ -201,25 +199,24 @@ export default function CaseStudyFEAPage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Fatigue & Durability Analysis
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 Fatigue simulation was then performed using ANSYS. The fatigue
                 load was set at 18 kN, representing a conservative estimate of
                 operational stress. The analysis revealed:
               </p>
               <div className="flex flex-row gap-4">
-                <div className="w-[0.625rem] h-[0.625rem] bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                <ul className="flex flex-col gap-2">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     The main load-bearing rubber areas exceeded the
                     600,000-cycle requirement
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Localized areas near the edges of the bottom plate had a
                     lower life (~170,000 cycles), but these regions primarily
                     serve damping functions, not structural roles, and thus did
                     not compromise the functionality
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <CaseStudyImageWrapper
@@ -235,27 +232,26 @@ export default function CaseStudyFEAPage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 Final Reporting & Approval
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 We compiled all results, including:
               </p>
               <div className="flex flex-row gap-4">
-                <div className="w-[0.625rem] h-[0.625rem] bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                <ul className="flex flex-col gap-2">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Stress and deformation plots at various load levels
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Fatigue life maps
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Graphs showing deformation versus force
-                  </p>
-                  <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  </li>
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     A stiffness curve confirming mechanical targets
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </div>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins mt-4">
+              <p className="text-base  text-footer-text font-normal font-poppins mt-4">
                 The complete report was shared with Bony Polymers, who reviewed
                 the solution and officially approved the final design for
                 production use.
@@ -274,32 +270,31 @@ export default function CaseStudyFEAPage() {
           <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
             Results & Benefits
           </h2>
-          <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+          <p className="text-base  text-footer-text font-normal font-poppins">
             This project resulted in a robust, validated solution that:
           </p>
           <div className="flex flex-row gap-4">
-            <div className="w-[0.625rem] h-[0.625rem] bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-            <div className="flex flex-col gap-2">
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <ul className="">
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Achieved 0.7 kN/mm stiffness precisely within the target
                 deflection range
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Demonstrated stable deformation behavior across a wide loading
                 spectrum
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Surpassed the 600,000-cycle fatigue durability requirement
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Maintained performance even under worst-case loading (18 kN)
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Minimized stress concentrations through design optimization
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
-          <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins mt-4">
+          <p className="text-base  text-footer-text font-normal font-poppins mt-4">
             The integration of hyperelastic modeling made the predictions much
             more reliable, reducing the need for excessive physical prototyping
             and helping the client accelerate their design-to-approval timeline.
@@ -314,14 +309,14 @@ export default function CaseStudyFEAPage() {
             <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
               Conclusion
             </h2>
-            <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <p className="text-base  text-footer-text font-normal font-poppins">
               For Bony Polymers, this project validated that simulation driven
               design can deliver real-world performance. Through a strategic
               blend of advanced FEA techniques, realistic material modeling and
               fatigue simulation, we were able to exceed both mechanical and
               durability expectations.
             </p>
-            <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <p className="text-base  text-footer-text font-normal font-poppins">
               The new side bumper design is now approved for use, and the
               process helped reduce development cost, improve confidence in
               long-term reliability, and ensure compliance with the

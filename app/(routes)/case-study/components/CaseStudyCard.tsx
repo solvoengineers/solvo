@@ -41,7 +41,7 @@ export default function CaseStudyCard({
       {/* Content Section */}
       <div className="flex flex-col gap-3 w-full">
         {/* Title */}
-        <h3 className="text-[1rem] leading-[1.5em] font-bold text-footer-text font-poppins">
+        <h3 className="text-[1rem]  font-bold text-footer-text font-poppins">
           {caseStudy.title}
         </h3>
 

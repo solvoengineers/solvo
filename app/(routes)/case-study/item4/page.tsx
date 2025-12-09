@@ -36,7 +36,7 @@ export default function CaseStudyGasTurbinePage() {
               Project Overview
             </h2>
             <div className="flex flex-col gap-4">
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 This project focused on a micro gas turbine engine designed to
                 generate 50 kg of thrust. While the hardware was successfully
                 assembled and could be spun up to 13,500 RPM using an external
@@ -46,7 +46,7 @@ export default function CaseStudyGasTurbinePage() {
                 entirely, clearly indicating a failure in transitioning to
                 self-sustained combustion.
               </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 To solve this, we conducted a detailed CFD analysis across the
                 compressor, combustion chamber and turbine. The goal was to
                 understand the root cause of this failure and deliver a design
@@ -67,7 +67,7 @@ export default function CaseStudyGasTurbinePage() {
               <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
                 The Challenge
               </h2>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              <p className="text-base  text-footer-text font-normal font-poppins">
                 The key issue was that the engine could not maintain enough
                 internal energy to continue running autonomously. Initial
                 observations suggested an imbalance between the work produced by
@@ -81,21 +81,21 @@ export default function CaseStudyGasTurbinePage() {
               </p>
               <div className="flex flex-row gap-4">
                 <ul className="flex flex-col gap-2">
-                  <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     The compressor stalled at low speeds (notably at 18,000 RPM)
                   </li>
-                  <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     The pressure ratio of the original compressor was too low
                     (only 2.1 at 50,000 RPM).
                   </li>
-                  <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     Fuel-air mixing and combustion stability were problematic
                   </li>
-                  <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     The net power output at critical RPM points was likely
                     negative or insufficient.
                   </li>
-                  <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                  <li className="text-base  text-footer-text font-normal font-poppins">
                     The engine could not meet the condition for self-sustaining
                     operation without continuous starter input.
                   </li>
@@ -114,76 +114,76 @@ export default function CaseStudyGasTurbinePage() {
             <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
               A. Performance evaluation of existing design
             </h2>
-            <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <p className="text-base  text-footer-text font-normal font-poppins">
               We first simulated the engine's behaviour at three key RPM points,
               idle (18k), mid (50k) and max (85k):
             </p>
             <div className="flex flex-row items-start gap-[1.5rem] sm:grid sm:grid-cols-1 sm:gap-6">
               <div className="flex-1 flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-heading font-semibold font-poppins">
+                  <p className="text-base  text-footer-heading font-semibold font-poppins">
                     At 50k RPM:
                   </p>
                   <div className="flex flex-row gap-4">
                     <ul className="list2">
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Compressor required 130 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Turbine produced 340 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Net power: +210 kW → Self-sustaining confirmed
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Thrust achieved: 360 N
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-heading font-semibold font-poppins">
+                  <p className="text-base  text-footer-heading font-semibold font-poppins">
                     At 18k RPM:
                   </p>
                   <div className="flex flex-row gap-4">
                     <ul className="list2">
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Compressor required 7.5 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Turbine produced 16 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Net power: +8.5 kW → Barely self-sustaining
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Thrust achieved: 105 N
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className="text-base leading-[1.5em] text-footer-heading font-semibold font-poppins">
+                  <p className="text-base  text-footer-heading font-semibold font-poppins">
                     At 85k RPM:
                   </p>
                   <div className="flex flex-row gap-4">
                     <ul className="list2">
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Compressor required 510 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Turbine produced 1050 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Net power: +540 kW
                       </li>
-                      <li className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+                      <li className="text-base  text-footer-text font-normal font-poppins">
                         Thrust achieved: 596 N
                       </li>
                     </ul>
                   </div>
                 </div>
-                <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins mt-4">
+                <p className="text-base  text-footer-text font-normal font-poppins mt-4">
                   While the turbine had sufficient capacity, the original
                   compressor was the bottleneck, unable to support airflow or
                   pressure at low and mid RPMs, particularly during transitional
@@ -287,39 +287,38 @@ export default function CaseStudyGasTurbinePage() {
           <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
             Results & Benefits
           </h2>
-          <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+          <p className="text-base  text-footer-text font-normal font-poppins">
             With the updated compressor, the engine now:
           </p>
           <div className="flex flex-row gap-4">
-            <div className="w-[0.625rem] h-[0.625rem] bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-            <div className="flex flex-col gap-2">
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <ul className="">
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Achieves self-sustaining combustion above 11,000 RPM, even at
                 18,000 RPM idle.
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Produces sufficient net power across all key RPM ranges to
                 support autonomous operation.
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Delivers 360 N of thrust at 50k RPM and 596 N at 85k RPM,
                 confirming the ability to scale to the design goal of 50 kg of
                 thrust.
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Shows no stall characteristics, allowing reliable startup and
                 ramp-up.
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Supports subsonic nozzle operation with 95% efficiency, as
                 verified through isentropic and actual exit velocity
                 calculations.
-              </p>
-              <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+              </li>
+              <li className="text-base  text-footer-text font-normal font-poppins">
                 Operates with validated compressor-turbine performance balance —
                 no oversizing or underloading.
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -331,21 +330,21 @@ export default function CaseStudyGasTurbinePage() {
             <h2 className="text-[1.875rem] leading-[1.2em] text-footer-heading font-semibold font-poppins">
               Conclusion
             </h2>
-            <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <p className="text-base  text-footer-text font-normal font-poppins">
               This project demonstrates how simulation-driven redesign can
               resolve combustion instability and performance bottlenecks in gas
               turbine engines. By addressing the mismatch between the turbine's
               power output and the compressor's pressure generation, we restored
               full functionality and met the engine's thrust target.
             </p>
-            <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <p className="text-base  text-footer-text font-normal font-poppins">
               The redesigned compressor eliminated stall, improved pressure
               ratios, and enabled consistent airflow across RPM ranges. Most
               importantly, the engine now transitions seamlessly from assisted
               startup to self sustained operation, a critical milestone for any
               micro gas turbine.
             </p>
-            <p className="text-base leading-[1.5em] text-footer-text font-normal font-poppins">
+            <p className="text-base  text-footer-text font-normal font-poppins">
               This work sets the stage for further development, including
               thermal optimization and mechanical durability studies. The engine
               is now fully capable of moving into integrated testing and
