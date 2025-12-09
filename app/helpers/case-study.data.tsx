@@ -13,7 +13,7 @@ export const allCaseStudies: ICaseStudy[] = [
     description:
       "Optimization rubber-to-metal bonded part for stiffness and fatigue Life",
     logo: "/images/case-study/item1/logo.png",
-    link: "/case-study/train-side-bumper",
+    link: "/case-study/item1",
   },
   {
     id: "rvfcd",
@@ -21,7 +21,7 @@ export const allCaseStudies: ICaseStudy[] = [
     description:
       "Optimizing the Design of the Radial Vortex Flow Controls Device (VFC)",
     logo: "/images/case-study/item2/logo.png",
-    link: "/case-study/rvfcd",
+    link: "/case-study/item2",
   },
   {
     id: "industrial-dehydrator",
@@ -29,7 +29,7 @@ export const allCaseStudies: ICaseStudy[] = [
     description:
       "CFD Airflow Optimization for Industrial Dehydrator System Analysis",
     logo: "/images/case-study/item3/logo.png",
-    link: "/case-study/industrial-dehydrator",
+    link: "/case-study/item3",
   },
   {
     id: "gas-turbine",
@@ -37,6 +37,6 @@ export const allCaseStudies: ICaseStudy[] = [
     description:
       "CFD redesigns micro gas turbine for self-sustaining thrust target",
     logo: "/images/case-study/item4/logo.png",
-    link: "/case-study/gas-turbine",
+    link: "/case-study/item4",
   },
 ];

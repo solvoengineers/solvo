@@ -14,7 +14,7 @@ export default function CaseStudyFEAPage() {
       {/* Hero Section with Gradient Background */}
       <div className="w-full max-w-desktop mx-auto flex flex-col items-start gap-6 sm:px-side-space relative">
         <img
-          src="/images/case-studies/fea/img1.png"
+          src="/images/case-studies/item1/img1.png"
           alt="Hero Image"
           className="w-auto object-cover h-12 absolute top-0 left-0 z-10"
         />
@@ -106,7 +106,7 @@ export default function CaseStudyFEAPage() {
             </div>
             <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
               <Image
-                src="/images/case-studies/fea/img6.png"
+                src="/images/case-studies/item1/img6.png"
                 alt="The Challenge"
                 fill
                 className="object-contain p-4"
@@ -162,7 +162,7 @@ export default function CaseStudyFEAPage() {
             </div>
             <div className="flex-1 relative w-[15rem]  h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] mx-auto sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
               <Image
-                src="/images/case-studies/fea/img2.png"
+                src="/images/case-studies/item1/img2.png"
                 alt="Advanced FEA Modeling"
                 fill
                 className="object-contain p-4 mx-auto"
@@ -196,7 +196,7 @@ export default function CaseStudyFEAPage() {
             </div>
             <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
               <Image
-                src="/images/case-studies/fea/img3.png"
+                src="/images/case-studies/item1/img3.png"
                 alt="Stiffness Evaluation"
                 fill
                 className="object-contain p-4"
@@ -233,7 +233,7 @@ export default function CaseStudyFEAPage() {
             </div>
             <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
               <Image
-                src="/images/case-studies/fea/img4.png"
+                src="/images/case-studies/item1/img4.png"
                 alt="Fatigue & Durability Analysis"
                 fill
                 className="object-contain p-4"
@@ -275,7 +275,7 @@ export default function CaseStudyFEAPage() {
             </div>
             <div className="flex-1 relative w-full h-[22.4375rem] sm:max-h-[17rem] sm:max-w-[25rem] sm:mx-auto rounded-[1.875rem] overflow-hidden bg-gradient-to-r from-[rgba(254,244,243,1)] to-[rgba(230,223,229,1)]">
               <Image
-                src="/images/case-studies/fea/img5.png"
+                src="/images/case-studies/item1/img5.png"
                 alt="Final Reporting & Approval"
                 fill
                 className="object-contain p-4"
