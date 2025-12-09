@@ -417,7 +417,7 @@ ul.list2 li::before {
 } */
 
 .btn-secondary:hover {
-  background: #0273bd;
+  background: #0273bd !important;
   color: white;
   border-color: #0273bd;
 }

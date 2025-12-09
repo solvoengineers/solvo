@@ -75,7 +75,8 @@ const ClientFocusSolutions = () => {
                 </Link>
                 <Link
                   href="/projects"
-                  className="btn btn-secondary !bg-transparent"
+                  className="btn btn-secondary bg-transparent"
+                  style={{ backgroundColor: "transparent" }}
                 >
                   <span className="text-base  text-primary-blue font-normal font-poppins text-center">
                     Our Projects
