@@ -15,7 +15,7 @@ const BlogListSection: React.FC<BlogListSectionProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
-    null
+    allBlogs[0].categories[0]
   );
 
   const handlePrevious = () => {
@@ -58,7 +58,7 @@ const BlogListSection: React.FC<BlogListSectionProps> = () => {
           </h2>
 
           {/* Category Filter Section */}
-          <div className="flex flex-row sm:flex-col gap-5 items-start overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="flex flex-row sm:flex-col gap-5 items-start overflow-x-auto custom-scrollbar">
             {/* All Categories Button */}
             <button
               onClick={() => handleCategoryClick(null)}
@@ -80,7 +80,7 @@ const BlogListSection: React.FC<BlogListSectionProps> = () => {
             </button>
 
             {/* Category Buttons */}
-            <div className="flex flex-row gap-[0.625rem] items-center overflow-x-auto w-full ">
+            <div className="flex flex-row gap-[0.625rem] items-center overflow-x-auto w-full pb-1 custom-scrollbar">
               {blogCategories.map((category) => {
                 const isSelected = selectedCategoryId === category.id;
                 return (

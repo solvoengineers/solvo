@@ -10,7 +10,7 @@ import Divider from "@/app/components/Divider";
 
 export default function MethodologyPage() {
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="about" />
       <TopSection />
       <MethodSteps />

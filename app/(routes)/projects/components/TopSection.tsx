@@ -23,9 +23,9 @@ const TopSection = () => {
           }
           description={
             <>
-              Explore our case studies to see how our cutting-edge technology
-              solutions have helped businesses achieve their goals and overcome
-              their challenges
+              Browse the projects that highlight our expertise in delivering
+              practical, reliable and high quality CAE solutions to meet client
+              needs and real world challenges
             </>
           }
         ></PageHeading>

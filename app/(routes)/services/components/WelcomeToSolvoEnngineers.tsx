@@ -11,8 +11,10 @@ const WelcomeToSolvoEnngineers = () => {
         <div className="flex flex-col gap-6 flex-1">
           {/* Title */}
           <h2 className=" font-semibold font-poppins text-[#1E1E1E] whitespace-pre-line">
-            Welcome To SOLVO Engineers: our Partner In Serving Best Engineering
-            Solutions
+            Welcome To SOLVO Engineers:{" "}
+            <span className="text-primary-blue">
+              Become our partner in serving best engineering solutions
+            </span>
           </h2>
 
           {/* Description Section */}
@@ -21,11 +23,11 @@ const WelcomeToSolvoEnngineers = () => {
               className="text-base  text-[#4A4A4A] font-normal font-poppins"
               style={{ fontSize: "1.125rem" }}
             >
-              At SOLVO Engineers, We Commit To Delivering Innovative, Focused
-              And Personalized Engineering Services That Would Bring The Best
-              Results Eliminating The Challenges Of Modern Industries. With Our
-              Expertise And Advanced Technology, We Ensure To Transform Your
-              Vision Into Real-Time, Functional, And High-Performance Solutions.
+              At Solvo Engineers, we commit to delivering innovative, focused
+              and personalized engineering services that bring the best results
+              while eliminating the challenges of modern industries. With our
+              expertise and advanced technology, we ensure to transform your
+              vision into real-time, functional and high-performance solutions.
             </span>
             <div className="relative w-[29rem] sm:flex hidden h-full shrink-0 sm:w-full sm:h-auto  border border-primary-blue rounded-[1.25rem] bg-white p-[0.625rem]">
               <img

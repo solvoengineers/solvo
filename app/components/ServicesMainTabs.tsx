@@ -18,17 +18,20 @@ interface OurServicesSectionProps {
 const services: Service[] = [
   {
     title: "Computational Fluid Dynamics (CFD)",
-    description: "Agentic AI assistant guide you through model setup",
+    description:
+      "Provides clear insights to improve your product’s efficiency and reliability",
     image: "/images/services/turbo-machinery.webp",
   },
   {
     title: "2D/3D Modeling & Rendering (CAD)",
-    description: "Run physics simulation & AI prediction in the cloud",
+    description:
+      "Turns your ideas into clear, detailed designs ready for development",
     image: "/images/services/3d-modeling.webp",
   },
   {
     title: "Finite Element Analysis (FEA)",
-    description: "Combine Engineering and Physics AI for instant design.",
+    description:
+      "Checks your product’s strength and safety before it’s ever built",
     image: "/images/services/structural-analysis.webp",
   },
 ];
@@ -45,9 +48,8 @@ export default function OurServicesSection({
 
         {/* Title */}
         <h2 className="text-[1.875rem] mb-7 w-[60%] sm:w-full !leading-[1.2em] text-text-gray font-semibold font-poppins text-center">
-          Run entire engineering{" "}
-          <span className="text-primary-blue">AI & Simulation workflows</span>{" "}
-          in your browser
+          Premium engineering expertise delivering unmatched{" "}
+          <span className="text-primary-blue">value for every client</span>
         </h2>
 
         {/* Services Grid */}

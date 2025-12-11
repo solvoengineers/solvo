@@ -10,6 +10,7 @@ import ContentSection from "./components/ContentSection";
 import ProjectListSection from "@/app/components/ProjectListSection";
 import OurTechnologySection from "@/app/components/OurTechnologySection";
 import GetInTouch from "@/app/components/GetInTouch";
+import Divider from "@/app/components/Divider";
 
 interface ProjectPageProps {
   params: {
@@ -26,10 +27,11 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
   }
 
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="projects" />
       <TopSection project={project} />
       <ContentSection project={project} />
+      <Divider></Divider>
       <ProjectListSection></ProjectListSection>
       <OurTechnologySection></OurTechnologySection>
       <GetInTouch></GetInTouch>

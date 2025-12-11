@@ -7,12 +7,13 @@ export default function TopSection() {
     <div className="w-full flex flex-col items-center gap-[1.625rem] max-w-desktop mx-auto sm:px-side-space">
       {/* Title */}
       <h1 className="text-[3rem]  text-footer-heading font-[570] font-obviously text-center">
-        Join Our Team
+        Join <span className="text-primary-blue">Our Team</span>
       </h1>
 
       {/* Subtitle */}
       <p className="text-lg text-footer-text">
-        Unleash your genius and maximize your potential
+        Be part of a growing CAE engineering team where your skills, creativity
+        and ideas help build impactful real life solutions.
       </p>
 
       {/* Apply Now Button */}

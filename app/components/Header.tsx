@@ -52,7 +52,7 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
     },
     {
       id: "about",
-      label: "About Us",
+      label: "About us",
       hasDropdown: true,
       refKey: "about",
       dropdownComponent: <AboutDropdown isVisible={isAboutOpen} />,
@@ -86,45 +86,8 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
     },
   ];
 
-  // Close services dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        servicesRef.current &&
-        !servicesRef.current.contains(event.target as Node)
-      ) {
-        setIsServicesOpen(false);
-      }
-    };
-
-    if (isServicesOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isServicesOpen]);
-
-  // Close about dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        aboutRef.current &&
-        !aboutRef.current.contains(event.target as Node)
-      ) {
-        setIsAboutOpen(false);
-      }
-    };
-
-    if (isAboutOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isAboutOpen]);
+  // Close services dropdown when mouse leaves the dropdown area
+  // The hover handlers on the container will handle opening/closing
 
   // Close sidebar when clicking outside
   useEffect(() => {
@@ -151,19 +114,19 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
     };
   }, [isSidebarOpen]);
 
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const toggleAbout = () => {
-    setIsAboutOpen(!isAboutOpen);
-  };
-
-  const toggleDropdown = (itemId: string) => {
+  const openDropdown = (itemId: string) => {
     if (itemId === "services") {
-      setIsServicesOpen(!isServicesOpen);
+      setIsServicesOpen(true);
     } else if (itemId === "about") {
-      setIsAboutOpen(!isAboutOpen);
+      setIsAboutOpen(true);
+    }
+  };
+
+  const closeDropdown = (itemId: string) => {
+    if (itemId === "services") {
+      setIsServicesOpen(false);
+    } else if (itemId === "about") {
+      setIsAboutOpen(false);
     }
   };
 
@@ -188,12 +151,12 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
   };
 
   return (
-    <header className="w-full z-20  sm:h-auto  h-[5.6875rem] bg-white py-5 shadow-[0px_6px_40px_0px_rgba(0,0,0,0.04)]">
+    <header className="w-full fixed z-20 top-0 left-0  sm:h-auto  h-[5.6875rem] bg-white py-5 shadow-[0px_6px_40px_0px_rgba(0,0,0,0.04)]">
       <div className="w-full sm:w-auto sm:px-side-space  max-w-desktop mx-auto flex items-center justify-between  gap-5">
         {/* Logo */}
         <Link
           href="/"
-          className="w-[8.625rem] h-[2.65rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]"
+          className="w-[9rem] h-[2.8rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]"
         >
           <Image
             src="/images/logo-176606.webp"
@@ -204,14 +167,14 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
         </Link>
 
         {/* Navigation */}
-        <nav className="flex sm:hidden items-center justify-end gap-3 flex-1 h-6">
+        <nav className="flex sm:hidden items-center justify-end gap-6 flex-1 h-6">
           {navigationItems.map((item) => {
             const isActive = activeRoute === item.id;
             const isOpen = isDropdownOpen(item.id);
             const itemRef = getRef(item.refKey);
 
             const baseClassName = classNames(
-              "relative text-base font-normal font-poppins px-3 py-2 transition-all duration-500 ease-out overflow-hidden",
+              "relative text-base font-normal font-poppins py-1 transition-all duration-500 ease-out overflow-hidden",
               {
                 "text-primary-blue": isActive,
                 "text-text-gray": !isActive,
@@ -224,25 +187,24 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
                   key={item.id}
                   ref={itemRef}
                   className="relative flex items-center gap-1 group"
+                  onMouseEnter={() => openDropdown(item.id)}
+                  onMouseLeave={() => closeDropdown(item.id)}
                 >
                   <button
-                    onClick={() => toggleDropdown(item.id)}
                     className={classNames(
                       baseClassName,
-                      "cursor-pointer group-hover:text-primary-blue"
+                      "cursor-pointer group-hover:text-primary-blue relative"
                     )}
                   >
                     <span className="relative z-10 inline-block transition-all duration-500 group-hover:-translate-y-0.5">
                       {item.label}
                     </span>
-                    {/* Animated underline - slides from left to right */}
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-blue transition-all duration-500 ease-out group-hover:w-full"></span>
                     {/* Shimmer effect */}
                     <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span>
                   </button>
                   <div
                     className={classNames(
-                      "w-4 h-4 text-text-gray transition-all duration-500 group-hover:text-primary-blue",
+                      "w-4 h-4 text-text-gray transition-all duration-500 group-hover:text-primary-blue relative z-10",
                       {
                         "text-primary-blue rotate-180": isOpen,
                       }
@@ -250,6 +212,8 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
                   >
                     {allIcons.chevronDown(16, 16)}
                   </div>
+                  {/* Animated underline - spans across both text and icon */}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-blue transition-all duration-500 ease-out group-hover:w-[calc(100%-3px)]"></span>
                   {item.dropdownComponent}
                 </div>
               );

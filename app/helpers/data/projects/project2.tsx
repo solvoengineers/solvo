@@ -63,6 +63,7 @@ export const project2: IFullProject = {
             <p className="text-base  text-footer-text font-normal font-poppins">
               The main objectives of this CFD study were:
             </p>
+            <br></br>
             <ul className="flex flex-col gap-4">
               <li className="text-base  text-footer-text font-normal font-poppins">
                 To analyze the flow field characteristics over an Ahmed body for

@@ -29,9 +29,9 @@ const IndustriesWeServe = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-footer-heading font-semibold font-poppins text-center flex items-start h-full px-10 ">
+              <div className="text-footer-heading text-[1rem] whitespace-nowrap font-semibold font-poppins text-center flex items-start h-full px-10 ">
                 {industry.name}
-              </h3>
+              </div>
             </div>
           ))}
         </div>

@@ -28,7 +28,7 @@ export default function ServicePage({ params }: ServicePageProps) {
   }
 
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="services" />
       <TopSection serviceItem={serviceItem} />
       <OurExpertiseSection serviceItem={serviceItem} />

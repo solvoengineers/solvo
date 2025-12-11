@@ -27,10 +27,8 @@ export default function OurBestClients() {
         <div className="flex flex-col items-center gap-[1.875rem] w-full">
           {/* Description */}
           <h2 className="text-[1.875rem]  text-text-gray font-semibold font-poppins text-center">
-            Trusted by{" "}
-            <span className="text-primary-blue">
-              3,000+ globally companies.
-            </span>
+            Honored to serve{" "}
+            <span className="text-primary-blue">top clients</span>
           </h2>
 
           {/* Client Logos - Continuous Linear Scroll */}

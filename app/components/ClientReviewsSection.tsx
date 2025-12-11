@@ -125,12 +125,12 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
             {/* Badge */}
             <GreenBadge
               icon={"/images/zap-icon.svg"}
-              text="Solvo's Premium"
+              text="Testimonials"
             ></GreenBadge>
 
             {/* Title */}
             <h2 className="text-[1.875rem]  text-text-gray font-semibold font-poppins">
-              What Our Clients Says
+              What Our <span className="text-primary-blue">Clients Says</span>
             </h2>
           </div>
           {/* Swiper Container */}

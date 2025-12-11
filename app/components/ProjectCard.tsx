@@ -21,29 +21,28 @@ export default function ProjectCard({
       {/* Image */}
       <div
         ref={ref}
-        className="relative w-full h-[17rem] sm:max-w-[17rem] sm:max-h-[12rem] rounded-[1.25rem] overflow-hidden bg-[#D7D7D7]"
+        className="relative w-full h-[17rem] sm:max-w-[17rem] sm:max-h-[12rem] rounded-[1.25rem] overflow-hidden bg-transparent"
       >
-        <Image
+        <img
           src={project.image}
           alt={project.title}
-          fill
-          className="object-cover"
+          className="object-contain w-full h-full"
           loading="lazy"
         />
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-3 w-full justify-between h-full flex-1">
+      <div className="flex flex-col gap-3 w-full  h-full flex-1">
         {/* Title */}
-        <h3 className=" font-semibold  text-footer-heading  font-poppins">
+        <div className=" font-semibold  text-[1rem] text-footer-heading  font-poppins">
           {project.title}
-        </h3>
+        </div>
 
         {/* Description and Read More */}
         <div className="flex flex-row items-end w-full">
           <p className="text-base  text-footer-text font-normal font-poppins flex-1">
-            {project.description.slice(0, 80)}...{" "}
-            <span className="text-base  text-primary-blue font-normal font-poppins">
+            {project.description.slice(0, 100)}...{" "}
+            <span className="text-xs  text-primary-blue font-normal font-poppins">
               Read more
             </span>
           </p>

@@ -77,7 +77,7 @@ const CustomerSimulationSection: React.FC<
           {/* Badge */}
           <GreenBadge
             icon="/images/zap-icon.svg"
-            text="Solvo’s Premium"
+            text="Solvo’s Premium Workflow"
           ></GreenBadge>
 
           {/* Title */}

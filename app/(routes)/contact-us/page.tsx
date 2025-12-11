@@ -4,7 +4,7 @@ import Header from "@/app/components/Header";
 
 function ContactUsPage() {
   return (
-    <div className="w-full  flex flex-col bg-white relative justify-center gap-section-spacing">
+    <div className="w-full  flex flex-col bg-white relative justify-center gap-section-spacing page-wrapper">
       <div
         className="w-full h-full absolute -bottom-0 z-10 left-0 "
         style={{

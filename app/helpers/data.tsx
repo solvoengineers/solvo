@@ -561,7 +561,8 @@ export const allServiceItems: IServiceItem[] = [
 export const allHomePageServiceItems: IHomePageServiceItem[] = [
   {
     title: "Computational Fluid Dynamics (CFD)",
-    description: "Agentic AI assistant guide you through model setup",
+    description:
+      "Provides clear insights to improve your product’s efficiency and reliability",
     image: "/images/services/turbo-machinery.webp",
     subItems: [
       {
@@ -624,7 +625,8 @@ export const allHomePageServiceItems: IHomePageServiceItem[] = [
   },
   {
     title: "2D/3D Modeling & Rendering (CAD)",
-    description: "Run physics simulation & AI prediction in the cloud",
+    description:
+      "Turns your ideas into clear, detailed designs ready for development",
     image: "/images/services/3d-modeling.webp",
     subItems: [
       {
@@ -685,7 +687,8 @@ export const allHomePageServiceItems: IHomePageServiceItem[] = [
   },
   {
     title: "Finite Element Analysis (FEA)",
-    description: "Combine Engineering and Physics AI for instant design.",
+    description:
+      "Checks your product’s strength and safety before it’s ever built",
     image: "/images/services/structural-analysis.webp",
     subItems: [
       {
@@ -769,9 +772,9 @@ export const allHeroSectionItems: IHeroSectionItem[] = [
     title: "Finite Element Analysis - FEA",
     features: [
       "Fatigue & Durability Testing",
-      "Fluid-Structure Interational",
-      "Structural Stress Analysis",
-      "VOF-Multiphase Analysis",
+      "Fluid-Structure Interaction",
+      "Structural Analysis",
+      "Stress Analysis",
     ],
     placeOrderLink: "/contact-us",
     ourServicesLink: "/services",

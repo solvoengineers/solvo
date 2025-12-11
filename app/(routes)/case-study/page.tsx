@@ -10,16 +10,18 @@ import ContactUsPage from "../contact-us/page";
 import GetInTouch from "@/app/components/GetInTouch";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import Divider from "@/app/components/Divider";
 
 export default function CaseStudyPage() {
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing overflow-visible">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing overflow-visible page-wrapper">
       {/* Header Section */}
       <Header activeRoute="case-study" />
       <TopSection />
       <CaseStudyList></CaseStudyList>
       <ClientReviewsSection></ClientReviewsSection>
       <ProjectListSection></ProjectListSection>
+      <Divider></Divider>
       <GetInTouch></GetInTouch>
       <Footer></Footer>
       {/* Case Studies Grid */}

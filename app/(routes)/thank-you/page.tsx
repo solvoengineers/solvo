@@ -9,7 +9,7 @@ export default function ThankYouPage() {
   const router = useRouter();
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-white relative">
+    <div className="w-full min-h-screen flex flex-col bg-white relative page-wrapper">
       {/* Background gradient similar to contact page */}
       <div
         className="w-full h-full absolute bottom-0 z-0 left-0"

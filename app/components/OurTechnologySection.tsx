@@ -25,7 +25,7 @@ const OurTechnologySection = ({ topBorder = false }) => {
       <div className="w-full max-w-desktop mx-auto flex flex-col items-center gap-[1.875rem]">
         {/* Title */}
         <h2 className="text-text-gray font-semibold font-poppins text-center">
-          Our <span className="text-primary-blue">Technology</span>
+          Our <span className="text-primary-blue">Technologies</span>
         </h2>
 
         {/* Technology Logos - Continuous Linear Scroll */}

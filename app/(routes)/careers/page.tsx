@@ -6,7 +6,7 @@ import WhyWorkWithUs from "./components/WhyWorkWithUs";
 
 export default function CareersPage() {
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="career" />
       <TopSection />
       <OpeningsList />
@@ -15,4 +15,3 @@ export default function CareersPage() {
     </div>
   );
 }
-

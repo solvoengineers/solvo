@@ -25,10 +25,10 @@ const preferableSoftwareOptions = [
 ];
 
 const estimatedBudgetOptions = [
-  { value: "5000-usd", label: "5000 USD" },
+  { value: "5000-usd", label: "> 5000 USD " },
   { value: "5000-10000-usd", label: "5000 - 10000 USD" },
   { value: "10000-30000-usd", label: "10000 - 30000 USD" },
-  { value: "50000-usd", label: "50000 USD" },
+  { value: "50000-usd", label: "< 50000 USD " },
 ];
 
 const servicesOptions = [
@@ -275,8 +275,8 @@ export default function GetInTouchForm() {
         </div>
 
         {/* Checkbox and File Upload */}
-        <div className="flex flex-col gap-6">
-          <label className="flex flex-row items-center gap-5 cursor-pointer">
+        <div className="flex flex-col gap-4">
+          <label className="flex flex-row items-center gap-3 cursor-pointer">
             <input
               type="checkbox"
               name="requiresNDA"
@@ -289,7 +289,7 @@ export default function GetInTouchForm() {
             </span>
           </label>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-3">
             <label
               htmlFor="file"
               className="text-xs  text-text-gray font-normal font-poppins"

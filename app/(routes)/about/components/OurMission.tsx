@@ -21,11 +21,11 @@ const OurMission: React.FC<OurMissionProps> = () => {
         <h2 className="font-bold font-obviously font-secondary text-center">
           Our mission
         </h2>
-        <h3 className="text-white !font-normal  text-center">
+        <div className="text-white text-base !font-normal  text-center">
           To be the leading CAE consulting firm, driving innovation and
           excellence to empower businesses, startups globally with advanced
           engineering solutions and technologies.
-        </h3>
+        </div>
       </div>
     </section>
   );

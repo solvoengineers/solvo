@@ -1,4 +1,5 @@
 import { IFullProject } from "@/app/helpers/projects.data";
+import Link from "next/link";
 
 interface TopSectionProps {
   project: IFullProject;
@@ -9,7 +10,8 @@ export default function TopSection({ project }: TopSectionProps) {
     <div className="flex flex-col gap-6 w-full max-w-desktop mx-auto sm:px-side-space">
       {/* Breadcrumb */}
       <h3 className="text-base text-footer-text font-normal font-poppins">
-        Home/ Projects/ {project.title}
+        <Link href="/">Home</Link> / <Link href="/projects">Projects</Link> /{" "}
+        {project.title}
       </h3>
 
       {/* Title */}

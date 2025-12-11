@@ -23,13 +23,13 @@ const ClientReviewItem: React.FC<ClientReviewItemProps> = ({ data }) => {
           </div>
 
           {/* Client Info and Verify Link */}
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-row items-center justify-between ">
             {/* Client Info */}
             <div className="flex flex-col">
               <h3 className="text-[1.25rem]  text-text-gray font-semibold font-poppins">
                 {data.clientName}
               </h3>
-              <p className="text-base text-footer-text font-normal font-poppins">
+              <p className="text-base text-footer-text  font-poppins font-semibold">
                 {data.clientRole}
               </p>
             </div>

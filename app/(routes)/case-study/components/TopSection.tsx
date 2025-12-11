@@ -10,7 +10,6 @@ export default function TopSection() {
         className="absolute top-0 left-0 -translate-y-[3rem] sm:h-[10rem] h-[15rem]  "
         alt="Background Pattern"
       ></img>
-      <GreenBadge icon="/images/zap-icon.svg" text="Case Studies" />
 
       {/* Title */}
       <PageHeading

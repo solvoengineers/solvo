@@ -13,7 +13,7 @@ interface HomePageProps {}
 
 const HomePage: React.FC<HomePageProps> = () => {
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="home" />
       <HeroSection></HeroSection>
       <OurBestClients />

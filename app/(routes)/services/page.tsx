@@ -13,13 +13,14 @@ interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
   return (
-    <div className="flex flex-col w-full h-full bg-white gap-section-spacing">
+    <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="services" />
       <TopSection></TopSection>
       <ClientFocusSolutions></ClientFocusSolutions>
       <OurTechnologySection></OurTechnologySection>
       <WelcomeToSolvoEnngineers></WelcomeToSolvoEnngineers>
       <ProductDetailsSection></ProductDetailsSection>
+      <Divider></Divider>
       <ProjectListSection></ProjectListSection>
       <GetInTouch></GetInTouch>
       <Footer />
