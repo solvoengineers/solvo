@@ -82,7 +82,7 @@
   --orange: #f98502;
   --border-select-item: #bdbcc733;
   --disable: #8a8a8a;
-  --primary-light-blue: #88d8e833;
+  --primary-light-blue: rgba(2, 114, 189, 0.1);
   --section-spacing: 3.125rem;
   --button-hover-animation: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -447,13 +447,16 @@ ul.list2 li::before {
 .service-tab-btn {
   transition: var(--button-hover-animation);
 }
-.service-tab-btn:hover {
-  @apply bg-primary-blue text-white;
-  transition: var(--button-hover-animation);
-}
 
-.service-tab-btn:hover .service-icon {
-  @apply text-white;
+@media (min-width: 767px) {
+  .service-tab-btn:hover {
+    @apply bg-primary-blue text-white;
+    transition: var(--button-hover-animation);
+  }
+
+  .service-tab-btn:hover .service-icon {
+    @apply text-white;
+  }
 }
 
 /* Custom scrollbar for category filters */

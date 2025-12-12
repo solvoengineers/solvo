@@ -82,7 +82,7 @@ const CustomerSimulationItemMobile: React.FC<
       >
         <path
           d={getPathForIndex(index)}
-          stroke="#000000"
+          stroke="#424242"
           strokeWidth="2"
           fill="none"
           strokeDasharray="16 16"

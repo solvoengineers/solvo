@@ -19,6 +19,8 @@ interface HeaderProps {
     | "career"
     | "blogs"
     | "case-study";
+
+  forContactUs?: boolean;
 }
 
 interface NavigationItem {
@@ -37,7 +39,10 @@ interface NavigationItem {
   refKey?: string;
 }
 
-export default function Header({ activeRoute = undefined }: HeaderProps) {
+export default function Header({
+  activeRoute = undefined,
+  forContactUs,
+}: HeaderProps) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -161,7 +166,10 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
         {/* Logo */}
         <Link
           href="/"
-          className="w-[9rem] h-[2.8rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]"
+          className={classNames(
+            "w-[9rem] h-[2.8rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]",
+            { "sm:opacity-0": forContactUs }
+          )}
         >
           <Image
             src="/images/logo-176606.webp"

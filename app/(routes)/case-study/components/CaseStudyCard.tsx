@@ -18,7 +18,7 @@ export default function CaseStudyCard({
   return (
     <Link
       href={caseStudy.link}
-      className={`flex rounded-2xl flex-col items-center sm:items-start justify-center gap-11 sm:px-side-space sm:py-[2rem] p-[3.125rem_1.5rem] bg-white border border-footer-border rounded-5xl w-full hover:shadow-lg transition-shadow ${className}`}
+      className={`flex rounded-2xl flex-col items-center justify-center gap-11 sm:px-side-space sm:py-[2rem] p-[3.125rem_1.5rem] bg-white border border-footer-border rounded-5xl w-full hover:shadow-lg transition-shadow ${className}`}
     >
       {/* Logo Container */}
       <div className="flex flex-col items-center justify-center w-[10rem] h-[10rem] sm:w-[8rem] sm:h-[8rem] sm:p-3 p-5 rounded-full bg-primary-blue/20 shadow-[0px_0px_39.3px_-9px_rgba(2,115,189,1)]">

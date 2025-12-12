@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { IBlog } from "@/app/helpers/blogs.data";
+import Link from "next/link";
 
 interface TopSectionProps {
   blog: IBlog;
@@ -13,7 +14,8 @@ export default function TopSection({ blog }: TopSectionProps) {
         <div className="flex flex-col gap-4 flex-1">
           {/* Breadcrumb */}
           <h3 className="text-base  text-footer-text font-normal font-poppins">
-            Home/ Blogs/ Blog Name
+            <Link href="/">Home</Link>/ <Link href="/blogs">Blogs</Link>/{" "}
+            {blog.title}
           </h3>
 
           {/* Title */}
@@ -25,7 +27,7 @@ export default function TopSection({ blog }: TopSectionProps) {
           <div className="flex flex-row items-center gap-[0.625rem]">
             <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0 bg-[#D9D9D9]">
               <Image
-                src={blog.author.avatar}
+                src={"/images/blogs/default-avatar.webp"}
                 alt={blog.author.name}
                 fill
                 className="object-cover"

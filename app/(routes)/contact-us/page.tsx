@@ -13,8 +13,8 @@ function ContactUsPage() {
         }}
       ></div>
 
-      <div className="blur-[20px]">
-        <Header></Header>
+      <div className="hidden sm:block">
+        <Header forContactUs={true}></Header>
       </div>
       <div className="z-10">
         <GetInTouch> </GetInTouch>

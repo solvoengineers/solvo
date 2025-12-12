@@ -72,7 +72,7 @@ export default function Sidebar({
   return (
     <aside className="w-full h-full flex flex-col bg-white shadow-[10px_0px_20px_0px_rgba(0,0,0,0.06)] ">
       {/* Header with Logo and Close Button */}
-      <div className="relative flex items-center justify-between px-6 py-4 border-b border-border-select-item">
+      <div className="relative flex items-center justify-between px-6 py-4 ">
         {/* Logo */}
         <div className="w-[8rem] relative flex justify-start object-left">
           <img
@@ -106,7 +106,7 @@ export default function Sidebar({
         </button>
       </div>
 
-      <div className="flex flex-col overflow-y-auto flex-1 bg-white">
+      <div className="flex flex-col overflow-y-auto  bg-white">
         {menuItems.map((item, index) => {
           const isActive = activeRoute === item.id;
           const isServices = item.id === "services";
@@ -225,6 +225,21 @@ export default function Sidebar({
                     </div>
                   )}
                 </>
+              ) : item.id === "contact" ? (
+                <Link
+                  href={item.href}
+                  onClick={onClose}
+                  className={classNames(
+                    "btn btn-primary w-[85%] mx-6 my-4 flex items-center justify-center",
+                    {
+                      "rounded-b-[0.5rem]": isLastItem(index),
+                    }
+                  )}
+                >
+                  <span className="text-sm font-normal font-poppins">
+                    {item.label}
+                  </span>
+                </Link>
               ) : (
                 <Link
                   href={item.href}
