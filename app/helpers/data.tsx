@@ -27,8 +27,7 @@ export const allProducts: ProductDetail[] = [
     description:
       "Bony Polymers, a trusted manufacturer of precision rubber-to-metal bonded parts in India, approached us to improve the performance of a critical side bumper assembly. The goal was to increase the component’s static stiffness to 0.7 kN/mm for a displacement range of 5–10 mm, while also ensuring that the part could reliably withstand at least 600,000 load cycles.",
     caseStudyLink: "/case-study/item1",
-
-    image: "/images/products/vfc-device-image.webp",
+    image: "/images/products/rubber-metal-parts-image.webp",
   },
   {
     logo: "/images/case-study/item2/logo.png",
@@ -37,7 +36,7 @@ export const allProducts: ProductDetail[] = [
     description:
       "Commercial Dehydrators America approached us to investigate a critical airflow issue within their industrial dehydrator system. The dehydrator, consisting of 50 stacked drying trays, was experiencing non-uniform airflow at a design speed of 1 meter per second. Despite a seemingly adequate system layout, the airflow was disturbed, non-laminar, and inconsistent",
     caseStudyLink: "/case-study/item2",
-    image: "/images/products/rubber-metal-parts-image.webp",
+    image: "/images/products/dehydrator-system-image.webp",
   },
   {
     logo: "/images/case-study/item3/logo.png",
@@ -46,7 +45,7 @@ export const allProducts: ProductDetail[] = [
     description:
       "SuDS Enviro Ltd engaged us to design and simulate a set of Radial Vortex Flow Control (VFC) devices that control stormwater flows using a purely hydraulic mechanism—without moving parts, power, or complex control systems. These devices needed to manage both low and high flow conditions, enabling unrestricted flow at low volumes and inducing vortex-driven throttling during peak flows.",
     caseStudyLink: "/case-study/item3",
-    image: "/images/products/dehydrator-system-image.webp",
+    image: "/images/products/vfc-device-image.webp",
   },
   {
     logo: "/images/case-study/item4/logo.png",
