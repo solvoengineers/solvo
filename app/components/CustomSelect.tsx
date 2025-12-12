@@ -121,15 +121,18 @@ export default function CustomSelect({
 
       {/* Custom dropdown menu */}
       {isOpen && (
-        <div className="absolute  z-50 w-full bg-white mt-1  border border-footer-border rounded-lg shadow-lg overflow-hidden">
+        <div className="absolute  z-50 w-full bg-white mt-1  border border-footer-border/50 rounded-lg shadow-lg overflow-hidden">
           {options.map((option, index) => {
             const isSelected = option.value === value;
             return (
-              <div key={option.value} className="bg-primary-blue/10">
+              <div
+                key={option.value}
+                className="bg-white  border-b border-[rgba(189,188,199,0.2)]"
+              >
                 <button
                   type="button"
                   onClick={() => handleOptionClick(option.value)}
-                  className={`w-full px-3 py-2 text-left text-base  font-poppins transition-colors cursor-pointer ${
+                  className={`w-full px-3 py-2 text-left text-base text-footer-text hover:bg-primary-light-blue hover:text-primary-blue  duration-300 ease-in-out  font-poppins transition-colors cursor-pointer ${
                     isSelected
                       ? "text-primary-blue font-semibold"
                       : "text-disable font-normal"

@@ -31,7 +31,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isVisible }) => {
             <Link
               key={index}
               href={item.link}
-              className={`flex flex-row items-center gap-2.5 px-5 py-5 bg-white text-black hover:bg-primary-light-blue hover:text-primary-blue transition-all duration-300 ease-in-out ${
+              className={`flex flex-row items-center gap-2.5 px-5 py-5 bg-white text-footer-text hover:bg-primary-light-blue hover:text-primary-blue transition-all duration-300 ease-in-out ${
                 index === 0 ? "rounded-t-lg" : ""
               } ${
                 index === aboutItems.length - 1 ? "rounded-b-lg border-b-0" : ""
