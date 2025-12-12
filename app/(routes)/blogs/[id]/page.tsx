@@ -8,6 +8,7 @@ import { useParams } from "next/navigation";
 import TopSection from "./components/TopSection";
 import ContentSection from "./components/ContentSeciton";
 import BlogListSection from "../components/BlogListSection";
+import Divider from "@/app/components/Divider";
 
 interface BlogPageProps {
   params: {
@@ -28,6 +29,8 @@ const BlogPage = ({ params }: BlogPageProps) => {
       <Header activeRoute="blogs" />
       <TopSection blog={blog} />
       <ContentSection blog={blog} />
+
+      <Divider></Divider>
       <BlogListSection></BlogListSection>
       <Footer />
     </div>

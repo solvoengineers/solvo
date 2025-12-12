@@ -31,24 +31,19 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isVisible }) => {
     },
   ];
 
+  if (!isVisible) return null;
+
   return (
     <div className="absolute top-full right-0 pt-2 z-20">
       {/* Transparent bridge wrapper to connect with header item */}
       <div className="w-[24.375rem] bg-transparent">
         {/* Actual dropdown content */}
-        <div
-          className={`w-full bg-[#e6f1f9] border border-[rgba(189,188,199,0.2)] rounded-lg overflow-hidden transition-all duration-300 ease-in-out ${
-            isVisible
-              ? "opacity-100 visible translate-y-0"
-              : "opacity-0 invisible -translate-y-2"
-          }`}
-          style={{ pointerEvents: isVisible ? "auto" : "none" }}
-        >
+        <div className="w-full bg-white border border-[rgba(189,188,199,0.2)] rounded-lg overflow-hidden shadow-[0px_8px_40px_0px_rgba(0,0,0,0.12)]">
           {services.map((service, index) => (
             <Link
               key={index}
               href={service.link}
-              className={`flex flex-row items-center gap-[0.625rem] px-5 py-5 hover:bg-[rgba(2,115,189,0.15)] transition-colors ${
+              className={`flex flex-row items-center gap-2.5 px-5 py-5 bg-white text-black hover:bg-primary-light-blue hover:text-primary-blue transition-all duration-300 ease-in-out ${
                 index === 0 ? "rounded-t-lg" : ""
               } ${
                 index === services.length - 1 ? "rounded-b-lg border-b-0" : ""
@@ -59,14 +54,14 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isVisible }) => {
               }`}
             >
               {/* Icon */}
-              <div className="w-5 h-5 flex-shrink-0 flex items-center justify-center">
+              <div className="w-5 h-5 shrink-0 flex items-center justify-center">
                 <img
                   src={service.icon}
                   alt={service.name}
                   className="w-5 h-5 object-contain"
                 ></img>
               </div>
-              <span className="text-base text-primary-blue font-normal font-poppins">
+              <span className="text-base font-normal font-poppins">
                 {service.name}
               </span>
             </Link>

@@ -8,6 +8,7 @@ import AboutDropdown from "./AboutDropdown";
 import Sidebar from "./Sidebar";
 import classNames from "classnames";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
   activeRoute?:
@@ -44,6 +45,8 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
   const aboutRef = useRef<HTMLDivElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
+  const router = useRouter();
+
   const navigationItems: NavigationItem[] = [
     {
       id: "home",
@@ -53,6 +56,7 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
     {
       id: "about",
       label: "About us",
+      href: "/about",
       hasDropdown: true,
       refKey: "about",
       dropdownComponent: <AboutDropdown isVisible={isAboutOpen} />,
@@ -60,6 +64,7 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
     {
       id: "services",
       label: "Services",
+      href: "/services",
       hasDropdown: true,
       refKey: "services",
       dropdownComponent: <ServicesDropdown isVisible={isServicesOpen} />,
@@ -191,6 +196,11 @@ export default function Header({ activeRoute = undefined }: HeaderProps) {
                   onMouseLeave={() => closeDropdown(item.id)}
                 >
                   <button
+                    onClick={() => {
+                      if (item.href) {
+                        router.push(item.href);
+                      }
+                    }}
                     className={classNames(
                       baseClassName,
                       "cursor-pointer group-hover:text-primary-blue relative"

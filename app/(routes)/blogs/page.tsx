@@ -3,6 +3,7 @@ import TopSection from "./components/TopSection";
 import BlogListSection from "./components/BlogListSection";
 import { LatestNewsSection } from "./components/LatestNewsSection";
 import Footer from "@/app/components/Footer";
+import Divider from "@/app/components/Divider";
 
 interface AboutProps {}
 
@@ -15,6 +16,7 @@ const About: React.FC<AboutProps> = () => {
       <LatestNewsSection></LatestNewsSection>
 
       <BlogListSection></BlogListSection>
+
       <Footer />
     </div>
   );

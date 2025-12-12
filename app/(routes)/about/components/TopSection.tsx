@@ -99,11 +99,17 @@ const TopSection = () => {
                   work that is practical reliable and easy to maintain.
                 </p>
                 <p className="text-lg  text-footer-text font-normal font-poppins">
-                  Our culture values clear communication ownership and steady
-                  improvement. We treat every project as a partnership and keep
-                  feedback simple and honest. This is placeholder copy sized for
-                  your layout while giving a short friendly overview of our
-                  approach and values.
+                  We approach each challenge with patience curiosity and a
+                  commitment to getting things right. Our team works closely
+                  together sharing knowledge and supporting one another to
+                  create solutions that truly serve our clients’ needs. We
+                  believe good engineering comes from thoughtful planning
+                  careful execution and learning from every project we complete.
+                  Whether refining existing designs or developing new concepts
+                  we stay focused on delivering work that is dependable
+                  efficient and built to last. This placeholder paragraph
+                  maintains the same friendly straightforward voice while
+                  offering a clear sense of how we operate and collaborate.
                 </p>
               </div>
             </div>

@@ -8,23 +8,23 @@ const VisionSection: React.FC<VisionSectionProps> = () => {
       <img
         src="/images/about/spiral-lines-right.webp"
         alt="Client Reviews Background"
-        className="absolute right-0   -top-[47rem] h-[69rem] sm:hidden z-10"
+        className="absolute right-0  -top-[31.25rem] h-[69rem] sm:hidden"
       />
 
       <img
         src="/images/about/spiral-lines-left.webp"
         alt="Client Reviews Background"
-        className="absolute left-0 -top-[47rem] h-[69rem] sm:hidden"
+        className="absolute left-0 -top-[31.25rem] h-[69rem] sm:hidden"
       />
       <div className="flex flex-col gap-6 w-[600px] items-center relative">
         <h2 className="font-bold font-secondary text-center font-obviously">
           Vision
         </h2>
-        <h3 className=" text-white font-normal font-poppins text-center ">
+        <div className=" text-white text-base font-normal font-poppins text-center ">
           We are committed to offer top-notch CAE engineering services while
           fostering a culture of innovation, collaboration. Our succes measured
           by our client’s progress and our employee’s well-being.{" "}
-        </h3>
+        </div>
       </div>
     </section>
   );
