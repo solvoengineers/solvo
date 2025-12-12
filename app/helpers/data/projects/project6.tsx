@@ -5,6 +5,7 @@ export const project6: IFullProject = {
   description:
     "A detailed CFD analysis of a custom duct geometry to evaluate and optimize its cooling performance using Ansys Fluent 2024 R2.",
   image: "/images/projects/item6/main-image.webp",
+  thumbnail: "/images/projects/item6/thumbnail.png",
   link: "/projects/cfd-duct-cooling-optimization",
   summary: [
     {

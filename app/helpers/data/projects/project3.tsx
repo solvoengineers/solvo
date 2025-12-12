@@ -6,6 +6,7 @@ export const project3: IFullProject = {
   description:
     "A detailed CFD analysis of compressible airflow through a two-dimensional converging-diverging nozzle using Ansys Fluent to investigate subsonic to supersonic flow acceleration.",
   image: "/images/projects/item3/main-image.webp",
+  thumbnail: "/images/projects/item3/thumbnail.png",
   link: "/projects/cfd-compressible-flow-cd-nozzle",
   summary: [
     {

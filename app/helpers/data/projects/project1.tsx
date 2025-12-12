@@ -5,6 +5,7 @@ export const project1: IFullProject = {
   description:
     "A detailed coupled thermal and mechanical stress analysis of a standard 1U CubeSat intended for low Earth orbit operations.",
   image: "/images/projects/item1/main-image.webp",
+  thumbnail: "/images/projects/item1/thumbnail.png",
   link: "/projects/1u-cubesat-thermal-mechanical-analysis",
   summary: [
     {

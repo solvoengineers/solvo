@@ -6,6 +6,7 @@ export const project11: IFullProject = {
   description:
     "A comprehensive HVAC simulation of a warehouse using Computational Fluid Dynamics (CFD) in Ansys to improve natural ventilation efficiency and optimize airflow patterns.",
   image: "/images/projects/item11/main-image.webp",
+  thumbnail: "/images/projects/item11/thumbnail.png",
   link: "/projects/hvac-warehouse-natural-flow-simulation",
   summary: [
     {

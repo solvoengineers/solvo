@@ -16,6 +16,7 @@ export interface IFullProject {
   description: string;
   image: string;
   link: string;
+  thumbnail: string;
   summary: IProjectSection[];
   sections: IProjectSection[];
 }

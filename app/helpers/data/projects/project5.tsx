@@ -5,6 +5,7 @@ export const project5: IFullProject = {
   description:
     "A comprehensive CFD analysis to investigate and optimize the aerodynamic performance of two custom-designed RC aircraft wings using Ansys Fluent.",
   image: "/images/projects/item4/main-image.webp",
+  thumbnail: "/images/projects/item5/thumbnail.png",
   link: "/projects/cfd-rc-aircraft-wing-optimization",
   summary: [
     {
@@ -34,7 +35,7 @@ export const project5: IFullProject = {
           </div>
           <div className="w-[34.9375rem] shrink-0 sm:w-full">
             <img
-              src="/images/projects/item4/main-image.webp"
+              src="/images/projects/item5/main-image.webp"
               alt="RC Aircraft Wing Analysis"
               className="rounded-[1.25rem] w-[34.9375rem] h-[17.375rem] sm:w-full sm:h-auto object-contain"
             />
@@ -47,7 +48,31 @@ export const project5: IFullProject = {
     {
       title: "Objectives and Approach",
       description: (
-        <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
+        <div className="flex flex-col">
+          <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
+            This project involved a comprehensive Computational Fluid Dynamics
+            (CFD) analysis to investigate and optimize the aerodynamic
+            performance of two custom-designed RC aircraft wings. The aim was to
+            evaluate lift and drag characteristics using Ansys Fluent, and to
+            determine which wing configuration — a single wing or a
+            multi-winglet design — provided better aerodynamic efficiency for RC
+            flight applications.
+            <br></br>
+            Understanding airflow behavior around aircraft wings is critical in
+            designing high-performance aerial platforms. With the growing usage
+            of RC (radio-controlled) aircraft in training, recreational flying,
+            and UAV applications, optimizing wing design can significantly
+            enhance flight stability, endurance, and lift generation. This
+            project compared two wing geometries under identical simulation
+            conditions to extract valuable insights for design improvement.
+            <div className="w-[34.9375rem] shrink-0 sm:w-full">
+              <img
+                src="/images/projects/item5/content-image1.webp"
+                alt="Wing Design Comparison"
+                className="rounded-[1.25rem] w-[34.9375rem] h-[15.375rem] sm:w-full sm:h-auto object-contain"
+              />
+            </div>
+          </div>
           <div className="flex-1 flex flex-col gap-4">
             <p className="text-base  text-footer-text font-normal font-poppins">
               The key objectives of this project were:
@@ -91,13 +116,6 @@ export const project5: IFullProject = {
               airflow was treated as incompressible with ideal gas properties.
             </p>
           </div>
-          <div className="w-[34.9375rem] shrink-0 sm:w-full">
-            <img
-              src="/images/projects/item4/content-image1.webp"
-              alt="Wing Design Comparison"
-              className="rounded-[1.25rem] w-[34.9375rem] h-[15.375rem] sm:w-full sm:h-auto object-contain"
-            />
-          </div>
         </div>
       ),
     },
@@ -139,7 +157,7 @@ export const project5: IFullProject = {
           </div>
           <div className="w-[36.375rem] shrink-0 sm:w-full">
             <img
-              src="/images/projects/item4/content-image2.webp"
+              src="/images/projects/item5/content-image2.webp"
               alt="Simulation Setup"
               className="rounded-[1.25rem] w-[36.375rem] h-[21.375rem] sm:w-full sm:h-auto object-contain"
             />

@@ -5,6 +5,7 @@ export const project4: IFullProject = {
   description:
     "A comprehensive CFD analysis to evaluate and optimize the aerodynamic performance of a multi-rotor drone platform using Ansys Fluent.",
   image: "/images/projects/item4/main-image.webp",
+  thumbnail: "/images/projects/item4/thumbnail.png",
   link: "/projects/cfd-drone-aerodynamics-optimization",
   summary: [
     {

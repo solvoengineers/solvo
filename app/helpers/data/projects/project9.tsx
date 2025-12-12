@@ -6,6 +6,7 @@ export const project9: IFullProject = {
   description:
     "A detailed FEA analysis of a beam bracket to assess its structural integrity, deformation behavior, and load-carrying capacity under realistic boundary conditions using Ansys 2024 R2.",
   image: "/images/projects/item9/main-image.webp",
+  thumbnail: "/images/projects/item9/thumbnail.png",
   link: "/projects/fea-beam-bracket-structural-integrity",
   summary: [
     {

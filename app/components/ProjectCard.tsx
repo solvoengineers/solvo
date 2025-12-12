@@ -24,7 +24,7 @@ export default function ProjectCard({
         className="relative w-full h-[17rem] sm:max-w-[17rem] sm:max-h-[12rem] rounded-[1.25rem] overflow-hidden bg-transparent"
       >
         <img
-          src={project.image}
+          src={project.thumbnail}
           alt={project.title}
           className="object-contain w-full h-full"
           loading="lazy"

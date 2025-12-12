@@ -6,6 +6,7 @@ export const project7: IFullProject = {
   description:
     "A detailed CFD analysis of the Mercedes-AMG W11 Formula One front wing, focusing on optimizing aerodynamic performance by minimizing drag while maintaining controlled downforce characteristics.",
   image: "/images/projects/item7/main-image.webp",
+  thumbnail: "/images/projects/item7/thumbnail.png",
   link: "/projects/cfd-mercedes-w11-wing-optimization",
   summary: [
     {
