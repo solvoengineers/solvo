@@ -177,15 +177,13 @@ const BlogListSection: React.FC<BlogListSectionProps> = () => {
               </div>
 
               {/* Right Chevron - Mobile Only */}
-              {true && (
-                <button
-                  onClick={() => scrollCategoryList("right")}
-                  className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 hidden sm:block text-primary-blue hover:text-primary-blue transition-colors"
-                  aria-label="Scroll right"
-                >
-                  {allIcons.chevronRight(16, 16)}
-                </button>
-              )}
+              <button
+                onClick={() => scrollCategoryList("right")}
+                className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 hidden sm:block text-primary-blue hover:text-primary-blue transition-colors"
+                aria-label="Scroll right"
+              >
+                {allIcons.chevronRight(22, 22)}
+              </button>
             </div>
           </div>
         </div>
