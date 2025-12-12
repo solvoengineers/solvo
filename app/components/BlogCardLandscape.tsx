@@ -65,7 +65,7 @@ export default function BlogCardLandscape({
             {/* Avatar */}
             <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
               <Image
-                src={blog.author.avatar}
+                src={"/images/blogs/default-avatar.webp"}
                 alt={blog.author.name}
                 fill
                 className="object-cover"

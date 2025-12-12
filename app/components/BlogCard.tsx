@@ -72,7 +72,7 @@ export default function BlogCard({
             {/* Avatar */}
             <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
               <Image
-                src={blog.author.avatar}
+                src={"/images/blogs/default-avatar.webp"}
                 alt={blog.author.name}
                 className="object-cover"
                 fill
