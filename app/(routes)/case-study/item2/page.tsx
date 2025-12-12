@@ -59,7 +59,13 @@ export default function CaseStudyDehydratorPage() {
       </div>
 
       {/* Main Content Section with Gradient Background */}
-      <div className="w-full bg-gradient-to-t from-transparent via-[rgba(136,216,232,0.2)] to-[rgba(136,216,232,0.4)] py-section-spacing">
+      <div
+        className="w-full py-section-spacing"
+        style={{
+          background:
+            "linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(2, 115, 189, 0.08) 47.74%, rgba(2, 115, 189, 0.16) 88.56%)",
+        }}
+      >
         <div className="w-full max-w-desktop mx-auto  sm:px-side-space flex flex-col gap-6">
           {/* The Challenge Section */}
           <div className="flex flex-row items-start gap-[1.5rem]  sm:grid sm:grid-cols-1 sm:gap-6">

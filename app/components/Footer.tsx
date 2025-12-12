@@ -183,7 +183,13 @@ function BottomSection() {
 // Main Footer Component
 export default function Footer() {
   return (
-    <footer className="w-full bg-white bg-gradient-to-b from-[rgba(136,216,232,0.4)] via-[rgba(136,216,232,0.1)] to-transparent py-[3.125rem]  sm:px-side-space flex flex-col gap-6">
+    <footer
+      className="w-full bg-white py-[3.125rem] sm:px-side-space flex flex-col gap-6"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(2, 115, 189, 0.16) -9.85%, rgba(2, 115, 189, 0.04) 64.29%, rgba(255, 255, 255, 0) 93.66%)",
+      }}
+    >
       <div className="w-full max-w-desktop mx-auto flex flex-col gap-6 ">
         {/* Main Content */}
         <div className="flex flex-row sm:flex-col gap-[3.75rem] sm:gap-section-spacing w-full ">
