@@ -4,7 +4,7 @@ import Header from "@/app/components/Header";
 
 function ContactUsPage() {
   return (
-    <div className="w-full  flex flex-col bg-white relative justify-center gap-section-spacing page-wrapper">
+    <div className="w-full h-screen  flex flex-col bg-white relative justify-center gap-section-spacing page-wrapper">
       <div
         className="w-full h-full absolute -bottom-0 z-10 left-0 "
         style={{
@@ -16,12 +16,12 @@ function ContactUsPage() {
       <div className="hidden sm:block">
         <Header forContactUs={true}></Header>
       </div>
-      <div className="z-10">
-        <GetInTouch> </GetInTouch>
+      <div className="z-10 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-full">
+        <GetInTouch removeBadge></GetInTouch>
       </div>
-      <div className="blur-[20px]">
+      {/* <div className="blur-[20px]">
         <Footer></Footer>
-      </div>
+      </div> */}
     </div>
   );
 }
