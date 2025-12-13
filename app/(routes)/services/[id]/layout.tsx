@@ -5,37 +5,6 @@ type Props = {
   params: Promise<{ id: string }> | { id: string };
 };
 
-// Helper function to extract text from React node
-function extractText(node: React.ReactNode): string {
-  if (typeof node === "string") {
-    return node;
-  }
-  if (typeof node === "number") {
-    return String(node);
-  }
-  if (node === null || node === undefined) {
-    return "";
-  }
-  if (Array.isArray(node)) {
-    return node.map(extractText).filter(Boolean).join(" ");
-  }
-  if (typeof node === "object") {
-    // Handle React elements
-    if ("props" in node && node.props) {
-      if (node.props.children) {
-        return extractText(node.props.children);
-      }
-    }
-    // Handle React fragments
-    if ("type" in node && node.type === Symbol.for("react.fragment")) {
-      if ("props" in node && node.props && node.props.children) {
-        return extractText(node.props.children);
-      }
-    }
-  }
-  return "";
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Handle both Promise and direct params (for Next.js 13/14 and 15+)
   const resolvedParams = await Promise.resolve(params);
@@ -52,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // Extract title text from React node
-  const titleText = extractText(serviceItem.title);
+  // Use seoTitle for metadata
+  const titleText = serviceItem.seoTitle;
 
   // Use subtitle as description (it's already optimized and concise)
   const descriptionText = serviceItem.subtitle;
@@ -93,7 +62,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ...(serviceKeywords[serviceId] || []),
     "engineering services",
     "Solvo Engineers",
-    titleText.toLowerCase(),
   ];
 
   return {

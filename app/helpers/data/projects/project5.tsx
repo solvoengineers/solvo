@@ -2,6 +2,7 @@ import { IFullProject } from "../../projects.data";
 
 export const project5: IFullProject = {
   title: "CFD Analysis of an RC Aircraft Wing Optimization",
+  seoTitle: "CFD Analysis of an RC Aircraft Wing Optimization",
   description:
     "A comprehensive CFD analysis to investigate and optimize the aerodynamic performance of two custom-designed RC aircraft wings using Ansys Fluent.",
   image: "/images/projects/item4/main-image.webp",

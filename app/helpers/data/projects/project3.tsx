@@ -3,6 +3,7 @@ import { IFullProject } from "../../projects.data";
 export const project3: IFullProject = {
   title:
     "CFD Analysis of Compressible Flow in a Converging-Diverging Nozzle Using Ansys Fluent",
+  seoTitle: "CFD Analysis of Compressible Flow in a Converging-Diverging Nozzle Using Ansys Fluent",
   description:
     "A detailed CFD analysis of compressible airflow through a two-dimensional converging-diverging nozzle using Ansys Fluent to investigate subsonic to supersonic flow acceleration.",
   image: "/images/projects/item3/main-image.webp",

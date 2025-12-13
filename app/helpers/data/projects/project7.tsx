@@ -3,6 +3,7 @@ import { IFullProject } from "../../projects.data";
 export const project7: IFullProject = {
   title:
     "CFD-Based Drag Optimization of Mercedes W11 Formula One Wing Using Ansys Fluent",
+  seoTitle: "CFD-Based Drag Optimization of Mercedes W11 Formula One Wing Using Ansys Fluent",
   description:
     "A detailed CFD analysis of the Mercedes-AMG W11 Formula One front wing, focusing on optimizing aerodynamic performance by minimizing drag while maintaining controlled downforce characteristics.",
   image: "/images/projects/item7/main-image.webp",

@@ -2,6 +2,7 @@ import { IFullProject } from "../../projects.data";
 
 export const project10: IFullProject = {
   title: "FEA Analysis of Nylon Injection Moulding Part",
+  seoTitle: "FEA Analysis of Nylon Injection Moulding Part",
   description:
     "A structural performance evaluation of a nylon-based injection-moulded bracket using Finite Element Analysis (FEA) to validate mechanical strength and reliability under expected load conditions.",
   image: "/images/projects/item10/main-image.webp",

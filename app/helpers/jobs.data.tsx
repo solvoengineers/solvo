@@ -1,6 +1,7 @@
 export interface IJobPosition {
   id: string;
   title: string;
+  seoTitle: string;
   employmentType: string;
   workType: string;
   location: string;
@@ -18,6 +19,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "cfd-engineer",
     title: "CFD Engineer",
+    seoTitle: "CFD Engineer - Careers at Solvo Engineers",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
@@ -54,6 +56,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "fea-engineer",
     title: "FEA Engineer",
+    seoTitle: "FEA Engineer - Careers at Solvo Engineers",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
@@ -88,6 +91,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "business-developer",
     title: "Business Developer",
+    seoTitle: "Business Developer - Careers at Solvo Engineers",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
@@ -122,6 +126,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "social-media-manager",
     title: "Social Media Manager",
+    seoTitle: "Social Media Manager - Careers at Solvo Engineers",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",

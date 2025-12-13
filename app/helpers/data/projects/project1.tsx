@@ -2,6 +2,7 @@ import { IFullProject } from "../../projects.data";
 
 export const project1: IFullProject = {
   title: "1U CubeSat Thermal-Mechanical (Coupled) Stress Analysis",
+  seoTitle: "1U CubeSat Thermal-Mechanical (Coupled) Stress Analysis",
   description:
     "A detailed coupled thermal and mechanical stress analysis of a standard 1U CubeSat intended for low Earth orbit operations.",
   image: "/images/projects/item1/main-image.webp",

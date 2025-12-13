@@ -92,6 +92,7 @@ export interface IFAQ {
 export interface IServiceItem {
   id: "fea-analysis" | "cfd-analysis" | "cad-analysis";
   title: React.ReactNode;
+  seoTitle: string;
   subtitle: string;
   heroImage: string;
   content: {
@@ -114,6 +115,7 @@ export const allServiceItems: IServiceItem[] = [
         FEA Analysis <span className="text-primary-blue">Services</span>
       </>
     ),
+    seoTitle: "FEA Analysis Services - Finite Element Analysis Solutions",
     subtitle:
       "Get clear, accurate FEA results every time, solve complex engineering problems into confident decisions.",
     heroImage: "/images/service-pages/fea-analysis/top-section/hero-image.webp",
@@ -261,6 +263,7 @@ export const allServiceItems: IServiceItem[] = [
         CFD Analysis <span className="text-primary-blue">Services</span>
       </>
     ),
+    seoTitle: "CFD Analysis Services - Computational Fluid Dynamics Solutions",
     subtitle:
       "From airflow and cooling to mixing and pressure drop, CFD shows what's happening inside your design so you can improve it fast",
     heroImage: "/images/service-pages/cfd-analysis/top-section/hero-image.webp",
@@ -414,6 +417,7 @@ export const allServiceItems: IServiceItem[] = [
         CAD Analysis <span className="text-primary-blue">Services</span>
       </>
     ),
+    seoTitle: "CAD Analysis Services - 3D CAD Modeling & Design Solutions",
     subtitle:
       "From sketch to 3D model, CAD helps you refine designs, spot issues early, and move faster to manufacturing",
     heroImage: "/images/service-pages/cad-analysis/top-section/hero-image.webp",

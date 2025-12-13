@@ -18,35 +18,6 @@ interface ServicePageProps {
   };
 }
 
-// Helper function to extract text from React node
-function extractText(node: React.ReactNode): string {
-  if (typeof node === "string") {
-    return node;
-  }
-  if (typeof node === "number") {
-    return String(node);
-  }
-  if (node === null || node === undefined) {
-    return "";
-  }
-  if (Array.isArray(node)) {
-    return node.map(extractText).filter(Boolean).join(" ");
-  }
-  if (typeof node === "object") {
-    if ("props" in node && node.props) {
-      if (node.props.children) {
-        return extractText(node.props.children);
-      }
-    }
-    if ("type" in node && node.type === Symbol.for("react.fragment")) {
-      if ("props" in node && node.props && node.props.children) {
-        return extractText(node.props.children);
-      }
-    }
-  }
-  return "";
-}
-
 export default function ServicePage({ params }: ServicePageProps) {
   const { id } = useParams();
 
@@ -58,10 +29,8 @@ export default function ServicePage({ params }: ServicePageProps) {
 
   // Generate structured data based on params
   useEffect(() => {
-    const titleText = extractText(serviceItem.title);
+    const titleText = serviceItem.seoTitle;
     const descriptionText = serviceItem.subtitle;
-    const contentTitle = serviceItem.content.title;
-    const contentDescription = extractText(serviceItem.content.description);
 
     // Service schema for structured data
     const serviceSchema = {

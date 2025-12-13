@@ -13,6 +13,7 @@ import { project11 } from "./data/projects/project11";
 
 export interface IFullProject {
   title: string;
+  seoTitle: string;
   description: string;
   image: string;
   link: string;
