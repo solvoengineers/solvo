@@ -14,7 +14,6 @@ const TopSection = () => {
           src="/images/about/hero-dots2.webp"
           alt="Hero dots"
           className="absolute top-0 left-0 -translate-y-[3rem] sm:h-[10rem] h-[15rem] "
-          alt="Background Pattern"
         ></img>
 
         <PageHeading
