@@ -22,7 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Use seoTitle for metadata
   const titleText = job.seoTitle;
-  const descriptionText = job.introduction || `Apply for ${job.title} position at Solvo Engineers. Join our team of expert engineers.`;
+  const descriptionText =
+    job.introduction ||
+    `Apply for ${job.title} position at Solvo Engineers. Join our team of expert engineers.`;
 
   // Generate keywords based on job type
   const jobKeywords: Record<string, string[]> = {
@@ -72,22 +74,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: descriptionText,
       url: job.link,
       type: "article",
-      images: job.image
-        ? [
-            {
-              url: job.image,
-              width: 1200,
-              height: 630,
-              alt: titleText,
-            },
-          ]
-        : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: titleText,
       description: descriptionText,
-      images: job.image ? [job.image] : undefined,
     },
     alternates: {
       canonical: job.link,
@@ -106,4 +97,3 @@ export default function CareerLayout({
 }) {
   return <>{children}</>;
 }
-
