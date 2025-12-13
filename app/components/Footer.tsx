@@ -112,17 +112,6 @@ function RightSection() {
             Contact Us
           </h3>
           <div className="flex flex-col gap-3">
-            <div className="flex flex-row items-center gap-2.5 w-full">
-              <div className="w-5 h-5 text-primary-blue flex-shrink-0">
-                {allIcons.footer.contact(20, 20)}
-              </div>
-              <a
-                href="tel:+923126099600"
-                className="text-base text-footer-text font-normal font-poppins"
-              >
-                +92 312 6099600
-              </a>
-            </div>
             <div className="flex flex-row items-center gap-2.5">
               <div className="w-5 h-5 text-primary-blue flex-shrink-0">
                 {allIcons.footer.message(20, 20)}

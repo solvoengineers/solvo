@@ -100,7 +100,8 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
 
           {/* Slider Controls */}
           <a
-            href="/verify-reviews"
+            href="https://www.upwork.com/agencies/1692951574913634304/"
+            target="_blank"
             className="text-base underline text-primary-blue font-normal font-poppins hover:underline sm:px-side-space hidden sm:block "
           >
             Verify our reviews
@@ -135,12 +136,13 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
           </div>
           {/* Swiper Container */}
           <div className="w-full relative">
-            <Link
-              href="/verify-reviews"
-              className="text-base absolute bottom-0 underline text-primary-blue font-normal font-poppins hover:underline sm:hidden"
+            <a
+              href="https://www.upwork.com/agencies/1692951574913634304/"
+              target="_blank"
+              className="text-base absolute bottom-0 underline text-primary-blue font-normal font-poppins hover:underline sm:hidden z-10"
             >
               Verify our reviews
-            </Link>
+            </a>
             <Swiper
               spaceBetween={30}
               slidesPerView={1}

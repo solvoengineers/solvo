@@ -756,7 +756,7 @@ export const allHomePageServiceItems: IHomePageServiceItem[] = [
 
 export const allHeroSectionItems: IHeroSectionItem[] = [
   {
-    badgeText: "Our Most In-Demand CFD Services",
+    badgeText: "Our Most In-Demand CAE Services",
     badgeIcon: "/images/zap-icon.svg",
     title: "Computation Fluid Dynamics - CFD",
     features: [
@@ -770,7 +770,7 @@ export const allHeroSectionItems: IHeroSectionItem[] = [
     image: "/images/hero-section/item1.webp",
   },
   {
-    badgeText: "Our Most In-Demand CFD Services",
+    badgeText: "Our Most In-Demand CAE Services",
     badgeIcon: "/images/zap-icon.svg",
     title: "Finite Element Analysis - FEA",
     features: [
@@ -784,7 +784,7 @@ export const allHeroSectionItems: IHeroSectionItem[] = [
     image: "/images/hero-section/item2.webp",
   },
   {
-    badgeText: "Our Most In-Demand CFD Services",
+    badgeText: "Our Most In-Demand CAE Services",
     badgeIcon: "/images/zap-icon.svg",
     title: "Computation Fluid Dynamics-CAD",
     features: [

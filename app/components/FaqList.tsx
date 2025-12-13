@@ -48,7 +48,7 @@ export default function FaqList({ faqs, className = "" }: FaqListProps) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 max-h-[29.5rem] overflow-y-auto">
+        <div className="flex flex-col gap-6 max-h-[29.5rem] overflow-y-auto custom-scrollbar px-4">
           <div className="flex flex-col gap-6">
             <Faq faqs={faqs} />
           </div>
