@@ -124,7 +124,7 @@ const CustomerSimulationItemMobile: React.FC<
 
             {/* Step Image - Centered */}
             <div className="relative w-full flex items-center justify-center">
-              <div className="relative w-full max-w-[15rem] aspect-square">
+              <div className="relative w-full max-h-[13rem] aspect-square ">
                 <Image
                   src={phase.stepImage}
                   alt={`Step ${phase.stepNumber}`}
