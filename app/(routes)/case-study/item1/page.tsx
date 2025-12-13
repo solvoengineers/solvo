@@ -24,6 +24,7 @@ export default function CaseStudyFEAPage() {
         </h1>
         <img
           src="/images/about/hero-dots2.webp"
+          alt="Hero dots"
           className="absolute top-0 left-0 -translate-y-[13rem] sm:h-[10rem] h-[15rem]  "
           alt="Background Pattern"
         ></img>
