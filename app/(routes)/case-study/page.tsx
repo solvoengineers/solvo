@@ -11,6 +11,30 @@ import GetInTouch from "@/app/components/GetInTouch";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import Divider from "@/app/components/Divider";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Case Studies - Engineering Success Stories",
+  description:
+    "Explore our engineering case studies showcasing successful FEA, CFD, and CAD projects. Learn how Solvo Engineers delivers innovative solutions for clients across industries.",
+  keywords: [
+    "engineering case studies",
+    "FEA case studies",
+    "CFD case studies",
+    "CAD case studies",
+    "engineering success stories",
+    "project examples",
+  ],
+  openGraph: {
+    title: "Case Studies - Solvo Engineers",
+    description:
+      "Explore our engineering case studies showcasing successful FEA, CFD, and CAD projects.",
+    url: "/case-study",
+  },
+  alternates: {
+    canonical: "/case-study",
+  },
+};
 
 export default function CaseStudyPage() {
   return (

@@ -8,7 +8,7 @@ import CaseStudyImageWrapper from "../components/CaseStudyImageWrapper";
 export default function CaseStudyDehydratorPage() {
   return (
     <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
-      <Header />
+      <Header activeRoute="case-study" />
 
       {/* Hero Section with Gradient Background */}
       <div className="w-full max-w-desktop mx-auto flex flex-col items-start gap-6 sm:px-side-space relative">

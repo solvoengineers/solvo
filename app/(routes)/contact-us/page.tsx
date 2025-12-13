@@ -3,6 +3,32 @@ import GetInTouch from "@/app/components/GetInTouch";
 import Header from "@/app/components/Header";
 import Link from "next/link";
 import { allIcons } from "@/app/helpers/icons";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Get in Touch with Solvo Engineers",
+  description:
+    "Contact Solvo Engineers for expert engineering consultation services. Get in touch with our team of professional licensed engineers for FEA, CFD, and CAD solutions.",
+  keywords: [
+    "contact solvo engineers",
+    "engineering consultation",
+    "get in touch",
+    "engineering services contact",
+  ],
+  openGraph: {
+    title: "Contact Us - Solvo Engineers",
+    description:
+      "Contact Solvo Engineers for expert engineering consultation services. Get in touch with our team of professional licensed engineers.",
+    url: "/contact-us",
+  },
+  alternates: {
+    canonical: "/contact-us",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 function ContactUsPage() {
   return (

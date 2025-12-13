@@ -67,7 +67,7 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
             {/* Badge */}
             <GreenBadge
               icon={"/images/zap-icon.svg"}
-              text="Solvo's Premium"
+              text="Testimonials"
             ></GreenBadge>
 
             {/* Title */}

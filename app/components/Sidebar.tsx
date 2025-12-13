@@ -111,7 +111,7 @@ export default function Sidebar({
           const isActive = activeRoute === item.id;
           const isServices = item.id === "services";
           const isAbout = item.id === "about";
-          const hasBottomBorder = !isLastItem(index);
+          const hasBottomBorder = index !== menuItems.length - 2;
 
           return (
             <div key={item.id}>
