@@ -54,7 +54,7 @@ export const allProducts: ProductDetail[] = [
     description:
       "This project focused on a micro gas turbine engine designed to generate 50 kg of thrust. While the hardware was successfully assembled and could be spun up to 13,500 RPM using an external starter motor, the engine consistently failed to sustain combustion once the starter was disengaged. The RPM would quickly fall to 6,500 and then the engine would shut down entirely, clearly indicating a failure in transitioning to self-sustained combustion.",
     caseStudyLink: "/case-study/item4",
-    image: "/images/products/item4.webp",
+    image: "/images/products/item3.webp",
   },
 ];
 
