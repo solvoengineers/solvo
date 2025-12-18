@@ -19,7 +19,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
+    ],
+  },
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com"
+  ),
   title: {
     default: "Solvo Engineers - Expert FEA, CFD & CAD Engineering Services",
     template: "%s | Solvo Engineers",
