@@ -22,10 +22,12 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   icons: {
     icon: [
-      { url: "/favicon.ico" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
       { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
     ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/favicon-96.png", sizes: "96x96", type: "image/png" }],
   },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com"
