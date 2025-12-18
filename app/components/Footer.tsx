@@ -69,12 +69,6 @@ function RightSection() {
             >
               Case Studies
             </Link>
-            <Link
-              href="/faqs"
-              className="text-base text-footer-text font-normal font-poppins"
-            >
-              FAQs
-            </Link>
           </div>
         </div>
 
