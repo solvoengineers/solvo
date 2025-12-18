@@ -21,40 +21,44 @@ export interface IHeroSectionItem {
 
 export const allProducts: ProductDetail[] = [
   {
-    logo: "/images/case-study/item1/logo.png",
+    logo: "/images/case-study/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts/logo.png",
     title:
       "FEA Analysis to Enhancing Stiffness and Fatigue Life of Rubber-to-Metal Bonded Parts",
     description:
       "Bony Polymers, a trusted manufacturer of precision rubber-to-metal bonded parts in India, approached us to improve the performance of a critical side bumper assembly. The goal was to increase the component’s static stiffness to 0.7 kN/mm for a displacement range of 5–10 mm, while also ensuring that the part could reliably withstand at least 600,000 load cycles.",
-    caseStudyLink: "/case-study/item1",
+    caseStudyLink:
+      "/case-study/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts",
     image: "/images/products/rubber-metal-parts-image.webp",
   },
   {
-    logo: "/images/case-study/item2/logo.png",
+    logo: "/images/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
     title:
       "CFD Analysis and Airflow Optimization for Industrial Dehydrator System",
     description:
       "Commercial Dehydrators America approached us to investigate a critical airflow issue within their industrial dehydrator system. The dehydrator, consisting of 50 stacked drying trays, was experiencing non-uniform airflow at a design speed of 1 meter per second. Despite a seemingly adequate system layout, the airflow was disturbed, non-laminar, and inconsistent",
-    caseStudyLink: "/case-study/item2",
+    caseStudyLink:
+      "/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system",
     image: "/images/products/dehydrator-system-image.webp",
   },
   {
-    logo: "/images/case-study/item3/logo.png",
+    logo: "/images/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
     title:
       "Design Optimizing and CFD Analysis for Radial Vortex Flow Controls Device (VFC)",
     description:
       "SuDS Enviro Ltd engaged us to design and simulate a set of Radial Vortex Flow Control (VFC) devices that control stormwater flows using a purely hydraulic mechanism—without moving parts, power, or complex control systems. These devices needed to manage both low and high flow conditions, enabling unrestricted flow at low volumes and inducing vortex-driven throttling during peak flows.",
-    caseStudyLink: "/case-study/item3",
+    caseStudyLink:
+      "/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc",
     image: "/images/products/vfc-device-image.webp",
   },
   {
-    logo: "/images/case-study/item4/logo.png",
+    logo: "/images/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine/logo.png",
     title:
       "CFD Design optimization to achieve self-sustaining combustion in a micro gas turbine",
     description:
       "This project focused on a micro gas turbine engine designed to generate 50 kg of thrust. While the hardware was successfully assembled and could be spun up to 13,500 RPM using an external starter motor, the engine consistently failed to sustain combustion once the starter was disengaged. The RPM would quickly fall to 6,500 and then the engine would shut down entirely, clearly indicating a failure in transitioning to self-sustained combustion.",
-    caseStudyLink: "/case-study/item4",
-    image: "/images/products/item3.webp",
+    caseStudyLink:
+      "/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine",
+    image: "/images/products/item4.webp",
   },
 ];
 
@@ -90,7 +94,10 @@ export interface IFAQ {
 }
 
 export interface IServiceItem {
-  id: "fea-analysis" | "cfd-analysis" | "cad-analysis";
+  id:
+    | "finite-element-anlaysis-fea"
+    | "computational-fluid-dynamics-cfd"
+    | "3d-cad-designing";
   title: React.ReactNode;
   seoTitle: string;
   subtitle: string;
@@ -109,7 +116,7 @@ export interface IServiceItem {
 
 export const allServiceItems: IServiceItem[] = [
   {
-    id: "fea-analysis",
+    id: "finite-element-anlaysis-fea",
     title: (
       <>
         FEA Analysis <span className="text-primary-blue">Services</span>
@@ -118,7 +125,8 @@ export const allServiceItems: IServiceItem[] = [
     seoTitle: "FEA Analysis Services - Finite Element Analysis Solutions",
     subtitle:
       "Get clear, accurate FEA results every time, solve complex engineering problems into confident decisions.",
-    heroImage: "/images/service-pages/fea-analysis/top-section/hero-image.webp",
+    heroImage:
+      "/images/service-pages/finite-element-anlaysis-fea/top-section/hero-image.webp",
     content: {
       title: "FEA Services for Strong & Reliable Products",
       description: (
@@ -138,22 +146,22 @@ export const allServiceItems: IServiceItem[] = [
       ),
       rightSection: {
         image:
-          "/images/service-pages/fea-analysis/top-section/content-image.webp",
+          "/images/service-pages/finite-element-anlaysis-fea/top-section/content-image.webp",
         moreServices: [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
               "Our CFD services provide In-Design insights into fluid flow phrnomena to enchance product efficiency and reliability",
-            link: "/services/cfd-analysis",
-            logo: "/images/service-pages/cfd-analysis/logo.webp",
+            link: "/services/computational-fluid-dynamics-cfd",
+            logo: "/images/service-pages/computational-fluid-dynamics-cfd/logo.webp",
           },
           {
             title: "3D CAD Modeling",
             description:
               "Our CAD services transform concept into precise digital models. Facilitating seamless progression form design to production",
-            link: "/services/cad-analysis",
+            link: "/services/3d-cad-designing",
 
-            logo: "/images/service-pages/cad-analysis/logo.webp",
+            logo: "/images/service-pages/3d-cad-designing/logo.webp",
           },
         ],
       },
@@ -161,51 +169,63 @@ export const allServiceItems: IServiceItem[] = [
     expertiseItems: [
       {
         title: "Crashworthiness Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img1.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img1.webp",
       },
       {
         title: "Structural Design Optimization",
-        image: "/images/service-pages/fea-analysis/expertise-items/img2.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img2.webp",
       },
       {
         title: "Stress Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img3.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img3.webp",
       },
       {
         title: "Topology Optmisation",
-        image: "/images/service-pages/fea-analysis/expertise-items/img4.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img4.webp",
       },
       {
         title: "Coupled Thermo-Stress Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img5.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img5.webp",
       },
       {
         title: "Mesh Independent Study (MIT)",
-        image: "/images/service-pages/fea-analysis/expertise-items/img6.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img6.webp",
       },
       {
         title: "Buckling Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img7.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img7.webp",
       },
       {
         title: "Seismic Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img8.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img8.webp",
       },
       {
         title: "Drop Test's",
-        image: "/images/service-pages/fea-analysis/expertise-items/img9.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img9.webp",
       },
       {
         title: "Fatigue Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img10.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img10.webp",
       },
       {
         title: "Structural Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img11.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img11.webp",
       },
       {
         title: "Modal Analysis",
-        image: "/images/service-pages/fea-analysis/expertise-items/img12.webp",
+        image:
+          "/images/service-pages/finite-element-anlaysis-fea/expertise-items/img12.webp",
       },
     ],
     faqs: [
@@ -257,7 +277,7 @@ export const allServiceItems: IServiceItem[] = [
     ],
   },
   {
-    id: "cfd-analysis",
+    id: "computational-fluid-dynamics-cfd",
     title: (
       <>
         CFD Analysis <span className="text-primary-blue">Services</span>
@@ -266,7 +286,8 @@ export const allServiceItems: IServiceItem[] = [
     seoTitle: "CFD Analysis Services - Computational Fluid Dynamics Solutions",
     subtitle:
       "From airflow and cooling to mixing and pressure drop, CFD shows what's happening inside your design so you can improve it fast",
-    heroImage: "/images/service-pages/cfd-analysis/top-section/hero-image.webp",
+    heroImage:
+      "/images/service-pages/computational-fluid-dynamics-cfd/top-section/hero-image.webp",
     content: {
       title: "CFD Services for Enhanced Product Performance",
       description: (
@@ -286,23 +307,23 @@ export const allServiceItems: IServiceItem[] = [
       ),
       rightSection: {
         image:
-          "/images/service-pages/cfd-analysis/top-section/content-image.webp",
+          "/images/service-pages/computational-fluid-dynamics-cfd/top-section/content-image.webp",
         moreServices: [
           {
             title: "Finite Element Analysis - FEA",
             description:
               "Our FEA services deliver in-design guidance on stress and deformation to improve product strength, safety and durability.",
-            link: "/services/fea-analysis",
+            link: "/services/finite-element-anlaysis-fea",
 
-            logo: "/images/service-pages/fea-analysis/logo.webp",
+            logo: "/images/service-pages/finite-element-anlaysis-fea/logo.webp",
           },
           {
             title: "3D CAD Modeling",
             description:
               "Our CAD services transform concept into precise digital models. Facilitating seamless progression form design to production",
-            link: "/services/cad-analysis",
+            link: "/services/3d-cad-designing",
 
-            logo: "/images/service-pages/cad-analysis/logo.webp",
+            logo: "/images/service-pages/3d-cad-designing/logo.webp",
           },
         ],
       },
@@ -310,51 +331,63 @@ export const allServiceItems: IServiceItem[] = [
     expertiseItems: [
       {
         title: "Airflow Testing & Optimisation",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img1.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img1.webp",
       },
       {
         title: "Combustion Simulations",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img2.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img2.webp",
       },
       {
         title: "Multi-physics Analysis",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img3.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img3.webp",
       },
       {
         title: "Particle Tracking Analysis",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img4.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img4.webp",
       },
       {
         title: "Melting & Solidification",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img5.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img5.webp",
       },
       {
         title: "HVAC Solutions",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img6.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img6.webp",
       },
       {
         title: "Turbo Machinery Analysis",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img7.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img7.webp",
       },
       {
         title: "Fluid-Structure Interaction-FSI",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img8.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img8.webp",
       },
       {
         title: "Design Optimization",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img9.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img9.webp",
       },
       {
         title: "Electromagnetic Analysis",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img10.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img10.webp",
       },
       {
         title: "Hydrodynamic Analysis",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img11.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img11.webp",
       },
       {
         title: "Thermal Analysis",
-        image: "/images/service-pages/cfd-analysis/expertise-items/img12.webp",
+        image:
+          "/images/service-pages/computational-fluid-dynamics-cfd/expertise-items/img12.webp",
       },
     ],
     faqs: [
@@ -411,7 +444,7 @@ export const allServiceItems: IServiceItem[] = [
     ],
   },
   {
-    id: "cad-analysis",
+    id: "3d-cad-designing",
     title: (
       <>
         CAD Analysis <span className="text-primary-blue">Services</span>
@@ -420,7 +453,8 @@ export const allServiceItems: IServiceItem[] = [
     seoTitle: "CAD Analysis Services - 3D CAD Modeling & Design Solutions",
     subtitle:
       "From sketch to 3D model, CAD helps you refine designs, spot issues early, and move faster to manufacturing",
-    heroImage: "/images/service-pages/cad-analysis/top-section/hero-image.webp",
+    heroImage:
+      "/images/service-pages/3d-cad-designing/top-section/hero-image.webp",
     content: {
       title: "CAD Services for Precise Digital Models",
       description: (
@@ -440,22 +474,22 @@ export const allServiceItems: IServiceItem[] = [
       ),
       rightSection: {
         image:
-          "/images/service-pages/cad-analysis/top-section/content-image.webp",
+          "/images/service-pages/3d-cad-designing/top-section/content-image.webp",
         moreServices: [
           {
             title: "Finite Element Analysis - FEA",
             description:
               "Our FEA services deliver in-design guidance on stress and deformation to improve product strength, safety and durability.",
-            link: "/services/fea-analysis",
+            link: "/services/finite-element-anlaysis-fea",
 
-            logo: "/images/service-pages/fea-analysis/logo.webp",
+            logo: "/images/service-pages/finite-element-anlaysis-fea/logo.webp",
           },
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
               "Our CFD services provide In-Design insights into fluid flow phrnomena to enchance product efficiency and reliability",
-            link: "/services/cfd-analysis",
-            logo: "/images/service-pages/cfd-analysis/logo.webp",
+            link: "/services/computational-fluid-dynamics-cfd",
+            logo: "/images/service-pages/computational-fluid-dynamics-cfd/logo.webp",
           },
         ],
       },
@@ -463,51 +497,63 @@ export const allServiceItems: IServiceItem[] = [
     expertiseItems: [
       {
         title: "3D Modeling",
-        image: "/images/service-pages/cad-analysis/expertise-items/img1.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img1.webp",
       },
       {
         title: "Assembly Modeling",
-        image: "/images/service-pages/cad-analysis/expertise-items/img2.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img2.webp",
       },
       {
         title: "Sheet Metal Design",
-        image: "/images/service-pages/cad-analysis/expertise-items/img3.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img3.webp",
       },
       {
         title: "Design for Manufacturing-DFM",
-        image: "/images/service-pages/cad-analysis/expertise-items/img4.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img4.webp",
       },
       {
         title: "Parametric Modeling",
-        image: "/images/service-pages/cad-analysis/expertise-items/img5.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img5.webp",
       },
       {
         title: "Reverse Engineering",
-        image: "/images/service-pages/cad-analysis/expertise-items/img6.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img6.webp",
       },
       {
         title: "Product Visualization",
-        image: "/images/service-pages/cad-analysis/expertise-items/img7.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img7.webp",
       },
       {
         title: "CAD Conversion",
-        image: "/images/service-pages/cad-analysis/expertise-items/img8.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img8.webp",
       },
       {
         title: "Rapid Prototyping",
-        image: "/images/service-pages/cad-analysis/expertise-items/img9.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img9.webp",
       },
       {
         title: "Geometric Dimensioning & Tolerancing",
-        image: "/images/service-pages/cad-analysis/expertise-items/img10.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img10.webp",
       },
       {
         title: "BOM - Bill of Materials",
-        image: "/images/service-pages/cad-analysis/expertise-items/img11.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img11.webp",
       },
       {
         title: "Motion Analysis",
-        image: "/images/service-pages/cad-analysis/expertise-items/img12.webp",
+        image:
+          "/images/service-pages/3d-cad-designing/expertise-items/img12.webp",
       },
     ],
     faqs: [

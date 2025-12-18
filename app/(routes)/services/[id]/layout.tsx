@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Generate keywords based on service type
   const serviceKeywords: Record<string, string[]> = {
-    "fea-analysis": [
+    "finite-element-anlaysis-fea": [
       "FEA analysis",
       "finite element analysis",
       "FEA services",
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "FEA simulation",
       "engineering analysis",
     ],
-    "cfd-analysis": [
+    "computational-fluid-dynamics-cfd": [
       "CFD analysis",
       "computational fluid dynamics",
       "CFD services",
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "aerodynamic analysis",
       "thermal analysis",
     ],
-    "cad-analysis": [
+    "3d-cad-designing": [
       "CAD services",
       "3D CAD modeling",
       "CAD design",
