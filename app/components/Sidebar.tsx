@@ -14,7 +14,7 @@ interface SidebarProps {
     | "projects"
     | "career"
     | "blogs"
-    | "case-study"
+    | "case-studies"
     | "contact";
   onClose?: () => void;
 }
@@ -69,7 +69,7 @@ export default function Sidebar({
     { id: "projects", label: "Projects", href: "/projects" },
     { id: "career", label: "Career", href: "/careers" },
     { id: "blogs", label: "Blogs", href: "/blogs" },
-    { id: "case-study", label: "Case Studies", href: "/case-study" },
+    { id: "case-studies", label: "Case Studies", href: "/case-studies" },
     { id: "contact", label: "Contact Us", href: "/contact" },
   ];
 

@@ -64,7 +64,7 @@ function RightSection() {
             </Link>
 
             <Link
-              href="/case-study"
+              href="/case-studies"
               className="text-base text-footer-text font-normal font-poppins"
             >
               Case Studies

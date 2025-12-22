@@ -21,42 +21,42 @@ export interface IHeroSectionItem {
 
 export const allProducts: ProductDetail[] = [
   {
-    logo: "/images/case-study/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts/logo.png",
+    logo: "/images/case-studies/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts/logo.png",
     title:
       "FEA Analysis to Enhancing Stiffness and Fatigue Life of Rubber-to-Metal Bonded Parts",
     description:
       "Bony Polymers, a trusted manufacturer of precision rubber-to-metal bonded parts in India, approached us to improve the performance of a critical side bumper assembly. The goal was to increase the component’s static stiffness to 0.7 kN/mm for a displacement range of 5–10 mm, while also ensuring that the part could reliably withstand at least 600,000 load cycles.",
     caseStudyLink:
-      "/case-study/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts",
+      "/case-studies/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts",
     image: "/images/products/rubber-metal-parts-image.webp",
   },
   {
-    logo: "/images/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
+    logo: "/images/case-studies/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
     title:
       "CFD Analysis and Airflow Optimization for Industrial Dehydrator System",
     description:
       "Commercial Dehydrators America approached us to investigate a critical airflow issue within their industrial dehydrator system. The dehydrator, consisting of 50 stacked drying trays, was experiencing non-uniform airflow at a design speed of 1 meter per second. Despite a seemingly adequate system layout, the airflow was disturbed, non-laminar, and inconsistent",
     caseStudyLink:
-      "/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system",
+      "/case-studies/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system",
     image: "/images/products/dehydrator-system-image.webp",
   },
   {
-    logo: "/images/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
+    logo: "/images/case-studies/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
     title:
       "Design Optimizing and CFD Analysis for Radial Vortex Flow Controls Device (VFC)",
     description:
       "SuDS Enviro Ltd engaged us to design and simulate a set of Radial Vortex Flow Control (VFC) devices that control stormwater flows using a purely hydraulic mechanism—without moving parts, power, or complex control systems. These devices needed to manage both low and high flow conditions, enabling unrestricted flow at low volumes and inducing vortex-driven throttling during peak flows.",
     caseStudyLink:
-      "/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc",
+      "/case-studies/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc",
     image: "/images/products/vfc-device-image.webp",
   },
   {
-    logo: "/images/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine/logo.png",
+    logo: "/images/case-studies/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine/logo.png",
     title:
       "CFD Design optimization to achieve self-sustaining combustion in a micro gas turbine",
     description: `This project involved a micro gas turbine designed to produce 50 kg thrust. Although the hardware was assembled and accelerated to 13,500 RPM using an external starter, combustion could not be sustained after disengagement. Speed rapidly dropped to 6,500 RPM, followed by complete shutdown, indicating failure to transition to stable self-sustained combustion during normal operating conditions consistently`,
     caseStudyLink:
-      "/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine",
+      "/case-studies/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine",
     image: "/images/products/item4.webp",
   },
 ];

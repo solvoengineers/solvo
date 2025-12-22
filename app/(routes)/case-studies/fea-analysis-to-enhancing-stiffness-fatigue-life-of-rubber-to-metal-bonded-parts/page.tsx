@@ -9,7 +9,7 @@ import CaseStudyImageWrapper from "../components/CaseStudyImageWrapper";
 export default function CaseStudyFEAPage() {
   return (
     <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
-      <Header activeRoute="case-study" />
+      <Header activeRoute="case-studies" />
 
       {/* Hero Section with Gradient Background */}
       <div className="w-full max-w-desktop mx-auto flex flex-col items-start gap-6 sm:px-side-space relative">

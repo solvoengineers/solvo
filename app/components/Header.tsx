@@ -18,7 +18,7 @@ interface HeaderProps {
     | "projects"
     | "career"
     | "blogs"
-    | "case-study";
+    | "case-studies";
 
   forContactUs?: boolean;
 }
@@ -31,7 +31,7 @@ interface NavigationItem {
     | "projects"
     | "career"
     | "blogs"
-    | "case-study";
+    | "case-studies";
   label: string;
   href?: string;
   hasDropdown?: boolean;
@@ -90,9 +90,9 @@ export default function Header({
       href: "/blogs",
     },
     {
-      id: "case-study",
+      id: "case-studies",
       label: "Case Studies",
-      href: "/case-study",
+      href: "/case-studies",
     },
   ];
 

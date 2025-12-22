@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { allCaseStudies } from "@/app/helpers/case-study.data";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const caseStudy = allCaseStudies.find((cs) => cs.link === "/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine");
+  const caseStudy = allCaseStudies.find((cs) => cs.link === "/case-studies/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc");
 
   if (!caseStudy) {
     return {
@@ -22,9 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "computational fluid dynamics",
       "case study",
       "engineering case study",
-      "gas turbine",
-      "combustion analysis",
-      "micro gas turbine",
+      "vortex flow control",
+      "VFC device",
       "Solvo Engineers",
     ],
     openGraph: {
@@ -53,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function CaseStudyItem4Layout({
+export default function CaseStudyItem3Layout({
   children,
 }: {
   children: React.ReactNode;

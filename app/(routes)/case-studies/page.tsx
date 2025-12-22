@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     title: "Case Studies - Solvo Engineers",
     description:
       "Explore our engineering case studies showcasing successful FEA, CFD, and CAD projects.",
-    url: "/case-study",
+    url: "/case-studies",
   },
   alternates: {
-    canonical: "/case-study",
+    canonical: "/case-studies",
   },
 };
 
@@ -40,7 +40,7 @@ export default function CaseStudyPage() {
   return (
     <div className="flex flex-col w-full h-full bg-white gap-section-spacing overflow-visible page-wrapper">
       {/* Header Section */}
-      <Header activeRoute="case-study" />
+      <Header activeRoute="case-studies" />
       <TopSection />
       <CaseStudyList></CaseStudyList>
       <ClientReviewsSection></ClientReviewsSection>
