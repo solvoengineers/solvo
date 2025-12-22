@@ -30,7 +30,7 @@ export default function CaseStudyCard({
               "object-contain  bg-white  sm:h-3 h-4 w-auto",
               {
                 "sm:h-5 h-7": index === 0,
-                "sm:h-4 h-6": index === 1,
+                "sm:h-4 h-6": index === 2,
                 "sm:h-3 h-4": index === 3,
               }
             )}

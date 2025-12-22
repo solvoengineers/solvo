@@ -72,7 +72,7 @@ const ClientReviewsSection: React.FC<ClientReviewsSectionProps> = () => {
 
             {/* Title */}
             <h2 className="text-[1.875rem]  text-text-gray font-semibold font-poppins">
-              What Our Clients Says
+              What Our <span className="text-primary-blue">Clients Says</span>
             </h2>
           </div>
 

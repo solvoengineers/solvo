@@ -54,8 +54,7 @@ export const allProducts: ProductDetail[] = [
     logo: "/images/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine/logo.png",
     title:
       "CFD Design optimization to achieve self-sustaining combustion in a micro gas turbine",
-    description:
-      "This project focused on a micro gas turbine engine designed to generate 50 kg of thrust. While the hardware was successfully assembled and could be spun up to 13,500 RPM using an external starter motor, the engine consistently failed to sustain combustion once the starter was disengaged. The RPM would quickly fall to 6,500 and then the engine would shut down entirely, clearly indicating a failure in transitioning to self-sustained combustion.",
+    description: `This project involved a micro gas turbine designed to produce 50 kg thrust. Although the hardware was assembled and accelerated to 13,500 RPM using an external starter, combustion could not be sustained after disengagement. Speed rapidly dropped to 6,500 RPM, followed by complete shutdown, indicating failure to transition to stable self-sustained combustion during normal operating conditions consistently`,
     caseStudyLink:
       "/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine",
     image: "/images/products/item4.webp",

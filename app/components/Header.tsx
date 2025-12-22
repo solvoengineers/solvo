@@ -163,21 +163,32 @@ export default function Header({
   return (
     <header className="w-full fixed z-20 top-0 left-0  sm:h-auto  h-[5.6875rem] bg-white py-5 shadow-[0px_6px_40px_0px_rgba(0,0,0,0.04)]">
       <div className="w-full sm:w-auto sm:px-side-space  max-w-desktop mx-auto flex items-center justify-between  gap-5">
-        {/* Logo */}
-        <Link
-          href="/"
-          className={classNames(
-            "w-[9rem] h-[2.8rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]",
-            { "sm:opacity-0": forContactUs }
-          )}
-        >
-          <Image
-            src="/images/logo-176606.webp"
-            alt="Logo"
-            fill
-            className="object-contain transition-opacity duration-300 hover:opacity-90"
-          />
-        </Link>
+        {/* Logo or Back to Home */}
+        {forContactUs ? (
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-[1rem] font-normal font-poppins text-text-gray hover:text-primary-blue transition-colors duration-300 group"
+          >
+            <div className="w-5 h-5 text-text-gray group-hover:text-primary-blue transition-colors duration-300">
+              {allIcons.chevronLeft(20, 20)}
+            </div>
+            <span className="relative z-10 inline-block transition-all duration-300 group-hover:-translate-x-0.5">
+              Back to Home
+            </span>
+          </Link>
+        ) : (
+          <Link
+            href="/"
+            className="w-[9rem] h-[2.8rem] relative flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-[-2deg]"
+          >
+            <Image
+              src="/images/logo-176606.webp"
+              alt="Logo"
+              fill
+              className="object-contain transition-opacity duration-300 hover:opacity-90"
+            />
+          </Link>
+        )}
 
         {/* Navigation */}
         <nav className="flex sm:hidden items-center justify-end gap-6 flex-1 h-6">

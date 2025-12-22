@@ -26,10 +26,10 @@ const TopSection = () => {
           }
           description={
             <>
-              Solvo Engineering is CAE consultant firm specializing in FA, CFD
-              simulations and CAD modeling. We pride ourselves on delivering
-              exceptional lifecycle solutions customization to meet the precise
-              needs of our clients.
+              Solvo Engineering is CFD consultant firm specializing in FEA/CFD
+              simulations and 3D CAD modeling. We pride ourselves on delivering
+              great design optimisation and validation solutions to meet the
+              precise needs of our clients.
             </>
           }
         ></PageHeading>
