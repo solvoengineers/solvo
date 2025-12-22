@@ -704,6 +704,7 @@ export const allIcons = {
       <svg
         width="24"
         height="14"
+        style={{ height: `${14 / 16}rem`, width: `${24 / 16}rem` }}
         viewBox="0 0 24 14"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -731,6 +732,7 @@ export const allIcons = {
       <svg
         width="19"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${19 / 16}rem` }}
         viewBox="0 0 19 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -743,6 +745,7 @@ export const allIcons = {
       <svg
         width="26"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${26 / 16}rem` }}
         viewBox="0 0 26 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -755,6 +758,7 @@ export const allIcons = {
       <svg
         width="15"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${15 / 16}rem` }}
         viewBox="0 0 15 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -767,6 +771,7 @@ export const allIcons = {
       <svg
         width="24"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${24 / 16}rem` }}
         viewBox="0 0 24 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -791,6 +796,7 @@ export const allIcons = {
       <svg
         width="19"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${19 / 16}rem` }}
         viewBox="0 0 19 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -809,6 +815,7 @@ export const allIcons = {
       <svg
         width="17"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${17 / 16}rem` }}
         viewBox="0 0 17 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -836,6 +843,7 @@ export const allIcons = {
       <svg
         width="17"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${17 / 16}rem` }}
         viewBox="0 0 17 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -856,6 +864,7 @@ export const allIcons = {
       <svg
         width="19"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${19 / 16}rem` }}
         viewBox="0 0 19 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -872,6 +881,7 @@ export const allIcons = {
       <svg
         width="13"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${13 / 16}rem` }}
         viewBox="0 0 13 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -896,6 +906,7 @@ export const allIcons = {
       <svg
         width="22"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${22 / 16}rem` }}
         viewBox="0 0 22 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -913,6 +924,7 @@ export const allIcons = {
       <svg
         width="17"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${17 / 16}rem` }}
         viewBox="0 0 17 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -928,6 +940,7 @@ export const allIcons = {
       <svg
         width="18"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${18 / 16}rem` }}
         viewBox="0 0 18 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -964,6 +977,7 @@ export const allIcons = {
       <svg
         width="22"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${22 / 16}rem` }}
         viewBox="0 0 22 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -996,6 +1010,7 @@ export const allIcons = {
       <svg
         width="31"
         height="16"
+        style={{ height: `${16 / 16}rem`, width: `${31 / 16}rem` }}
         viewBox="0 0 31 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -1020,6 +1035,7 @@ export const allIcons = {
       <svg
         width="19"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${19 / 16}rem` }}
         viewBox="0 0 19 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -1060,6 +1076,7 @@ export const allIcons = {
       <svg
         width="29"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${29 / 16}rem` }}
         viewBox="0 0 29 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -1076,6 +1093,7 @@ export const allIcons = {
       <svg
         width="19"
         height="18"
+        style={{ height: `${18 / 16}rem`, width: `${19 / 16}rem` }}
         viewBox="0 0 19 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
