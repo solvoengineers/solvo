@@ -34,7 +34,7 @@ const TopSection = () => {
           }
         ></PageHeading>
       </div>
-      <Link href="/contact-us" className="btn btn-primary">
+      <Link href="/contact" className="btn btn-primary">
         <span className="text-sm  text-white font-normal font-poppins">
           Lets Connect
         </span>

@@ -6,7 +6,7 @@ import classNames from "classnames";
 import CaseStudyList from "./components/CaseStudyList";
 import ClientReviewsSection from "@/app/components/ClientReviewsSection";
 import ProjectListSection from "@/app/components/ProjectListSection";
-import ContactUsPage from "../contact-us/page";
+import ContactUsPage from "../contact/page";
 import GetInTouch from "@/app/components/GetInTouch";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";

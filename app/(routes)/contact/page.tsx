@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     title: "Contact Us - Solvo Engineers",
     description:
       "Contact Solvo Engineers for expert engineering consultation services. Get in touch with our team of professional licensed engineers.",
-    url: "/contact-us",
+    url: "/contact",
   },
   alternates: {
-    canonical: "/contact-us",
+    canonical: "/contact",
   },
   robots: {
     index: true,

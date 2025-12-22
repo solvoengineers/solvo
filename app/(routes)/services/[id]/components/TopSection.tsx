@@ -27,7 +27,7 @@ export default function TopSection({ serviceItem }: TopSectionProps) {
           title={serviceItem.title}
           description={<>{serviceItem.subtitle}</>}
         ></PageHeading>
-        <Link href="/contact-us" className="btn btn-primary">
+        <Link href="/contact" className="btn btn-primary">
           <span className="text-sm  text-white font-normal font-poppins">
             Lets Connect
           </span>

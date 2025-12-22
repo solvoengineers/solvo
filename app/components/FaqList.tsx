@@ -37,7 +37,7 @@ export default function FaqList({ faqs, className = "" }: FaqListProps) {
             </div>
 
             {/* Button */}
-            <Link href="/contact-us" className="btn btn-primary w-fit">
+            <Link href="/contact" className="btn btn-primary w-fit">
               <span className="text-sm  text-white font-normal font-poppins">
                 Send email
               </span>
@@ -69,7 +69,7 @@ export default function FaqList({ faqs, className = "" }: FaqListProps) {
           </div>
 
           {/* Button */}
-          <Link href="/contact-us" className="btn btn-primary w-fit">
+          <Link href="/contact" className="btn btn-primary w-fit">
             <span className="text-sm  text-white font-normal font-poppins">
               Send email
             </span>

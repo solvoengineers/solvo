@@ -70,7 +70,7 @@ export default function Sidebar({
     { id: "career", label: "Career", href: "/careers" },
     { id: "blogs", label: "Blogs", href: "/blogs" },
     { id: "case-study", label: "Case Studies", href: "/case-study" },
-    { id: "contact", label: "Contact Us", href: "/contact-us" },
+    { id: "contact", label: "Contact Us", href: "/contact" },
   ];
 
   const isFirstItem = (index: number) => index === 0;

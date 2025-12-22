@@ -290,7 +290,7 @@ export default function Header({
 
         {/* Contact Button */}
         <Link
-          href="/contact-us"
+          href="/contact"
           className="btn btn-primary sm:!hidden group !pr-2 relative overflow-hidden transition-all  "
         >
           <span className="text-sm font-normal font-poppins relative z-10 transition-transform duration-300 ">

@@ -92,7 +92,7 @@ function RightSection() {
             </Link>
 
             <Link
-              href="/contact-us"
+              href="/contact"
               className="text-base text-footer-text font-normal font-poppins"
             >
               Contact
