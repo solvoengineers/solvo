@@ -37,7 +37,7 @@ export const allBlogs: IBlog[] = [
       avatar: "/images/blogs/author-avatar.webp", // Placeholder - you may need to add actual avatar image
     },
     date: "July 12, 2025",
-    link: "/blogs/choosing-best-cfd-software",
+    link: "/blogs/choosing-the-best-cfd-software-for-engineering-a-practical-guide-to-ansys-comsol-solidworks-and-star-ccm-plus",
     categories: ["1"], // Aerospace & Defense
     introduction: (
       <>
@@ -183,7 +183,7 @@ export const allBlogs: IBlog[] = [
       avatar: "/images/blogs/item2/user-image.webp",
     },
     date: "July 12, 2025",
-    link: "/blogs/what-is-fea-and-cfd",
+    link: "/blogs/what-is-fea-and-cfd-why-every-industry-needs-simulation-in-product-development",
     categories: ["1", "6"], // Aerospace & Defense, Manufacturing
     introduction: (
       <>
@@ -352,7 +352,7 @@ export const allBlogs: IBlog[] = [
       avatar: "/images/blogs/item3/user-image.webp",
     },
     date: "July 12, 2025",
-    link: "/blogs/cfd-fea-electric-vehicles-aerospace",
+    link: "/blogs/how-cfd-and-fea-are-powering-the-future-of-electric-vehicles-and-aerospace-innovation",
     categories: ["1", "2"], // Aerospace & Defense, Automotive & Transportation
     introduction: (
       <>
@@ -519,7 +519,7 @@ export const allBlogs: IBlog[] = [
       avatar: "/images/blogs/item4/user-image.webp",
     },
     date: "July 12, 2025",
-    link: "/blogs/simulation-aerospace-defense",
+    link: "/blogs/simulation-in-aerospace-and-defense-how-cfd-and-fea-are-shaping-safer-smarter-flight-systems",
     categories: ["1"], // Aerospace & Defense
     introduction: (
       <>
@@ -688,7 +688,7 @@ export const allBlogs: IBlog[] = [
       avatar: "/images/blogs/item5/user-image.webp",
     },
     date: "July 12, 2025",
-    link: "/blogs/cfd-fea-jet-engine-design",
+    link: "/blogs/how-cfd-and-fea-are-redefining-jet-engine-design-and-performance",
     categories: ["1"], // Aerospace & Defense
     introduction: (
       <>
@@ -836,7 +836,7 @@ export const allBlogs: IBlog[] = [
       avatar: "/images/blogs/item6/user-image.webp",
     },
     date: "July 12, 2025",
-    link: "/blogs/accelerating-aerospace-defence-development",
+    link: "/blogs/accelerating-aerospace-and-defence-product-development-with-cfd-and-fea-analysis",
     categories: ["1"], // Aerospace & Defense
     introduction: (
       <>
