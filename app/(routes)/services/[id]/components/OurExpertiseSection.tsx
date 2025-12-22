@@ -13,11 +13,11 @@ export default function OurExpertiseSection({
   // Determine expertise title based on service ID
   const getExpertiseTitle = () => {
     switch (serviceItem.id) {
-      case "fea-analysis":
+      case "finite-element-anlaysis-fea":
         return "Our Expertise is Finite Element Analysis (FEA)";
-      case "cfd-analysis":
+      case "computational-fluid-dynamics-cfd":
         return "Our Expertise is Computational Fluid Dynamics (CFD)";
-      case "cad-analysis":
+      case "3d-cad-designing":
         return "Our Expertise is 3D CAD Modeling (CAD)";
       default:
         return "Our Expertise";
@@ -27,11 +27,11 @@ export default function OurExpertiseSection({
   // Determine expertise description based on service ID
   const getExpertiseDescription = () => {
     switch (serviceItem.id) {
-      case "fea-analysis":
+      case "finite-element-anlaysis-fea":
         return "We've completed hundreds of FEA projects across industries. Below are some of the main types of analysis we deliver.";
-      case "cfd-analysis":
+      case "computational-fluid-dynamics-cfd":
         return "We run CFD on a wide range of systems and conditions. Below are some of the main types of analysis we provide";
-      case "cad-analysis":
+      case "3d-cad-designing":
         return "We support a wide range of CAD needs, from concept modeling to production-ready drawings. Below are some of our key services";
       default:
         return "";
