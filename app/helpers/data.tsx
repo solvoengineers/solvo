@@ -31,7 +31,7 @@ export const allProducts: ProductDetail[] = [
     image: "/images/products/rubber-metal-parts-image.webp",
   },
   {
-    logo: "/images/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
+    logo: "/images/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
     title:
       "CFD Analysis and Airflow Optimization for Industrial Dehydrator System",
     description:
@@ -41,7 +41,7 @@ export const allProducts: ProductDetail[] = [
     image: "/images/products/dehydrator-system-image.webp",
   },
   {
-    logo: "/images/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
+    logo: "/images/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
     title:
       "Design Optimizing and CFD Analysis for Radial Vortex Flow Controls Device (VFC)",
     description:
