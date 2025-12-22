@@ -8,7 +8,7 @@ export const project8: IFullProject = {
     "A comprehensive FEA analysis of a custom-designed industrial fixture assembly to evaluate its structural performance under static loading conditions using SolidWorks Simulation.",
   image: "/images/projects/item8/main-image.webp",
   thumbnail: "/images/projects/item8/thumbnail.png",
-  link: "/projects/fea-industrial-fixture-optimization",
+  link: "/projects/fea-analysis-and-optimization-of-an-industrial-fixture-using-solidworks-simulation",
   summary: [
     {
       title: "Project Summary",

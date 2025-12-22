@@ -8,7 +8,7 @@ export const project2: IFullProject = {
     "A computational fluid dynamics study examining aerodynamic behavior around an Ahmed body model with different rear slant angles using Ansys Fluent.",
   image: "/images/projects/item2/main-image.webp",
   thumbnail: "/images/projects/item2/thumbnail.png",
-  link: "/projects/cfd-ahmed-body-varying-slant-angles",
+  link: "/projects/cfd-analysis-of-flow-characteristics-around-an-ahmed-body-with-varying-slant-angles-using-ansys",
   summary: [
     {
       title: "Project Summary",

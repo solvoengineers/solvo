@@ -7,7 +7,7 @@ export const project10: IFullProject = {
     "A structural performance evaluation of a nylon-based injection-moulded bracket using Finite Element Analysis (FEA) to validate mechanical strength and reliability under expected load conditions.",
   image: "/images/projects/item10/main-image.webp",
   thumbnail: "/images/projects/item10/thumbnail.png",
-  link: "/projects/fea-nylon-injection-moulding-part",
+  link: "/projects/fea-analysis-of-nylon-injection-moulding-part",
   summary: [
     {
       title: "Project Summary",

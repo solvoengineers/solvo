@@ -3,12 +3,13 @@ import { IFullProject } from "../../projects.data";
 export const project11: IFullProject = {
   title:
     "HVAC Simulation – Increasing Natural Flow in Warehouse Using Ansys CFD",
-  seoTitle: "HVAC Simulation – Increasing Natural Flow in Warehouse Using Ansys CFD",
+  seoTitle:
+    "HVAC Simulation – Increasing Natural Flow in Warehouse Using Ansys CFD",
   description:
     "A comprehensive HVAC simulation of a warehouse using Computational Fluid Dynamics (CFD) in Ansys to improve natural ventilation efficiency and optimize airflow patterns.",
   image: "/images/projects/item11/main-image.webp",
   thumbnail: "/images/projects/item11/thumbnail.png",
-  link: "/projects/hvac-warehouse-natural-flow-simulation",
+  link: "/projects/hvac-simulation-increasing-natural-flow-in-warehouse-using-ansys-cfd",
   summary: [
     {
       title: "Project Summary",

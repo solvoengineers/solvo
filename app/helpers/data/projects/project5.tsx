@@ -7,7 +7,7 @@ export const project5: IFullProject = {
     "A comprehensive CFD analysis to investigate and optimize the aerodynamic performance of two custom-designed RC aircraft wings using Ansys Fluent.",
   image: "/images/projects/item4/main-image.webp",
   thumbnail: "/images/projects/item5/thumbnail.png",
-  link: "/projects/cfd-rc-aircraft-wing-optimization",
+  link: "/projects/cfd-analysis-of-an-rc-aircraft-wing-optimization",
   summary: [
     {
       title: "Project Summary",
