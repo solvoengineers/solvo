@@ -138,18 +138,9 @@ function BottomSection() {
       >
         Privacy Policy
       </Link>
-      <div className="flex flex-row items-center gap-1 justify-center sm:flex-wrap">
-        <span className="text-base text-footer-dark font-normal font-poppins">
-          All right reserved
-        </span>
-        <img
-          src="/images/copyright.webp"
-          alt="Copyright"
-          className="w-5 h-5 object-contain"
-        ></img>
-        <span className="text-base text-footer-dark font-normal font-poppins">
-          Solvo Engineering 2025
-        </span>
+      <div className="flex flex-row items-center gap-1 text-base justify-center sm:flex-wrap text-footer-text">
+        Copyright ©2025 All rights reserved |{" "}
+        <span className="text-primary-blue">Solvo Engineers</span>
       </div>
       <div className="flex flex-row items-center gap-1">
         <Link

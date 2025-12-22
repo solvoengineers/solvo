@@ -30,11 +30,7 @@ const ClientReviewItem: React.FC<ClientReviewItemProps> = ({ data }) => {
                 {data.clientName}
               </h3>
               <p className="text-base text-footer-text   font-poppins font-semibold">
-                {data.clientRole.split(" ").slice(0, -1).join(" ")}
-                <span className="text-primary-blue">
-                  {" "}
-                  {data.clientRole.split(" ").slice(-1)[0]}
-                </span>
+                {data.clientRole}
               </p>
             </div>
 
