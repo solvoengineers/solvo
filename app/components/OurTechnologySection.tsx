@@ -65,11 +65,12 @@ const OurTechnologySection = ({ topBorder = false }) => {
                     className="flex items-center"
                   >
                     <img
-                      className={classNames("h-8", {
-                        "!h-7": originalIndex === 1,
-                        "!h-14": originalIndex === 2,
-                        "!h-9": originalIndex === 3 || originalIndex === 7,
-                        "!h-11": originalIndex === 5,
+                      className={classNames("sm:h-5 h-8", {
+                        "!h-7 sm:!h-5": originalIndex === 1,
+                        "!h-14 sm:!h-10": originalIndex === 2,
+                        "!h-9 sm:!h-7":
+                          originalIndex === 3 || originalIndex === 7,
+                        "!h-11 sm:!h-8": originalIndex === 5,
                       })}
                       src={logo}
                       alt={`Technology ${originalIndex + 1}`}
