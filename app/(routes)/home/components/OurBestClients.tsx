@@ -94,6 +94,8 @@ export default function OurBestClients() {
                           {
                             "!h-6.5": originalIndex === 0,
                             "!h-11": originalIndex === 3,
+                            "!h-8": originalIndex === 10,
+                            "!h-9": originalIndex === 11,
                             "!h-12":
                               originalIndex === 1 ||
                               originalIndex === 9 ||
