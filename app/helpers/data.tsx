@@ -21,7 +21,7 @@ export interface IHeroSectionItem {
 
 export const allProducts: ProductDetail[] = [
   {
-    logo: "/images/case-studies/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts/logo.png",
+    logo: "/images/case-study/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts/logo.png",
     title:
       "FEA Analysis to Enhancing Stiffness and Fatigue Life of Rubber-to-Metal Bonded Parts",
     description:
@@ -31,7 +31,7 @@ export const allProducts: ProductDetail[] = [
     image: "/images/products/rubber-metal-parts-image.webp",
   },
   {
-    logo: "/images/case-studies/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
+    logo: "/images/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
     title:
       "CFD Analysis and Airflow Optimization for Industrial Dehydrator System",
     description:
@@ -41,7 +41,7 @@ export const allProducts: ProductDetail[] = [
     image: "/images/products/dehydrator-system-image.webp",
   },
   {
-    logo: "/images/case-studies/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
+    logo: "/images/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
     title:
       "Design Optimizing and CFD Analysis for Radial Vortex Flow Controls Device (VFC)",
     description:
@@ -51,7 +51,7 @@ export const allProducts: ProductDetail[] = [
     image: "/images/products/vfc-device-image.webp",
   },
   {
-    logo: "/images/case-studies/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine/logo.png",
+    logo: "/images/case-study/cfd-design-optimization-to-achieve-self-sustaining-combustion-in-a-micro-gas-turbine/logo.png",
     title:
       "CFD Design optimization to achieve self-sustaining combustion in a micro gas turbine",
     description: `This project involved a micro gas turbine designed to produce 50 kg thrust. Although the hardware was assembled and accelerated to 13,500 RPM using an external starter, combustion could not be sustained after disengagement. Speed rapidly dropped to 6,500 RPM, followed by complete shutdown, indicating failure to transition to stable self-sustained combustion during normal operating conditions consistently`,
