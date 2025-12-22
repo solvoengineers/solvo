@@ -30,7 +30,7 @@ export default function GetInTouchBanner() {
                 {allIcons.checkCircle(24, 24)}
               </div>
               <span className="text-sm  text-footer-text font-medium font-poppins">
-                You'll be talking to CAE Engineers account mangers
+                You'll be talking to CAE engineers not account managers
               </span>
             </div>
           </div>

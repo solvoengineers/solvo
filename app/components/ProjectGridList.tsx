@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { allFullProjects } from "../helpers/projects.data";
 import ProjectCard from "./ProjectCard";
 import NumberedPagination from "./NumberedPagination";
@@ -8,17 +8,21 @@ import ProjectListSection from "./ProjectListSection";
 
 interface ProjectGridListProps {
   projects?: typeof allFullProjects;
-  itemsPerPage?: number;
   className?: string;
 }
 
 export default function ProjectGridList({
   projects = allFullProjects,
-  itemsPerPage = 9, // 3x3 grid
   className = "",
 }: ProjectGridListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const topCardRef = useRef<HTMLDivElement>(null);
+  const [itemsPerPage, setItemsPerPage] = useState(9);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) setItemsPerPage(8);
+    else setItemsPerPage(9);
+  }, []);
 
   // Calculate total pages
   const totalPages = Math.ceil(projects.length / itemsPerPage);

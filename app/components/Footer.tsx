@@ -134,7 +134,7 @@ function BottomSection() {
     <div className="flex flex-row justify-between items-stretch gap-6 pt-6 border-t border-footer-border">
       <Link
         href="/privacy"
-        className="text-base text-footer-dark font-normal font-poppins"
+        className="text-base text-footer-dark font-normal font-poppins hover:text-primary-blue transition-colors duration-200"
       >
         Privacy Policy
       </Link>
@@ -145,7 +145,7 @@ function BottomSection() {
       <div className="flex flex-row items-center gap-1">
         <Link
           href="/terms"
-          className="text-base text-footer-dark font-normal font-poppins"
+          className="text-base text-footer-dark font-normal font-poppins hover:text-primary-blue transition-colors duration-200"
         >
           Terms of service
         </Link>
