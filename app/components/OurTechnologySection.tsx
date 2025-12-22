@@ -2,6 +2,7 @@
 
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
 const OurTechnologySection = ({ topBorder = false }) => {
@@ -12,6 +13,19 @@ const OurTechnologySection = ({ topBorder = false }) => {
     "/images/technology-images/tech4.webp",
     "/images/technology-images/tech5.webp",
     "/images/technology-images/tech6.webp",
+    "/images/technology-images/tech7.webp",
+    "/images/technology-images/tech8.webp",
+  ];
+
+  const technologyUrls = [
+    "https://www.ansys.com/",
+    "https://lsdyna.ansys.com/",
+    "https://www.autodesk.com/",
+    "https://www.solidworks.com/",
+    "https://www.simscale.com/",
+    "https://www.comsol.com/",
+    "https://www.3ds.com/",
+    "https://sketchup.trimble.com/",
   ];
 
   return (
@@ -44,17 +58,23 @@ const OurTechnologySection = ({ topBorder = false }) => {
                   key={`logo-${index}`}
                   className="shrink-0 flex items-center h-auto mx-[2.1875rem]"
                 >
-                  <img
-                    className={classNames("h-8", {
-                      "!h-7": originalIndex === 1,
-                      "!h-10": originalIndex === 0,
-                      "!h-14": originalIndex === 2,
-                      "!h-9": originalIndex === 3,
-                      "!h-11": originalIndex === 5,
-                    })}
-                    src={logo}
-                    alt={`Technology ${originalIndex + 1}`}
-                  />
+                  <Link
+                    href={technologyUrls[originalIndex]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    <img
+                      className={classNames("h-8", {
+                        "!h-7": originalIndex === 1,
+                        "!h-14": originalIndex === 2,
+                        "!h-9": originalIndex === 3 || originalIndex === 7,
+                        "!h-11": originalIndex === 5,
+                      })}
+                      src={logo}
+                      alt={`Technology ${originalIndex + 1}`}
+                    />
+                  </Link>
                 </div>
               );
             })}
