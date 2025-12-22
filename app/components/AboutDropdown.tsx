@@ -5,6 +5,7 @@ import Link from "next/link";
 interface AboutItem {
   name: string;
   link: string;
+  icon: string;
 }
 
 interface AboutDropdownProps {
@@ -16,6 +17,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isVisible }) => {
     {
       name: "Our Methodology",
       link: "/methodology",
+      icon: "/images/shared/about-dropdown/img2.webp",
     },
   ];
 
@@ -41,6 +43,14 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isVisible }) => {
                   : ""
               }`}
             >
+              {/* Icon */}
+              <div className="w-5 h-5 shrink-0 flex items-center justify-center">
+                <img
+                  src={item.icon}
+                  alt={item.name}
+                  className="w-5 h-5 object-contain"
+                ></img>
+              </div>
               <span className="text-base font-normal font-poppins">
                 {item.name}
               </span>

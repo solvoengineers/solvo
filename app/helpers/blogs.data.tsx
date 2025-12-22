@@ -28,7 +28,8 @@ export const allBlogs: IBlog[] = [
     id: "1",
     title:
       "Choosing the Best CFD Software for Engineering: A Practical Guide to Ansys, COMSOL, SolidWorks and STAR-CCM+",
-    seoTitle: "Choosing the Best CFD Software for Engineering: A Practical Guide to Ansys, COMSOL, SolidWorks and STAR-CCM+",
+    seoTitle:
+      "Choosing the Best CFD Software for Engineering: A Practical Guide to Ansys, COMSOL, SolidWorks and STAR-CCM+",
     description:
       "Discover how FEA and CFD transform product development and innovation...",
     image: "/images/blogs/item1/main-image.webp",
@@ -174,7 +175,8 @@ export const allBlogs: IBlog[] = [
     id: "2",
     title:
       "What is FEA and CFD? Why Every Industry Needs Simulation in Product Development",
-    seoTitle: "What is FEA and CFD? Why Every Industry Needs Simulation in Product Development",
+    seoTitle:
+      "What is FEA and CFD? Why Every Industry Needs Simulation in Product Development",
     description:
       "Discover how FEA and CFD transform product development and innovation...",
     image: "/images/blogs/item2/main-image.webp",
@@ -343,7 +345,8 @@ export const allBlogs: IBlog[] = [
     id: "3",
     title:
       "How CFD and FEA Are Powering the Future of Electric Vehicles and Aerospace Innovation",
-    seoTitle: "How CFD and FEA Are Powering the Future of Electric Vehicles and Aerospace Innovation",
+    seoTitle:
+      "How CFD and FEA Are Powering the Future of Electric Vehicles and Aerospace Innovation",
     description:
       "Discover how FEA and CFD transform product development and innovation...",
     image: "/images/blogs/item3/main-image.webp",
@@ -510,7 +513,8 @@ export const allBlogs: IBlog[] = [
     id: "4",
     title:
       "Simulation in Aerospace and Defense: How CFD and FEA are Shaping Safer, Smarter Flight Systems",
-    seoTitle: "Simulation in Aerospace and Defense: How CFD and FEA are Shaping Safer, Smarter Flight Systems",
+    seoTitle:
+      "Simulation in Aerospace and Defense: How CFD and FEA are Shaping Safer, Smarter Flight Systems",
     description:
       "Discover how FEA and CFD transform product development and innovation...",
     image: "/images/blogs/item4/main-image.webp",
@@ -679,7 +683,8 @@ export const allBlogs: IBlog[] = [
   {
     id: "5",
     title: "How CFD and FEA Are Redefining Jet Engine Design and Performance",
-    seoTitle: "How CFD and FEA Are Redefining Jet Engine Design and Performance",
+    seoTitle:
+      "How CFD and FEA Are Redefining Jet Engine Design and Performance",
     description:
       "Explore how simulation tools like CFD and FEA enhance jet engine efficiency, durability, and innovation in aerospace.",
     image: "/images/blogs/item5/main-image.webp",
@@ -827,7 +832,8 @@ export const allBlogs: IBlog[] = [
     id: "6",
     title:
       "Accelerating Aerospace and Defence Product Development with CFD and FEA Analysis",
-    seoTitle: "Accelerating Aerospace and Defence Product Development with CFD and FEA Analysis",
+    seoTitle:
+      "Accelerating Aerospace and Defence Product Development with CFD and FEA Analysis",
     description:
       "Discover how FEA and CFD transform product development and innovation...",
     image: "/images/blogs/item6/main-image.webp",

@@ -21,6 +21,11 @@ interface SidebarProps {
 
 const servicesItems = [
   {
+    name: "All services",
+    link: "/services",
+    // icon: "/images/shared/services-dropdown/img1.webp",
+  },
+  {
     name: "Computational Fluid Dynamics (CFD)",
     link: "/services/computational-fluid-dynamics-cfd",
     icon: "/images/shared/services-dropdown/img1.webp",
@@ -48,10 +53,12 @@ export default function Sidebar({
     {
       name: "About Us",
       link: "/about",
+      icon: "/images/shared/about-dropdown/img1.webp",
     },
     {
       name: "Our Methodology",
       link: "/methodology",
+      icon: "/images/shared/about-dropdown/img2.webp",
     },
   ];
 
@@ -159,6 +166,19 @@ export default function Sidebar({
                           onClick={onClose}
                           className="flex flex-row items-center gap-[0.625rem] px-6 py-2 bg-white transition-colors border-b border-border-select-item last:border-b-0 h-[3rem]"
                         >
+                          {/* Icon */}
+                          <div
+                            className={classNames(
+                              " w-4 h-4 shrink-0 flex items-center justify-center",
+                              { "opacity-0": serviceIndex === 0 }
+                            )}
+                          >
+                            <img
+                              src={service.icon}
+                              alt={service.name}
+                              className=" w-4 h-4 object-contain"
+                            ></img>
+                          </div>
                           <span className="best-base  text-footer-border font-medium font-poppins">
                             {service.name}
                           </span>
@@ -214,6 +234,14 @@ export default function Sidebar({
                           onClick={onClose}
                           className="flex flex-row items-center gap-[0.625rem] px-6 py-2 bg-white transition-colors border-b border-border-select-item last:border-b-0 h-[3rem]"
                         >
+                          {/* Icon */}
+                          <div className="w-4 h-4 shrink-0 flex items-center justify-center">
+                            <img
+                              src={aboutItem.icon}
+                              alt={aboutItem.name}
+                              className="w-4 h-4  object-contain"
+                            ></img>
+                          </div>
                           <span className="best-base  text-footer-border font-medium font-poppins">
                             {aboutItem.name}
                           </span>
