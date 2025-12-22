@@ -58,7 +58,7 @@ export default function ProjectListSection({ withoutHeading = false }) {
         <div className="w-full">
           <Swiper
             spaceBetween={16}
-            slidesPerView={1.5}
+            slidesPerView={2}
             breakpoints={{
               640: {
                 slidesPerView: 3,
