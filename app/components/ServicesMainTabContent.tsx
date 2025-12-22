@@ -136,7 +136,9 @@ export default function ServicesContent({
                   (selectedServiceIndex === 1 &&
                     internalSelectedSubItemIndex === 3) ||
                   (selectedServiceIndex === 2 &&
-                    internalSelectedSubItemIndex === 3),
+                    internalSelectedSubItemIndex === 3) ||
+                  (selectedServiceIndex === 2 &&
+                    internalSelectedSubItemIndex === 4),
                 "sm:w-1/4":
                   selectedServiceIndex === 0 &&
                   internalSelectedSubItemIndex === 0,
