@@ -1008,9 +1008,9 @@ export const allIcons = {
         />
       </svg>,
       <svg
-        width="31"
+        width="27"
         height="16"
-        style={{ height: `${16 / 16}rem`, width: `${31 / 16}rem` }}
+        style={{ height: `${16 / 16}rem`, width: `${27 / 16}rem` }}
         viewBox="0 0 31 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -1074,9 +1074,9 @@ export const allIcons = {
         />
       </svg>,
       <svg
-        width="29"
+        width="27"
         height="18"
-        style={{ height: `${18 / 16}rem`, width: `${29 / 16}rem` }}
+        style={{ height: `${18 / 16}rem`, width: `${27 / 16}rem` }}
         viewBox="0 0 29 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
