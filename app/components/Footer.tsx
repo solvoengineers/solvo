@@ -131,16 +131,19 @@ function RightSection() {
 // Bottom Section Component
 function BottomSection() {
   return (
-    <div className="flex flex-row justify-between items-stretch gap-6 pt-6 border-t border-footer-border">
+    <div className="flex flex-row  justify-between sm:items-start sm:gap-2 gap-6 pt-6 border-t border-footer-border">
       <Link
         href="/privacy"
         className="text-base text-footer-dark font-normal font-poppins hover:text-primary-blue transition-colors duration-200"
       >
         Privacy Policy
       </Link>
-      <div className="flex flex-row items-center gap-1 text-base justify-center sm:flex-wrap text-footer-text">
-        Copyright ©2025 All rights reserved |{" "}
-        <span className="text-primary-blue">Solvo Engineers</span>
+      <div className="flex flex-row items-center sm:flex-col   text-base justify-center sm:flex-wrap text-footer-text">
+        <div className="flex flex-row">
+          © 2025 Copyrights
+          <span className="text-primary-blue ml-1 mr-1"> Solvo Engineers.</span>
+        </div>
+        <div className="">All Rights Reserved.</div>
       </div>
       <div className="flex flex-row items-center gap-1">
         <Link
