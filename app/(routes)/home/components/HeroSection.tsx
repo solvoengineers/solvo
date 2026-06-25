@@ -37,6 +37,9 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
   return (
     <section className="w-full flex flex-col items-center gap-6 relative sm:px-side-space">
+      <h1 className="sr-only">
+        FEA, CFD &amp; CAD Engineering Simulation Services
+      </h1>
       <div className="w-full max-w-desktop mx-auto flex flex-col gap-6 relative">
         {/* Swiper Container */}
         <div className="w-full relative">
