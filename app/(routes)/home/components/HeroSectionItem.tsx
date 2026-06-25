@@ -55,6 +55,7 @@ const HeroSectionItem: React.FC<HeroSectionItemProps> = ({
                   alt={data.title}
                   fill
                   className="object-contain rounded-[1.25rem] "
+                  sizes="250px"
                 />
               </div>
             </div>
@@ -112,7 +113,8 @@ const HeroSectionItem: React.FC<HeroSectionItemProps> = ({
               alt={data.title}
               fill
               className="object-contain rounded-[1.25rem]"
-              loading="lazy"
+             sizes="(max-width: 640px) 100vw, 50vw"
+              priority={currentIndex === 0}
             />
           </div>
         </div>
