@@ -101,8 +101,46 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com";
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Solvo Engineers",
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo-176606.webp`,
+    description:
+      "Expert engineering consultation firm specializing in Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and Computer-Aided Design (CAD) services.",
+    email: "contact@solvoengineers.com",
+    sameAs: [
+      "https://www.linkedin.com/company/solvoengineers",
+      "https://www.instagram.com/solvo_engineers",
+      "https://t.me/solvoengineers",
+    ],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Solvo Engineers",
+    url: siteUrl,
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased `}
       >
