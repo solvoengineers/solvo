@@ -803,12 +803,12 @@ export const allHeroSectionItems: IHeroSectionItem[] = [
   {
     badgeText: "Our Most In-Demand CAE Services",
     badgeIcon: "/images/zap-icon.svg",
-    title: "Computation Fluid Dynamics - CFD",
+    title: "Computational Fluid Dynamics - CFD",
     features: [
       "Aerodynamic Analysis",
       "Airflow Optimization",
       "VOF-MultiPhase Analysis",
-      "Thermal Managment",
+      "Thermal Management",
     ],
     placeOrderLink: "/contact",
     ourServicesLink: "/services",
@@ -831,7 +831,7 @@ export const allHeroSectionItems: IHeroSectionItem[] = [
   {
     badgeText: "Our Most In-Demand CAE Services",
     badgeIcon: "/images/zap-icon.svg",
-    title: "Computation Fluid Dynamics-CAD",
+    title: "Computer Aided Design - CAD",
     features: [
       "3D Product Design",
       "Reverse Engineering",
@@ -1045,7 +1045,7 @@ export const allCustomerSimulationItems: ICustomerSimulationItem[] = [
     title: "Our Customer Simulation",
     leftPhase: {
       phaseTitle: "Quality Assurance & Validation",
-      subItems: ["Verification Protocals", "Validation Testing"],
+      subItems: ["Verification Protocols", "Validation Testing"],
       stepNumber: 5,
       stepImage: "/images/customer-simulation/step5.webp",
     },
