@@ -35,7 +35,7 @@ const HeroSectionItem: React.FC<HeroSectionItemProps> = ({
             ></GreenBadge> */}
 
             {/* Title */}
-            <h1
+            <h2
               className="text-[2.5rem]  text-footer-heading font-semibold mt-10"
               style={{ fontFamily: "Obviously, sans-serif" }}
             >
@@ -44,7 +44,7 @@ const HeroSectionItem: React.FC<HeroSectionItemProps> = ({
               <span className="text-primary-blue">
                 {data.title.split("-")[1]}
               </span>
-            </h1>
+            </h2>
           </div>
 
           <div className="hidden sm:flex flex-col gap-2">
