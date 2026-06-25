@@ -803,7 +803,7 @@ export const allHeroSectionItems: IHeroSectionItem[] = [
   {
     badgeText: "Our Most In-Demand CAE Services",
     badgeIcon: "/images/zap-icon.svg",
-    title: "Computational Fluid Dynamics - CFD",
+    title: "Computational Fluid Dynamics-CFD",
     features: [
       "Aerodynamic Analysis",
       "Airflow Optimization",
