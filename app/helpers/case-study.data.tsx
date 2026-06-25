@@ -19,12 +19,12 @@ export const allCaseStudies: ICaseStudy[] = [
     link: "/case-studies/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts",
   },
   {
-    id: "rvfcd",
-    title: "RVFCD",
+    id: "radial vfc device",
+    title: "Radial VFC Device",
     seoTitle:
       "CFD Analysis and Airflow Optimization for Industrial Dehydrator System",
     description:
-      "Optimizing the Design of the Radial Vortex Flow Controls Device (VFC)",
+      "CFD airflow analysis and optimization for uniform, laminar drying across all 50 trays of an industrial dehydrator system.",
     logo: "/images/case-study/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system/logo.png",
     link: "/case-studies/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system",
   },
@@ -34,7 +34,7 @@ export const allCaseStudies: ICaseStudy[] = [
     seoTitle:
       "Design Optimizing and CFD Analysis for Radial Vortex Flow Controls Device (VFC)",
     description:
-      "CFD Airflow Optimization for Industrial Dehydrator System Analysis",
+      "Design optimization and CFD analysis of radial Vortex Flow Control (VFC) devices for purely hydraulic stormwater throttling.",
     logo: "/images/case-study/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc/logo.png",
     link: "/case-studies/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc",
   },
