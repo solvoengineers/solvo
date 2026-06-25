@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Services - FEA, CFD & CAD Engineering Solutions",
   description:
-    "Explore our comprehensive engineering services including FEA analysis, CFD simulations, and CAD modeling. We provide innovative, focused, and personalized engineering solutions for modern industries.",
+    "Explore our comprehensive engineering services including FEA analysis, CFD simulations and CAD modeling. We provide innovative, focused and personalized engineering solutions for modern industries.",
   keywords: [
     "FEA services",
     "CFD services",
@@ -27,6 +27,24 @@ export const metadata: Metadata = {
     description:
       "Explore our comprehensive engineering services including FEA analysis, CFD simulations, and CAD modeling.",
     url: "/services",
+    type: "website",
+    siteName: "Solvo Engineers",
+    locale: "en_US",
+    images: [
+      {
+        url: "/images/logo-176606.webp",
+        width: 1200,
+        height: 630,
+        alt: "Solvo Engineers - Engineering Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Services - FEA, CFD & CAD Engineering Solutions",
+    description:
+      "Explore our comprehensive engineering services including FEA analysis, CFD simulations, and CAD modeling.",
+    images: ["/images/logo-176606.webp"],
   },
   alternates: {
     canonical: "/services",
