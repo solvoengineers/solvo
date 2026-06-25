@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solvo Engineers - Expert FEA, CFD & CAD Engineering Services",
+  // `absolute` stops the site from automatically adding "| Solvo Engineers"
+  // to the end of this title (that's what made the brand name show up twice).
+  title: {
+    absolute: "Solvo Engineers | FEA, CFD & CAD Engineering Services",
+  },
   description:
-    "Solvo Engineers is an expert engineering consultation firm specializing in Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and Computer-Aided Design (CAD) modeling services. We deliver precise and efficient solutions with advanced simulation-driven insights.",
+    "Solvo Engineers enhances product performance, reliability and efficiency through expert FEA, CFD and CAD simulation services.",
   keywords: [
     "FEA analysis",
     "CFD analysis",
@@ -19,9 +23,9 @@ export const metadata: Metadata = {
     "engineering firm",
   ],
   openGraph: {
-    title: "Solvo Engineers - Expert FEA, CFD & CAD Engineering Services",
+    title: "Solvo Engineers | FEA, CFD & CAD Engineering Services",
     description:
-      "Expert engineering consultation firm specializing in FEA, CFD, and CAD modeling services. Delivering precise and efficient solutions with advanced simulation-driven insights.",
+      "Solvo Engineers enhances product performance, reliability and efficiency through expert FEA, CFD and CAD simulation services.",
     url: "/",
     type: "website",
     siteName: "Solvo Engineers",
@@ -37,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solvo Engineers - Expert FEA, CFD & CAD Engineering Services",
+    title: "Solvo Engineers | FEA, CFD & CAD Engineering Services",
     description:
-      "Expert engineering consultation firm specializing in FEA, CFD, and CAD modeling services.",
+      "Solvo Engineers enhances product performance, reliability and efficiency through expert FEA, CFD and CAD simulation services.",
     images: ["/images/logo-176606.webp"],
   },
   alternates: {
@@ -65,4 +69,3 @@ export default function HomeLayout({
 }) {
   return <>{children}</>;
 }
-
