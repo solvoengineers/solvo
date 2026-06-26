@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/logo-176606.webp",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Solvo Engineers - Engineering Services",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Our Services - FEA, CFD & CAD Engineering Solutions",
     description:
       "Explore our comprehensive engineering services including FEA analysis, CFD simulations, and CAD modeling.",
-    images: ["/images/logo-176606.webp"],
+    images: ["/images/og-image.png"],
   },
   alternates: {
     canonical: "/services",
