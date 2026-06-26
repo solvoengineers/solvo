@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Solvo Engineers",
     images: [
       {
-        url: "/images/logo-176606.webp",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Solvo Engineers - Expert Engineering Services",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Solvo Engineers | FEA, CFD & CAD Engineering Services",
     description:
       "Solvo Engineers enhances product performance, reliability and efficiency through expert FEA, CFD and CAD simulation services.",
-    images: ["/images/logo-176606.webp"],
+    images: ["/images/og-image.png"],
   },
   alternates: {
     canonical: "/",
