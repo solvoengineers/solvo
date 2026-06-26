@@ -26,7 +26,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isVisible }) => {
     },
     {
       name: "Finite Element Analysis (FEA)",
-      link: "/services/finite-element-anlaysis-fea",
+      link: "/services/finite-element-analysis-fea",
       icon: "/images/shared/services-dropdown/img3.webp",
     },
   ];
