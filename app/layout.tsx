@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       "Expert engineering consultation firm specializing in FEA, CFD, and CAD modeling services. Delivering precise and efficient solutions with advanced simulation-driven insights.",
     images: [
       {
-        url: "/images/logo-176606.webp",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Solvo Engineers Logo",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "Solvo Engineers - Expert FEA, CFD & CAD Engineering Services",
     description:
       "Expert engineering consultation firm specializing in FEA, CFD, and CAD modeling services.",
-    images: ["/images/logo-176606.webp"],
+    images: ["/images/og-image.png"],
   },
   verification: {
     google: "JmsVSyNDIkHl6zbXKbYgVZG2iWFuYXJtabrCTA4a1UM",
@@ -109,7 +109,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Solvo Engineers",
     url: siteUrl,
-    logo: `${siteUrl}/images/logo-176606.webp`,
+    logo: `${siteUrl}/images/og-image.png`,
     description:
       "Expert engineering consultation firm specializing in Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and Computer-Aided Design (CAD) services.",
     email: "contact@solvoengineers.com",
