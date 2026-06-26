@@ -94,7 +94,7 @@ export interface IFAQ {
 
 export interface IServiceItem {
   id:
-    | "finite-element-anlaysis-fea"
+    | "finite-element-analysis-fea"
     | "computational-fluid-dynamics-cfd"
     | "3d-cad-designing";
   title: React.ReactNode;
@@ -115,7 +115,7 @@ export interface IServiceItem {
 
 export const allServiceItems: IServiceItem[] = [
   {
-    id: "finite-element-anlaysis-fea",
+    id: "finite-element-analysis-fea",
     title: (
       <>
         FEA Analysis <span className="text-primary-blue">Services</span>
@@ -312,7 +312,7 @@ export const allServiceItems: IServiceItem[] = [
             title: "Finite Element Analysis - FEA",
             description:
               "Our FEA services deliver in-design guidance on stress and deformation to improve product strength, safety and durability.",
-            link: "/services/finite-element-anlaysis-fea",
+            link: "/services/finite-element-analysis-fea",
 
             logo: "/images/service-pages/finite-element-anlaysis-fea/logo.webp",
           },
@@ -479,7 +479,7 @@ export const allServiceItems: IServiceItem[] = [
             title: "Finite Element Analysis - FEA",
             description:
               "Our FEA services deliver in-design guidance on stress and deformation to improve product strength, safety and durability.",
-            link: "/services/finite-element-anlaysis-fea",
+            link: "/services/finite-element-analysis-fea",
 
             logo: "/images/service-pages/finite-element-anlaysis-fea/logo.webp",
           },
