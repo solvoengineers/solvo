@@ -109,7 +109,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Solvo Engineers",
     url: siteUrl,
-    logo: `${siteUrl}/images/og-image.png`,
+    logo: `${siteUrl}/images/logo-176606.webp`,
     description:
       "Expert engineering consultation firm specializing in Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and Computer-Aided Design (CAD) services.",
     email: "contact@solvoengineers.com",
