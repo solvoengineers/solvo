@@ -37,7 +37,7 @@ const servicesItems = [
   },
   {
     name: "Finite Element Analysis (FEA)",
-    link: "/services/finite-element-anlaysis-fea",
+    link: "/services/finite-element-analysis-fea",
     icon: "/images/shared/services-dropdown/img3.webp",
   },
 ];
