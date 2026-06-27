@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/services/finite-element-anlaysis-fea",
+        destination: "/services/finite-element-analysis-fea",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
