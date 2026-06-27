@@ -19,8 +19,8 @@ export const allCaseStudies: ICaseStudy[] = [
     link: "/case-studies/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts",
   },
   {
-    id: "radial vfc device",
-    title: "Radial VFC Device",
+    id: "industrial-dehydrator",
+    title: "Industrial Dehydrator",
     seoTitle:
       "CFD Analysis and Airflow Optimization for Industrial Dehydrator System",
     description:
@@ -29,8 +29,8 @@ export const allCaseStudies: ICaseStudy[] = [
     link: "/case-studies/cfd-analysis-and-airflow-optimization-for-industrial-dehydrator-system",
   },
   {
-    id: "industrial-dehydrator",
-    title: "Industrial Dehydrator",
+    id: "radial-vfc-device",
+    title: "Radial VFC Device",
     seoTitle:
       "Design Optimizing and CFD Analysis for Radial Vortex Flow Controls Device (VFC)",
     description:
