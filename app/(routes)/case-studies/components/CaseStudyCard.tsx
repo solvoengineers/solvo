@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ICaseStudy } from "@/app/helpers/case-study.data";
 import { allIcons } from "@/app/helpers/icons";
-import classNames from "classnames";
 
 interface CaseStudyCardProps {
   caseStudy: ICaseStudy;
@@ -13,7 +11,6 @@ interface CaseStudyCardProps {
 export default function CaseStudyCard({
   caseStudy,
   className = "",
-  index,
 }: CaseStudyCardProps) {
   return (
     <Link
@@ -22,18 +19,11 @@ export default function CaseStudyCard({
     >
       {/* Logo Container */}
       <div className="flex flex-col items-center justify-center w-[10rem] h-[10rem] sm:w-[8rem] sm:h-[8rem] sm:p-3 p-5 rounded-full bg-primary-blue/20 shadow-[0px_0px_39.3px_-9px_rgba(2,115,189,1)]">
-        <div className="h-full w-full rounded-full bg-white flex items-center justify-center">
+        <div className="h-full w-full rounded-full bg-white flex items-center justify-center p-4">
           <img
             src={caseStudy.logo}
             alt={caseStudy.title}
-            className={classNames(
-              "object-contain  bg-white  sm:h-3 h-4 w-auto",
-              {
-                "sm:h-5 h-7": index === 0,
-                "sm:h-4 h-6": index === 2,
-                "sm:h-3 h-4": index === 3,
-              }
-            )}
+            className="object-contain w-[5.5rem] h-[3rem] sm:w-[4.5rem] sm:h-[2.5rem]"
           />
         </div>
       </div>
