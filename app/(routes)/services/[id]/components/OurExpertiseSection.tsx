@@ -13,7 +13,7 @@ export default function OurExpertiseSection({
   // Determine expertise title based on service ID
   const getExpertiseTitle = () => {
     switch (serviceItem.id) {
-      case "finite-element-anlaysis-fea":
+      case "finite-element-analysis-fea":
         return "Our Expertise is Finite Element Analysis (FEA)";
       case "computational-fluid-dynamics-cfd":
         return "Our Expertise is Computational Fluid Dynamics (CFD)";
@@ -27,7 +27,7 @@ export default function OurExpertiseSection({
   // Determine expertise description based on service ID
   const getExpertiseDescription = () => {
     switch (serviceItem.id) {
-      case "finite-element-anlaysis-fea":
+      case "finite-element-analysis-fea":
         return "We've completed hundreds of FEA projects across industries. Below are some of the main types of analysis we deliver.";
       case "computational-fluid-dynamics-cfd":
         return "We run CFD on a wide range of systems and conditions. Below are some of the main types of analysis we provide";
