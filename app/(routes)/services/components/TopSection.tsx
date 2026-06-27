@@ -11,7 +11,7 @@ const services = [
       "Optimize designs and ensure structural integrity with precise and efficient simulation techniques.",
     image: "/images/services/top-section/fea-image.webp",
     imagePosition: "left" as const,
-    link: "/services/finite-element-anlaysis-fea",
+    link: "/services/finite-element-analysis-fea",
   },
   {
     id: "cfd",
