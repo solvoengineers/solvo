@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Generate keywords based on service type
   const serviceKeywords: Record<string, string[]> = {
-    "finite-element-anlaysis-fea": [
+    "finite-element-analysis-fea": [
       "FEA analysis",
       "finite element analysis",
       "FEA services",
