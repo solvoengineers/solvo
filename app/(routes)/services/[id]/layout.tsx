@@ -94,10 +94,64 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServiceLayout({
+export default async function ServiceLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ id: string }>;
 }) {
-  return <>{children}</>;
+  const resolvedParams = await params;
+  const serviceId = resolvedParams.id;
+  const serviceItem = allServiceItems.find((item) => item.id === serviceId);
+
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com";
+
+  if (!serviceItem) {
+    return <>{children}</>;
+  }
+
+  // Clean, short display names for the breadcrumb (falls back to seoTitle)
+  const serviceNames: Record<string, string> = {
+    "finite-element-analysis-fea": "Finite Element Analysis (FEA)",
+    "computational-fluid-dynamics-cfd": "Computational Fluid Dynamics (CFD)",
+    "3d-cad-designing": "3D CAD Designing",
+  };
+  const serviceName = serviceNames[serviceId] || serviceItem.seoTitle;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${siteUrl}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: serviceName,
+        item: `${siteUrl}/services/${serviceId}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }
