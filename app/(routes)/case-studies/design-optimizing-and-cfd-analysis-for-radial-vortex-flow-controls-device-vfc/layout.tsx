@@ -57,6 +57,48 @@ export default function CaseStudyItem3Layout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
-}
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com";
+  const caseStudy = allCaseStudies.find(
+    (cs) => cs.link === "/case-studies/design-optimizing-and-cfd-analysis-for-radial-vortex-flow-controls-device-vfc"
+  );
 
+  if (!caseStudy) {
+    return <>{children}</>;
+  }
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Case Studies",
+        item: `${siteUrl}/case-studies`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: caseStudy.title,
+        item: `${siteUrl}${caseStudy.link}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {children}
+    </>
+  );
+}
