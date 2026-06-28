@@ -44,3 +44,61 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: titleText,
       description: descriptionText,
+      images: [caseStudy.logo],
+    },
+    alternates: {
+      canonical: caseStudy.link,
+    },
+  };
+}
+
+export default function CaseStudyItem1Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com";
+  const caseStudy = allCaseStudies.find(
+    (cs) => cs.link === "/case-studies/fea-analysis-to-enhancing-stiffness-fatigue-life-of-rubber-to-metal-bonded-parts"
+  );
+
+  if (!caseStudy) {
+    return <>{children}</>;
+  }
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Case Studies",
+        item: `${siteUrl}/case-studies`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: caseStudy.title,
+        item: `${siteUrl}${caseStudy.link}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {children}
+    </>
+  );
+}
