@@ -113,6 +113,21 @@ export default function RootLayout({
     description:
       "Expert engineering consultation firm specializing in Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and Computer-Aided Design (CAD) services.",
     email: "contact@solvoengineers.com",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "contact@solvoengineers.com",
+      contactType: "customer support",
+      availableLanguage: ["English"],
+    },
+    areaServed: "Worldwide",
+    knowsAbout: [
+      "Finite Element Analysis",
+      "Computational Fluid Dynamics",
+      "Computer-Aided Design",
+      "Engineering Simulation",
+      "Structural Analysis",
+      "Thermal Analysis",
+    ],
     sameAs: [
       "https://www.linkedin.com/company/solvoengineers",
       "https://www.instagram.com/solvo_engineers",
