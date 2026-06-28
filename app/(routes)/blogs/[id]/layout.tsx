@@ -64,11 +64,92 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function BlogLayout({
+export default async function BlogLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ id: string }>;
 }) {
-  return <>{children}</>;
-}
+  const resolvedParams = await params;
+  const blogId = resolvedParams.id;
+  const blog = allBlogs.find((b) => b.link.split("/").pop() === blogId);
 
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com";
+
+  if (!blog) {
+    return <>{children}</>;
+  }
+
+  // Convert the human-readable date (e.g. "July 12, 2025") to ISO 8601 if possible
+  const parsedDate = new Date(blog.date);
+  const publishedIso = isNaN(parsedDate.getTime())
+    ? blog.date
+    : parsedDate.toISOString();
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: blog.seoTitle,
+    description: blog.description,
+    image: `${siteUrl}${blog.image}`,
+    datePublished: publishedIso,
+    dateModified: publishedIso,
+    author: {
+      "@type": "Person",
+      name: blog.author.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Solvo Engineers",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/logo-176606.webp`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}${blog.link}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: `${siteUrl}/blogs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: blog.title,
+        item: `${siteUrl}${blog.link}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {children}
+    </>
+  );
+}
