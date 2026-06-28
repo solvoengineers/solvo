@@ -44,19 +44,3 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: titleText,
       description: descriptionText,
-      images: [caseStudy.logo],
-    },
-    alternates: {
-      canonical: caseStudy.link,
-    },
-  };
-}
-
-export default function CaseStudyItem1Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
-}
-
