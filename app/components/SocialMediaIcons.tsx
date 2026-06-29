@@ -11,26 +11,13 @@ const SocialMediaIcons: React.FC<SocialMediaIconsProps> = ({ small }) => {
     (small ? " social-media-small" : "");
   return (
     <div className="flex flex-row items-center gap-3 ">
-      
-        target="_blank"
-        href="https://www.instagram.com/solvo_engineers"
-        className={myClass}
-      >
+      <a target="_blank" href="https://www.instagram.com/solvo_engineers" className={myClass}>
         {allIcons.socialMedia.insta(20, 20)}
       </a>
-
-      
-        target="_blank"
-        href="https://www.linkedin.com/company/solvoengineers"
-        className={myClass}
-      >
+      <a target="_blank" href="https://www.linkedin.com/company/solvoengineers" className={myClass}>
         {allIcons.socialMedia.linkedin(20, 20)}
       </a>
-      
-        target="_blank"
-        href="https://wa.me/message/LUWBKIESNLZSP1"
-        className={myClass}
-      >
+      <a target="_blank" href="https://wa.me/message/LUWBKIESNLZSP1" className={myClass}>
         {allIcons.socialMedia.whatsapp(20, 20)}
       </a>
       <a target="_blank" href="https://t.me/solvoengineers" className={myClass}>
