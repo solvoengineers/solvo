@@ -140,7 +140,7 @@ function BottomSection() {
       </Link>
       <div className="flex flex-row items-center sm:flex-col   text-base justify-center sm:flex-wrap text-footer-text">
         <div className="flex flex-row">
-          © 2026 Copyrights
+          © {new Date().getFullYear()} Copyrights
           <span className="text-primary-blue ml-1 mr-1"> Solvo Engineers.</span>
         </div>
         <div className="">All Rights Reserved.</div>
