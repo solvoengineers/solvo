@@ -25,7 +25,7 @@ function LeftSection() {
           professional licensed engineers provide accurate, effective solutions.
           We are dedicated to offering advanced simulation driven insights that
           enable clients to promote innovation, reducing prototyping cost,
-          design optimization, and simplify the process of developing new
+          design optimization and simplify the process of developing new
           products.
         </p>
       </div>
