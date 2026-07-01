@@ -25,10 +25,10 @@ const preferableSoftwareOptions = [
 ];
 
 const estimatedBudgetOptions = [
-  { value: "5000-usd", label: "< 5000 USD " },
+  { value: "5000-usd", label: "< 5000 USD" },
   { value: "5000-10000-usd", label: "5000 - 10000 USD" },
   { value: "10000-30000-usd", label: "10000 - 30000 USD" },
-  { value: "50000-usd", label: "> 50000 USD " },
+  { value: "50000-usd", label: "> 50000 USD" },
 ];
 
 const servicesOptions = [
@@ -45,6 +45,9 @@ const servicesOptions = [
   { value: "airflow-simulations", label: "Airflow simulations" },
 ];
 
+// Maximum allowed upload size (10 MB)
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
+
 export default function GetInTouchForm() {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -59,14 +62,96 @@ export default function GetInTouchForm() {
     file: null as File | null,
   });
 
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
 
+  // Returns an error message for one field ("" means it's valid)
+  const validateField = (
+    name: string,
+    data: typeof formData = formData
+  ): string => {
+    switch (name) {
+      case "lookingFor":
+        return data.lookingFor ? "" : "Please choose an option";
+      case "fullName":
+        return data.fullName.trim() ? "" : "Please enter your name";
+      case "services":
+        return data.services ? "" : "Please choose an option";
+      case "email":
+        if (!data.email.trim()) return "Please enter your email";
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())
+          ? ""
+          : "Please enter a valid email";
+      case "software":
+        return data.software ? "" : "Please choose an option";
+      case "budget":
+        return data.budget ? "" : "Please choose an option";
+      case "message":
+        return data.message.trim() ? "" : "Please enter your message";
+      case "file":
+        if (data.file && data.file.size > MAX_FILE_SIZE)
+          return "File is larger than 10 MB. Please choose a smaller file.";
+        return "";
+      default:
+        return "";
+    }
+  };
+
+  const validateAll = (data: typeof formData = formData) => {
+    const fields = [
+      "lookingFor",
+      "fullName",
+      "services",
+      "email",
+      "software",
+      "budget",
+      "message",
+      "file",
+    ];
+    const newErrors: Record<string, string> = {};
+    fields.forEach((field) => {
+      const message = validateField(field, data);
+      if (message) newErrors[field] = message;
+    });
+    return newErrors;
+  };
+
+  const setFieldError = (name: string, message: string) => {
+    setErrors((prev) => {
+      const next = { ...prev };
+      if (message) next[name] = message;
+      else delete next[name];
+      return next;
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Check everything first
+    const newErrors = validateAll();
+    setErrors(newErrors);
+    setTouched({
+      lookingFor: true,
+      fullName: true,
+      services: true,
+      email: true,
+      software: true,
+      budget: true,
+      message: true,
+      file: true,
+    });
+
+    // Stop here if anything is invalid (the messages are now visible)
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
@@ -111,25 +196,57 @@ export default function GetInTouchForm() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<
+    e: React.ChangeEvent
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    const { name, value, type } = e.target;
+    const { name, type } = e.target;
+
+    let fieldValue: string | boolean | File | null;
     if (type === "checkbox") {
-      const checked = (e.target as HTMLInputElement).checked;
-      setFormData((prev) => ({ ...prev, [name]: checked }));
+      fieldValue = (e.target as HTMLInputElement).checked;
     } else if (type === "file") {
-      const file = (e.target as HTMLInputElement).files?.[0] || null;
-      setFormData((prev) => ({ ...prev, [name]: file }));
+      fieldValue = (e.target as HTMLInputElement).files?.[0] || null;
     } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
+      fieldValue = e.target.value;
+    }
+
+    const newData = { ...formData, [name]: fieldValue };
+    setFormData(newData);
+
+    // A file is checked the instant it's picked; other fields only after being touched
+    if (name === "file") {
+      setTouched((prev) => ({ ...prev, file: true }));
+      setFieldError("file", validateField("file", newData));
+    } else if (touched[name]) {
+      setFieldError(name, validateField(name, newData));
     }
   };
+
+  const handleBlur = (name: string) => {
+    setTouched((prev) => ({ ...prev, [name]: true }));
+    setFieldError(name, validateField(name));
+  };
+
+  // For the custom dropdowns: only validate once focus leaves the whole field
+  const handleGroupBlur =
+    (name: string) => (e: React.FocusEvent<HTMLDivElement>) => {
+      if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+        handleBlur(name);
+      }
+    };
+
+  const fieldError = (name: string) =>
+    errors[name] ? (
+      <p className="text-sm text-red-500 font-normal font-poppins mt-1">
+        {errors[name]}
+      </p>
+    ) : null;
 
   return (
     <form
       onSubmit={handleSubmit}
+      noValidate
       className="flex flex-col gap-[1.375rem] p-8 border border-primary-blue rounded-[1.25rem] sm:w-full w-[47rem] sm:p-5"
     >
       {/* Title */}
@@ -161,11 +278,7 @@ export default function GetInTouchForm() {
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col gap-3">
-        <h2 className="font-semibold font-obviously text-footer-text">
-          <span className="text-primary-blue">Get in touch</span> with us
-        </h2>
-      </div> */}
+
       <h2 className="text-text-gray font-semibold font-poppins sm:hidden block">
         How Can We Help You?
       </h2>
@@ -177,81 +290,97 @@ export default function GetInTouchForm() {
           className="grid sm:grid-cols-2 grid-cols-[repeat(3,12.5rem)] gap-6"
           style={{ justifyContent: "space-between" }}
         >
-          {/* I am looking to * */}
-          <CustomSelect
-            name="lookingFor"
-            value={formData.lookingFor}
-            onChange={handleChange}
-            placeholder="I am looking to *"
-            required
+          {/* I am looking to */}
+          <div
             className="w-[12.5rem] sm:w-full"
-            options={lookingForOptions}
-          />
+            onBlur={handleGroupBlur("lookingFor")}
+          >
+            <CustomSelect
+              name="lookingFor"
+              value={formData.lookingFor}
+              onChange={handleChange}
+              placeholder="I am looking to"
+              className="w-full"
+              options={lookingForOptions}
+            />
+            {fieldError("lookingFor")}
+          </div>
 
-          {/* Full Name * */}
-          <div className="relative w-[12.5rem] sm:w-full">
+          {/* Full Name */}
+          <div className="w-[12.5rem] sm:w-full">
             <input
               type="text"
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
+              onBlur={() => handleBlur("fullName")}
               placeholder="Full Name"
-              required
               className="w-full px-3 py-1 border border-footer-border rounded-lg text-base  text-footer-text font-normal font-poppins outline-none focus:border-primary-blue"
             />
-            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-red-500 pointer-events-none">
-              *
-            </span>
+            {fieldError("fullName")}
           </div>
 
-          {/* Services I need * */}
-          <CustomSelect
-            name="services"
-            value={formData.services}
-            onChange={handleChange}
-            placeholder="Services I need *"
-            required
+          {/* Services I need */}
+          <div
             className="w-[12.5rem] sm:w-full"
-            options={servicesOptions}
-          />
+            onBlur={handleGroupBlur("services")}
+          >
+            <CustomSelect
+              name="services"
+              value={formData.services}
+              onChange={handleChange}
+              placeholder="Services I need"
+              className="w-full"
+              options={servicesOptions}
+            />
+            {fieldError("services")}
+          </div>
 
-          {/* Email * */}
-          <div className="relative w-[12.5rem] sm:w-full">
+          {/* Email */}
+          <div className="w-[12.5rem] sm:w-full">
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
+              onBlur={() => handleBlur("email")}
               placeholder="Email"
-              required
               className="w-full px-3 py-1 border border-footer-border rounded-lg text-base  text-footer-text font-normal font-poppins outline-none focus:border-primary-blue"
             />
-            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-red-500 pointer-events-none">
-              *
-            </span>
+            {fieldError("email")}
           </div>
 
-          {/* Preferable Software * */}
-          <CustomSelect
-            name="software"
-            value={formData.software}
-            onChange={handleChange}
-            placeholder="Preferable Software *"
-            required
+          {/* Preferable Software */}
+          <div
             className="w-[12.5rem] sm:w-full"
-            options={preferableSoftwareOptions}
-          />
+            onBlur={handleGroupBlur("software")}
+          >
+            <CustomSelect
+              name="software"
+              value={formData.software}
+              onChange={handleChange}
+              placeholder="Preferable Software"
+              className="w-full"
+              options={preferableSoftwareOptions}
+            />
+            {fieldError("software")}
+          </div>
 
-          {/* Estimated Budget * */}
-          <CustomSelect
-            name="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            placeholder="Estimated Budget *"
-            required
+          {/* Estimated Budget */}
+          <div
             className="w-[12.5rem] sm:w-full"
-            options={estimatedBudgetOptions}
-          />
+            onBlur={handleGroupBlur("budget")}
+          >
+            <CustomSelect
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              placeholder="Estimated Budget"
+              className="w-full"
+              options={estimatedBudgetOptions}
+            />
+            {fieldError("budget")}
+          </div>
         </div>
 
         {/* Message Textarea */}
@@ -260,18 +389,19 @@ export default function GetInTouchForm() {
             htmlFor="message"
             className="text-lg  text-text-gray font-medium font-poppins"
           >
-            Your Message <span className="text-red-500">*</span>
+            Your Message
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
+            onBlur={() => handleBlur("message")}
             placeholder="Type here...."
-            required
             rows={8}
             className="px-3 py-3 border border-footer-border rounded-lg w-full min-h-[12.5rem] text-base  text-footer-text font-normal font-poppins outline-none resize-none focus:border-primary-blue"
           />
+          {fieldError("message")}
         </div>
 
         {/* Checkbox and File Upload */}
@@ -313,6 +443,7 @@ export default function GetInTouchForm() {
                 />
               </label>
             </div>
+            {fieldError("file")}
           </div>
         </div>
 
