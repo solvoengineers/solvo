@@ -185,6 +185,7 @@ export default function Header({
               src="/images/logo-176606.webp"
               alt="Logo"
               fill
+              sizes="144px"
               className="object-contain transition-opacity duration-300 hover:opacity-90"
             />
           </Link>
