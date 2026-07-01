@@ -78,8 +78,15 @@ export async function POST(request: NextRequest) {
 			html: emailHtml,
 		};
 
-		// Attach file if provided
+		// Attach file if provided (with a size limit)
 		if (file && file.size > 0) {
+			const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+			if (file.size > MAX_FILE_SIZE) {
+				return NextResponse.json(
+					{ error: "File is too large. Please keep uploads under 10 MB." },
+					{ status: 400 }
+				);
+			}
 			const buffer = Buffer.from(await file.arrayBuffer());
 			mailOptions.attachments = [
 				{
