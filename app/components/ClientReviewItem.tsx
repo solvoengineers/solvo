@@ -44,6 +44,7 @@ const ClientReviewItem: React.FC<ClientReviewItemProps> = ({ data }) => {
             src={data.image}
             alt={data.clientName}
             fill
+            sizes="240px"
             className="object-cover rounded-3xl"
             loading="lazy"
           />
