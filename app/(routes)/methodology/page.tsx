@@ -20,7 +20,7 @@ export default function MethodologyPage() {
           Our <span className="text-primary-blue">Projects</span>
         </h2>
         <p className="text-base text-footer-text font-normal font-poppins text-center ">
-          See how Solvo Products has helped its clients achieve their<br></br>{" "}
+          See how Solvo Engineers has helped its clients achieve their<br></br>{" "}
           vision of digital innovation.
         </p>
       </div>
