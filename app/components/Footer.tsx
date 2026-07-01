@@ -20,9 +20,9 @@ function LeftSection() {
         <p className="text-base text-footer-text font-normal font-poppins w-[30rem] sm:w-full">
           Solvo Engineers is an expert engineering consultation firm
           specializing in Finite Element Analysis (FEA), Computational Fluid
-          Dynamics (CFD) and Computer-Aided Design (CAD) medelling services.
-          With a focus on delivering precise and efficient solution, our team of
-          professional licensed engineers providing accurate effective solution.
+          Dynamics (CFD) and Computer-Aided Design (CAD) modelling services.
+          With a focus on delivering precise and efficient solutions, our team of
+          professional licensed engineers provide accurate, effective solutions.
           We are dedicated to offering advanced simulation driven insights that
           enable clients to promote innovation, reducing prototyping cost,
           design optimization, and simplify the process of developing new
@@ -140,7 +140,7 @@ function BottomSection() {
       </Link>
       <div className="flex flex-row items-center sm:flex-col   text-base justify-center sm:flex-wrap text-footer-text">
         <div className="flex flex-row">
-          © 2025 Copyrights
+          © 2026 Copyrights
           <span className="text-primary-blue ml-1 mr-1"> Solvo Engineers.</span>
         </div>
         <div className="">All Rights Reserved.</div>
