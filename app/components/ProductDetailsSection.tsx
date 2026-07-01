@@ -42,7 +42,7 @@ export default function ProductDetailsSection() {
         </h2>
 
         <p className="text-footer-text max-w-md text-center text-base ">
-          See how Solvo Products has helped its clients achieve their vision of
+          See how Solvo Engineers has helped its clients achieve their vision of
           digital innovation.
         </p>
         {/* Swiper Container */}
