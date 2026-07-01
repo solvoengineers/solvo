@@ -14,6 +14,7 @@ function LeftSection() {
             src="/images/logo-176606.webp"
             alt="Logo"
             fill
+            sizes="155px"
             className="object-contain"
           />
         </div>
