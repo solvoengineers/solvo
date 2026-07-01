@@ -25,10 +25,10 @@ const preferableSoftwareOptions = [
 ];
 
 const estimatedBudgetOptions = [
-  { value: "5000-usd", label: "> 5000 USD " },
+  { value: "5000-usd", label: "< 5000 USD " },
   { value: "5000-10000-usd", label: "5000 - 10000 USD" },
   { value: "10000-30000-usd", label: "10000 - 30000 USD" },
-  { value: "50000-usd", label: "< 50000 USD " },
+  { value: "50000-usd", label: "> 50000 USD " },
 ];
 
 const servicesOptions = [
@@ -260,7 +260,7 @@ export default function GetInTouchForm() {
             htmlFor="message"
             className="text-lg  text-text-gray font-medium font-poppins"
           >
-            Your Massage <span className="text-red-500">*</span>
+            Your Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"
