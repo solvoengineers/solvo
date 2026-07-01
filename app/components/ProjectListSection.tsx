@@ -49,7 +49,7 @@ export default function ProjectListSection({ withoutHeading = false }) {
         {/* Description */}
         {!withoutHeading && (
           <p className="text-footer-text max-w-md text-center text-base">
-            See how Solvo Products has helped its clients achieve their vision
+            See how Solvo Engineers has helped its clients achieve their vision
             of digital innovation.
           </p>
         )}
