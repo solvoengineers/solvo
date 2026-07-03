@@ -5,6 +5,26 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import CustomSelect from "./CustomSelect";
 
+// The three kinds of form fields our change handler can receive events from.
+// Naming this on its own line keeps the build tool's parser happy.
+type FormFieldElement =
+  | HTMLInputElement
+  | HTMLTextAreaElement
+  | HTMLSelectElement;
+
+// Everything the form keeps track of while the visitor fills it in
+type FormDataState = {
+  lookingFor: string;
+  fullName: string;
+  services: string;
+  email: string;
+  software: string;
+  budget: string;
+  message: string;
+  requiresNDA: boolean;
+  file: File | null;
+};
+
 // Select options from Figma
 const lookingForOptions = [
   { value: "start-new-project", label: "Start a new project" },
@@ -50,7 +70,7 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 export default function GetInTouchForm() {
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataState>({
     lookingFor: "",
     fullName: "",
     services: "",
@@ -59,7 +79,7 @@ export default function GetInTouchForm() {
     budget: "",
     message: "",
     requiresNDA: false,
-    file: null as File | null,
+    file: null,
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -70,11 +90,8 @@ export default function GetInTouchForm() {
     message: string;
   }>({ type: null, message: "" });
 
-  // Returns an error message for one field ("" means it's valid)
-  const validateField = (
-    name: string,
-    data: typeof formData = formData
-  ): string => {
+  // Returns the problem with one field, or "" if the field is fine
+  const validateField = (name: string, data: FormDataState): string => {
     switch (name) {
       case "lookingFor":
         return data.lookingFor ? "" : "Please choose an option";
@@ -82,11 +99,17 @@ export default function GetInTouchForm() {
         return data.fullName.trim() ? "" : "Please enter your name";
       case "services":
         return data.services ? "" : "Please choose an option";
-      case "email":
-        if (!data.email.trim()) return "Please enter your email";
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())
-          ? ""
-          : "Please enter a valid email";
+      case "email": {
+        const value = data.email.trim();
+        if (!value) return "Please enter your email";
+        const atPosition = value.indexOf("@");
+        const dotPosition = value.lastIndexOf(".");
+        const looksValid =
+          atPosition > 0 &&
+          dotPosition > atPosition + 1 &&
+          dotPosition < value.length - 1;
+        return looksValid ? "" : "Please enter a valid email";
+      }
       case "software":
         return data.software ? "" : "Please choose an option";
       case "budget":
@@ -94,15 +117,17 @@ export default function GetInTouchForm() {
       case "message":
         return data.message.trim() ? "" : "Please enter your message";
       case "file":
-        if (data.file && data.file.size > MAX_FILE_SIZE)
+        if (data.file && data.file.size > MAX_FILE_SIZE) {
           return "File is larger than 10 MB. Please choose a smaller file.";
+        }
         return "";
       default:
         return "";
     }
   };
 
-  const validateAll = (data: typeof formData = formData) => {
+  // Checks every field at once (used when Send is clicked)
+  const validateAll = (data: FormDataState): Record<string, string> => {
     const fields = [
       "lookingFor",
       "fullName",
@@ -116,16 +141,22 @@ export default function GetInTouchForm() {
     const newErrors: Record<string, string> = {};
     fields.forEach((field) => {
       const message = validateField(field, data);
-      if (message) newErrors[field] = message;
+      if (message) {
+        newErrors[field] = message;
+      }
     });
     return newErrors;
   };
 
+  // Adds or clears the message shown under one field
   const setFieldError = (name: string, message: string) => {
     setErrors((prev) => {
       const next = { ...prev };
-      if (message) next[name] = message;
-      else delete next[name];
+      if (message) {
+        next[name] = message;
+      } else {
+        delete next[name];
+      }
       return next;
     });
   };
@@ -134,7 +165,7 @@ export default function GetInTouchForm() {
     e.preventDefault();
 
     // Check everything first
-    const newErrors = validateAll();
+    const newErrors = validateAll(formData);
     setErrors(newErrors);
     setTouched({
       lookingFor: true,
@@ -195,11 +226,7 @@ export default function GetInTouchForm() {
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+  const handleChange = (e: React.ChangeEvent<FormFieldElement>) => {
     const { name, type } = e.target;
 
     let fieldValue: string | boolean | File | null;
@@ -214,7 +241,8 @@ export default function GetInTouchForm() {
     const newData = { ...formData, [name]: fieldValue };
     setFormData(newData);
 
-    // A file is checked the instant it's picked; other fields only after being touched
+    // A file is checked the instant it's picked;
+    // other fields only after they have been visited once
     if (name === "file") {
       setTouched((prev) => ({ ...prev, file: true }));
       setFieldError("file", validateField("file", newData));
@@ -225,7 +253,7 @@ export default function GetInTouchForm() {
 
   const handleBlur = (name: string) => {
     setTouched((prev) => ({ ...prev, [name]: true }));
-    setFieldError(name, validateField(name));
+    setFieldError(name, validateField(name, formData));
   };
 
   // For the custom dropdowns: only validate once focus leaves the whole field
@@ -236,6 +264,7 @@ export default function GetInTouchForm() {
       }
     };
 
+  // The small red line shown under an invalid field
   const fieldError = (name: string) =>
     errors[name] ? (
       <p className="text-sm text-red-500 font-normal font-poppins mt-1">
