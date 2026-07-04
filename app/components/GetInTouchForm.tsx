@@ -274,10 +274,15 @@ export default function GetInTouchForm() {
     }
   };
 
-  // The small red line under a field. Its space is always reserved
-  // (min-height) so the form never grows or shrinks when a message appears.
+  // ===== RED ERROR LINE UNDER EACH FIELD =====
+  // text-[0.7rem]  -> the RED TEXT SIZE (make smaller/bigger here)
+  // h-4            -> fixed reserved strip height; this is what stops the form
+  //                   from jumping when a message appears. KEEP this (do not
+  //                   remove h-4), otherwise the form will shift again.
+  // whitespace-nowrap -> keeps every message on ONE line (also prevents jump)
+  // mt-1           -> tiny gap between the field and its red line
   const fieldError = (name: string) => (
-    <p className="text-xs text-red-500 font-normal font-poppins mt-1 min-h-[1.25rem]">
+    <p className="text-[0.7rem] leading-4 text-red-500 font-normal font-poppins mt-1 h-4 overflow-hidden whitespace-nowrap text-ellipsis">
       {errors[name] || ""}
     </p>
   );
@@ -322,11 +327,20 @@ export default function GetInTouchForm() {
         How Can We Help You?
       </h2>
 
-      {/* Form Fields */}
-      <div className="flex flex-col gap-6">
-        {/* 6 Fields Grid - 3 cols, 2 rows */}
+      {/*
+        SPACING between the big blocks (the 6 fields, the message box, the
+        upload box and the Send button). Change gap-4 -> gap-3 or gap-2 to
+        pull them closer, or gap-5/gap-6 to push them apart.
+      */}
+      <div className="flex flex-col gap-4">
+        {/*
+          SPACING between the 6 fields.
+          gap-y-2 -> the up/down gap between the field rows (make smaller to
+                     tighten, e.g. gap-y-1). This is the main one you marked.
+          gap-x-6 -> the left/right gap between the columns.
+        */}
         <div
-          className="grid sm:grid-cols-2 grid-cols-[repeat(3,12.5rem)] gap-6"
+          className="grid sm:grid-cols-2 grid-cols-[repeat(3,12.5rem)] gap-x-6 gap-y-2"
           style={{ justifyContent: "space-between" }}
         >
           {/* I am looking to */}
