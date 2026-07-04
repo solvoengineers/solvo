@@ -282,9 +282,9 @@ export default function GetInTouchForm() {
   // whitespace-nowrap -> keeps every message on ONE line (also prevents jump)
   // mt-1           -> tiny gap between the field and its red line
   const fieldError = (name: string) => (
-    <p className="text-[0.35rem] leading-4 text-red-500 font-normal font-poppins mt-1 h-4 overflow-hidden whitespace-nowrap text-ellipsis">
+    <div className="text-[0.5rem] leading-4 text-red-500 font-normal font-poppins mt-1 h-4 overflow-hidden whitespace-nowrap text-ellipsis">
       {errors[name] || ""}
-    </p>
+    </div>
   );
 
   return (
