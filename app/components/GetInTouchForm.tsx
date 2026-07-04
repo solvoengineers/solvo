@@ -1,7 +1,7 @@
 "use client";
 
 import { allIcons } from "../helpers/icons";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import CustomSelect from "./CustomSelect";
 
@@ -70,6 +70,7 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 export default function GetInTouchForm() {
   const router = useRouter();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState<FormDataState>({
     lookingFor: "",
     fullName: "",
@@ -118,7 +119,7 @@ export default function GetInTouchForm() {
         return data.message.trim() ? "" : "Please enter your message";
       case "file":
         if (data.file && data.file.size > MAX_FILE_SIZE) {
-          return "File is larger than 10 MB. Please choose a smaller file.";
+          return "File must be under 10 MB.";
         }
         return "";
       default:
@@ -264,13 +265,22 @@ export default function GetInTouchForm() {
       }
     };
 
-  // The small red line shown under an invalid field
-  const fieldError = (name: string) =>
-    errors[name] ? (
-      <p className="text-sm text-red-500 font-normal font-poppins mt-1">
-        {errors[name]}
-      </p>
-    ) : null;
+  // Clears the chosen file and lets the same file be picked again
+  const removeFile = () => {
+    setFormData((prev) => ({ ...prev, file: null }));
+    setFieldError("file", "");
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  // The small red line under a field. Its space is always reserved
+  // (min-height) so the form never grows or shrinks when a message appears.
+  const fieldError = (name: string) => (
+    <p className="text-xs text-red-500 font-normal font-poppins mt-1 min-h-[1.25rem]">
+      {errors[name] || ""}
+    </p>
+  );
 
   return (
     <form
@@ -455,11 +465,36 @@ export default function GetInTouchForm() {
             >
               Upload Document (Optional)
             </label>
-            <div className="flex flex-row items-center gap-5 px-3 py-1 border border-footer-border rounded-lg">
-              <span className="text-sm  text-footer-text font-normal font-poppins flex-1">
+            <div className="flex flex-row items-center gap-3 px-3 py-1 border border-footer-border rounded-lg">
+              <span className="text-sm  text-footer-text font-normal font-poppins flex-1 min-w-0 truncate">
                 {formData.file ? formData.file.name : "Choose file to upload"}
               </span>
-              <label className="px-3 py-1 border border-orange rounded-lg bg-orange cursor-pointer">
+              {formData.file && (
+                <button
+                  type="button"
+                  onClick={removeFile}
+                  aria-label="Remove selected file"
+                  title="Remove file"
+                  className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full text-footer-text hover:text-red-500 transition-colors"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 6L6 18M6 6l12 12"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              )}
+              <label className="px-3 py-1 border border-orange rounded-lg bg-orange cursor-pointer flex-shrink-0">
                 <span className="text-sm  text-white font-normal font-poppins">
                   Browse File
                 </span>
@@ -467,6 +502,7 @@ export default function GetInTouchForm() {
                   type="file"
                   id="file"
                   name="file"
+                  ref={fileInputRef}
                   onChange={handleChange}
                   className="hidden"
                 />
