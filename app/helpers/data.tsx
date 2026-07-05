@@ -291,17 +291,18 @@ export const allServiceItems: IServiceItem[] = [
       title: "CFD Services for Enhanced Product Performance",
       description: (
         <>
-          Our CFD services help you design stronger and lighter products with
-          confidence. We use finite element analysis to predict how parts and
-          assemblies behave under real loads such as stress vibration heat
-          impact and fatigue. With accurate FEA simulations we reveal weak
-          points early compare design options and guide material choices so you
-          can reduce prototypes and shorten development time. Our engineers set
-          clear goals define loads and constraints and select the right element
-          types and material models so that each FEA analysis reflects real
-          world behavior. You get faster answers during concept development and
-          deeper insight during detailed design which means better performance
-          lower cost and fewer surprises in testing and production.
+        Our CFD services help you understand and improve how fluids move
+        through and around your design. We use computational fluid dynamics
+        to predict airflow, cooling, heat transfer, mixing and pressure drop
+        under real operating conditions. With accurate CFD simulations we
+        reveal flow problems early, compare design options and guide
+        geometry choices so you can reduce prototypes and shorten
+        development time. Our engineers set clear goals, define boundary
+        conditions and build quality meshes with the right turbulence models
+        so that each CFD analysis reflects real world behavior. You get
+        faster answers during concept development and deeper insight during
+        detailed design which means better performance, lower cost and fewer
+        surprises in testing and production.
         </>
       ),
       rightSection: {
