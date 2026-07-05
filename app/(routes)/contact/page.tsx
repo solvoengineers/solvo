@@ -41,6 +41,8 @@ function ContactUsPage() {
         }}
       ></div>
 
+      <h1 className="sr-only">Contact Solvo Engineers</h1>
+
       <div className="hidden sm:block">
         <Header forContactUs={true}></Header>
       </div>
