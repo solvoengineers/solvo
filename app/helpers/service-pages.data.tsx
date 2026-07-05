@@ -65,7 +65,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
-              "Our CFD services provide In-Design insights into fluid flow phrnomena to enchance product efficiency and reliability",
+              "Our CFD services provide in-design insights into fluid flow phenomena to enhance product efficiency and reliability",
             link: "/services/cfd-analysis",
             logo: "/images/service-pages/cfd-analysis/logo.webp",
           },
@@ -373,7 +373,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
-              "Our CFD services provide In-Design insights into fluid flow phrnomena to enchance product efficiency and reliability",
+              "Our CFD services provide in-design insights into fluid flow phenomena to enhance product efficiency and reliability",
             link: "/services/cfd-analysis",
             logo: "/images/service-pages/cfd-analysis/logo.webp",
           },
