@@ -20,7 +20,7 @@ const JobPage = () => {
   return (
     <div className="flex flex-col w-full h-full bg-white gap-section-spacing page-wrapper">
       <Header activeRoute="career" />
-      <TopSection />
+      <TopSection title={job.title} />
       <JobDetails job={job} />
       <JobApplyForm jobId={id as string} />
       <Footer />
