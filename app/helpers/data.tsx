@@ -150,7 +150,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
-              ""Our CFD services provide indesign understandings into fluid flow phenomena to enhance product efficiency and reliability",
+              "Our CFD services provide in-design understandings into fluid flow phenomena to enhance product efficiency and reliability",
             link: "/services/computational-fluid-dynamics-cfd",
             logo: "/images/service-pages/computational-fluid-dynamics-cfd/logo.webp",
           },
@@ -312,7 +312,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Finite Element Analysis - FEA",
             description:
-              "Our FEA services deliver indesign guidance on stress and deformation to improve product strength, safety and durability.",
+              "Our FEA services deliver in-design guidance on stress and deformation to improve product strength, safety and durability.",
             link: "/services/finite-element-analysis-fea",
 
             logo: "/images/service-pages/finite-element-anlaysis-fea/logo.webp",
@@ -479,7 +479,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Finite Element Analysis - FEA",
             description:
-              "Our FEA services deliver indesign guidance on stress and deformation to improve product strength, safety and durability.",
+              "Our FEA services deliver in-design guidance on stress and deformation to improve product strength, safety and durability.",
             link: "/services/finite-element-analysis-fea",
 
             logo: "/images/service-pages/finite-element-anlaysis-fea/logo.webp",
@@ -487,7 +487,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
-              ""Our CFD services provide indesign understandings into fluid flow phenomena to enhance product efficiency and reliability",
+              "Our CFD services provide in-design understandings into fluid flow phenomena to enhance product efficiency and reliability",
             link: "/services/computational-fluid-dynamics-cfd",
             logo: "/images/service-pages/computational-fluid-dynamics-cfd/logo.webp",
           },
