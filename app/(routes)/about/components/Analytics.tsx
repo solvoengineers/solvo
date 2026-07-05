@@ -30,9 +30,9 @@ const Analytics: React.FC<AnalyticsProps> = () => {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#fafafa] via-[#8a8a8a] to-[#fafafa]"></div>
       {analyticsItems.map((item, index) => (
         <div key={index} className="flex flex-col gap-5 items-center">
-          <h1 className="text-5xl font-semibold text-primary-blue font-obviously">
+       <div className="text-5xl sm:text-[2rem] leading-[1.2] font-semibold text-primary-blue font-obviously">
             {item.value}
-          </h1>
+          </div>
           <p className="text-base text-footer-text font-normal font-poppins">
             {item.description}
           </p>
