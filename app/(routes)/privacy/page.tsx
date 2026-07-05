@@ -3,7 +3,7 @@ import Header from "@/app/components/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Solvo Engineers",
+    title: "Privacy Policy",
   description:
     "Read Solvo Engineers' Privacy Policy to understand how we collect, use, and protect your personal information when you use our engineering consultation services.",
   keywords: [
