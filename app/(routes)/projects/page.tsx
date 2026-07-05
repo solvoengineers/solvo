@@ -7,7 +7,7 @@ import TopSection from "./components/TopSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Projects - Engineering Solutions Portfolio",
+  title: "Projects - FEA, CFD & CAD Portfolio",
   description:
     "Explore our portfolio of successful engineering projects. See how Solvo Engineers has helped clients achieve their vision through FEA, CFD, and CAD solutions.",
   keywords: [
