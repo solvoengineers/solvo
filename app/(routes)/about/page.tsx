@@ -12,9 +12,9 @@ import GetInTouch from "@/app/components/GetInTouch";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - Expert Engineering Consultation Firm",
+  title: "About Us - Engineering Consultation Firm",
   description:
-    "Learn about Solvo Engineers, a CAE consultant firm specializing in FEA, CFD simulations and CAD modeling. We deliver exceptional lifecycle solutions customized to meet the precise needs of our clients.",
+    "Learn about Solvo Engineers, a CAE consulting firm specializing in FEA, CFD simulation and CAD modeling, delivering solutions tailored to each client.",
   keywords: [
     "about solvo engineers",
     "engineering firm",
