@@ -1,6 +1,10 @@
 import PageHeading from "@/app/components/PageHeading";
 
-export default function TopSection() {
+interface TopSectionProps {
+  title?: string;
+}
+
+export default function TopSection({ title }: TopSectionProps) {
   return (
     <div className="w-full max-w-desktop mx-auto flex flex-col items-center gap-6 sm:px-side-space relative">
       <img
@@ -11,7 +15,7 @@ export default function TopSection() {
 
       <PageHeading
         className="w-[calc(100%-5rem)] sm:w-full"
-        title={<>We help businesses grow</>}
+        title={<>{title ?? "We help businesses grow"}</>}
         description={<>Work there. Find the dream job you’ve always wanted..</>}
       ></PageHeading>
     </div>
