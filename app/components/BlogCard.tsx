@@ -21,8 +21,7 @@ export default function BlogCard({
         "All Categories"
       : "All Categories";
 
-  const descriptionForBigCard =
-    " Comparison top CFD software’s like Ansys, COMSOL, SolidWorks and STAR-CCM+ to improve  cfd simulations...";
+
   return (
     <Link
       href={blog.link}
@@ -61,7 +60,7 @@ export default function BlogCard({
         {/* Description */}
         <div className="flex flex-col gap-2">
           <p className="text-sm  text-footer-text font-normal font-poppins">
-            {big ? descriptionForBigCard : blog.description}{" "}
+            {blog.description}{" "}
             <span className="text-sm  text-primary-blue font-normal font-poppins whitespace-nowrap">
               Read more
             </span>
