@@ -19,7 +19,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "cfd-engineer",
     title: "CFD Engineer",
-    seoTitle: "CFD Engineer - Careers at Solvo Engineers",
+    seoTitle: "CFD Engineer - Job Opening",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
@@ -56,7 +56,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "fea-engineer",
     title: "FEA Engineer",
-    seoTitle: "FEA Engineer - Careers at Solvo Engineers",
+     seoTitle: "FEA Engineer - Job Opening",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
@@ -91,7 +91,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "business-developer",
     title: "Business Developer",
-    seoTitle: "Business Developer - Careers at Solvo Engineers",
+    seoTitle: "Business Developer - Job Opening",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
@@ -126,7 +126,7 @@ export const allJobPositions: IJobPosition[] = [
   {
     id: "social-media-manager",
     title: "Social Media Manager",
-    seoTitle: "Social Media Manager - Careers at Solvo Engineers",
+    seoTitle: "Social Media Manager - Job Opening",
     employmentType: "Full-Time",
     workType: "Onsite/Hybrid/Remote",
     location: "Islamabad",
