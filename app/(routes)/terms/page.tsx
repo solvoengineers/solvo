@@ -3,7 +3,7 @@ import Header from "@/app/components/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions - Solvo Engineers",
+  title: "Terms and Conditions",
   description:
     "Read Solvo Engineers' Terms and Conditions to understand the terms governing your use of our website and engineering consultation services.",
   keywords: [
