@@ -121,7 +121,7 @@ export const allServiceItems: IServiceItem[] = [
         FEA Analysis <span className="text-primary-blue">Services</span>
       </>
     ),
-    seoTitle: "FEA Analysis Services - Finite Element Analysis Solutions",
+    seoTitle: "Finite Element Analysis (FEA) Services",
     subtitle:
       "Get clear, accurate FEA results every time, solve complex engineering problems into confident decisions.",
     heroImage:
