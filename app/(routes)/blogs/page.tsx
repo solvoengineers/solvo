@@ -7,9 +7,9 @@ import Divider from "@/app/components/Divider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blogs & Articles - Engineering Insights & News",
+  title: "Engineering Blog - FEA, CFD & CAD Insights",
   description:
-    "Read our latest engineering blogs and articles about FEA, CFD, CAD, and engineering best practices. Stay updated with industry insights and technical knowledge.",
+    "Read our latest engineering blogs about FEA, CFD, CAD and industry best practices. Stay updated with technical insights from Solvo Engineers.",
   keywords: [
     "engineering blog",
     "FEA blog",
