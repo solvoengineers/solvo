@@ -282,7 +282,7 @@ export const allServiceItems: IServiceItem[] = [
         CFD Analysis <span className="text-primary-blue">Services</span>
       </>
     ),
-    seoTitle: "CFD Analysis Services - Computational Fluid Dynamics Solutions",
+    seoTitle: "Computational Fluid Dynamics (CFD) Services",
     subtitle:
       "From airflow and cooling to mixing and pressure drop, CFD shows what's happening inside your design so you can improve it fast",
     heroImage:
@@ -450,7 +450,7 @@ export const allServiceItems: IServiceItem[] = [
         CAD Analysis <span className="text-primary-blue">Services</span>
       </>
     ),
-    seoTitle: "CAD Analysis Services - 3D CAD Modeling & Design Solutions",
+    seoTitle: "3D CAD Modeling & Design Services",
     subtitle:
       "From sketch to 3D model, CAD helps you refine designs, spot issues early, and move faster to manufacturing",
     heroImage:
