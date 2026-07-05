@@ -12,16 +12,19 @@ export default function TopSection({ blog }: TopSectionProps) {
       <div className="flex-row items-start gap-6 sm:flex-col grid grid-cols-[1.2fr_1fr] sm:grid-cols-1">
         {/* Title and Author Section */}
         <div className="flex flex-col gap-4 flex-1">
-          {/* Breadcrumb */}
-          <h3 className="text-base  text-footer-text font-normal font-poppins">
+    {/* Breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="text-base  text-footer-text font-normal font-poppins"
+          >
             <Link href="/">Home</Link>/ <Link href="/blogs">Blogs</Link>/{" "}
             {blog.title}
-          </h3>
+          </nav>
 
           {/* Title */}
-          <h2 className="  text-footer-heading font-[570] font-obviously">
+          <h1 className="text-[2.25rem]! sm:text-[1.5rem]! text-footer-heading font-[570] font-obviously">
             {blog.title}
-          </h2>
+          </h1>
 
           {/* Author Info */}
           <div className="flex flex-row items-center gap-[0.625rem]">
