@@ -6,7 +6,7 @@ import { allIcons } from "@/app/helpers/icons";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Get in Touch with Solvo Engineers",
+   title: "Contact Us - Get in Touch",
   description:
     "Contact Solvo Engineers for expert engineering consultation services. Get in touch with our team of professional licensed engineers for FEA, CFD, and CAD solutions.",
   keywords: [
