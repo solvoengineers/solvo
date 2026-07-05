@@ -16,7 +16,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case Studies - Engineering Success Stories",
   description:
-    "Explore our engineering case studies showcasing successful FEA, CFD, and CAD projects. Learn how Solvo Engineers delivers innovative solutions for clients across industries.",
+    "Engineering case studies showcasing successful FEA, CFD and CAD projects, and how Solvo Engineers delivers innovative solutions across industries.",
   keywords: [
     "engineering case studies",
     "FEA case studies",
