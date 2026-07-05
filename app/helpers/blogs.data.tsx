@@ -31,7 +31,7 @@ export const allBlogs: IBlog[] = [
     seoTitle:
       "Choosing the Best CFD Software for Engineering: A Practical Guide to Ansys, COMSOL, SolidWorks and STAR-CCM+",
     description:
-      "Discover how FEA and CFD transform product development and innovation...",
+      "Compare Ansys, COMSOL, SolidWorks and STAR-CCM+ side by side. A practical guide to choosing the right CFD software for your engineering projects and budget.",
     image: "/images/blogs/item1/main-image.webp",
     author: {
       name: "Mohsin Ali",
@@ -178,7 +178,7 @@ export const allBlogs: IBlog[] = [
     seoTitle:
       "What is FEA and CFD? Why Every Industry Needs Simulation in Product Development",
     description:
-      "Discover how FEA and CFD transform product development and innovation...",
+      "Learn what FEA and CFD are, how they differ and why simulation helps every industry predict product performance before building physical prototypes.",
     image: "/images/blogs/item2/main-image.webp",
     author: {
       name: "Mohsin Ali",
@@ -348,7 +348,7 @@ export const allBlogs: IBlog[] = [
     seoTitle:
       "How CFD and FEA Are Powering the Future of Electric Vehicles and Aerospace Innovation",
     description:
-      "Discover how FEA and CFD transform product development and innovation...",
+      "See how CFD and FEA simulation drive electric vehicle and aerospace innovation, from battery cooling and aerodynamics to lightweight structural design.",
     image: "/images/blogs/item3/main-image.webp",
     author: {
       name: "Mohsin Ali",
@@ -516,7 +516,7 @@ export const allBlogs: IBlog[] = [
     seoTitle:
       "Simulation in Aerospace and Defense: How CFD and FEA are Shaping Safer, Smarter Flight Systems",
     description:
-      "Discover how FEA and CFD transform product development and innovation...",
+      "How aerospace and defense teams use CFD and FEA to design safer, smarter flight systems that perform reliably under the most extreme conditions.",
     image: "/images/blogs/item4/main-image.webp",
     author: {
       name: "Mohsin Ali",
@@ -835,7 +835,7 @@ export const allBlogs: IBlog[] = [
     seoTitle:
       "Accelerating Aerospace and Defence Product Development with CFD and FEA Analysis",
     description:
-      "Discover how FEA and CFD transform product development and innovation...",
+      "How CFD and FEA analysis speed up aerospace and defence product development, cutting prototypes and validating wings, airframes and components faster.",
     image: "/images/blogs/item6/main-image.webp",
     author: {
       name: "Mohsin Ali",
