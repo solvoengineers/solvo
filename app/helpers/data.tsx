@@ -150,7 +150,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
-              "Our CFD services provide In-Design insights into fluid flow phrnomena to enchance product efficiency and reliability",
+              ""Our CFD services provide in-design understandings into fluid flow phenomena to enhance product efficiency and reliability",
             link: "/services/computational-fluid-dynamics-cfd",
             logo: "/images/service-pages/computational-fluid-dynamics-cfd/logo.webp",
           },
@@ -487,7 +487,7 @@ export const allServiceItems: IServiceItem[] = [
           {
             title: "Computational Fluid Dynamics - CFD",
             description:
-              "Our CFD services provide In-Design insights into fluid flow phrnomena to enchance product efficiency and reliability",
+              ""Our CFD services provide in-design understandings into fluid flow phenomena to enhance product efficiency and reliability",
             link: "/services/computational-fluid-dynamics-cfd",
             logo: "/images/service-pages/computational-fluid-dynamics-cfd/logo.webp",
           },
@@ -611,7 +611,7 @@ export const allHomePageServiceItems: IHomePageServiceItem[] = [
   {
     title: "Computational Fluid Dynamics (CFD)",
     description:
-      "Provides clear insights to improve your product’s efficiency and reliability",
+      "Provides clear understandings to improve your product’s efficiency and reliability",
     image: "/images/services/turbo-machinery.webp",
     subItems: [
       {
