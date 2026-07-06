@@ -18,7 +18,7 @@ export default function TopSection({ serviceItem }: TopSectionProps) {
       <div className="w-full max-w-desktop mx-auto flex flex-col items-center gap-6 sm:px-side-space sm:w-full relative">
         <img
           src="/images/about/hero-dots2.webp"
-          alt="Hero dots"
+          alt=""
           className="absolute top-0 left-0 -translate-y-[3rem] sm:h-[10rem] h-[15rem] "
         ></img>
 
@@ -38,7 +38,7 @@ export default function TopSection({ serviceItem }: TopSectionProps) {
         <div className="relative w-full h-[20rem] rounded-[1.25rem]  border border-primary-blue rounded-[1.25rem]">
           <img
             src={serviceItem.heroImage}
-            alt="Hero Image"
+            alt={serviceItem.seoTitle}
             className="object-contain h-auto w-atuo w-full h-full"
           />
         </div>
