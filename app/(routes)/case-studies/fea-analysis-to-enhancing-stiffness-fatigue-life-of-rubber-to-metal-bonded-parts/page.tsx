@@ -15,7 +15,7 @@ export default function CaseStudyFEAPage() {
       <div className="w-full max-w-desktop mx-auto flex flex-col items-start gap-6 sm:px-side-space relative">
         <img
           src="/images/case-studies/item1/img1.png"
-          alt="Hero Image"
+          alt="Client logo"
           className="w-auto object-cover h-12 absolute top-0 left-0 z-10 sm:left-side-space"
         />
         <h1 className="text-footer-heading font-bold font-obviously mt-20">
@@ -24,7 +24,7 @@ export default function CaseStudyFEAPage() {
         </h1>
         <img
           src="/images/about/hero-dots2.webp"
-          alt="Hero dots"
+          alt=""
           className="absolute top-0 left-0 -translate-y-[13rem] sm:h-[10rem] h-[15rem]  "
         ></img>
       </div>
