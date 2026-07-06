@@ -3,7 +3,7 @@ export const project2: IFullProject = {
   title:
     "CFD Analysis of Flow Characteristics Around an Ahmed Body with Varying Slant Angles Using Ansys",
   seoTitle:
-    "CFD Analysis of Flow Characteristics Around an Ahmed Body with Varying Slant Angles Using Ansys",
+    "Ahmed Body CFD Analysis - Slant Angles",
   description:
     "A computational fluid dynamics study examining aerodynamic behavior around an Ahmed body model with different rear slant angles using Ansys Fluent.",
   image: "/images/projects/item2/main-image.webp",

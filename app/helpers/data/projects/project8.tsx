@@ -3,9 +3,9 @@ import { IFullProject } from "../../projects.data";
 export const project8: IFullProject = {
   title:
     "FEA Analysis and Optimization of an Industrial Fixture Using SolidWorks Simulation",
-  seoTitle: "FEA Analysis and Optimization of an Industrial Fixture Using SolidWorks Simulation",
+  seoTitle: "Industrial Fixture FEA Optimization",
   description:
-    "A comprehensive FEA analysis of a custom-designed industrial fixture assembly to evaluate its structural performance under static loading conditions using SolidWorks Simulation.",
+    "FEA analysis of a custom industrial fixture assembly, evaluating structural performance under static loading in SolidWorks Simulation.",
   image: "/images/projects/item8/main-image.webp",
   thumbnail: "/images/projects/item8/thumbnail.png",
   link: "/projects/fea-analysis-and-optimization-of-an-industrial-fixture-using-solidworks-simulation",

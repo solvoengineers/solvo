@@ -3,9 +3,9 @@ import { IFullProject } from "../../projects.data";
 export const project9: IFullProject = {
   title:
     "FEA Analysis of a Beam Bracket for Structural Integrity Using Ansys 2024 R2",
-  seoTitle: "FEA Analysis of a Beam Bracket for Structural Integrity Using Ansys 2024 R2",
+  seoTitle: "Beam Bracket Structural FEA Analysis",
   description:
-    "A detailed FEA analysis of a beam bracket to assess its structural integrity, deformation behavior, and load-carrying capacity under realistic boundary conditions using Ansys 2024 R2.",
+    "FEA analysis of a beam bracket assessing structural integrity, deformation and load-carrying capacity under realistic boundary conditions in Ansys.",
   image: "/images/projects/item9/main-image.webp",
   thumbnail: "/images/projects/item9/thumbnail.png",
   link: "/projects/fea-analysis-of-a-beam-bracket-for-structural-integrity-using-ansys-2024-r2",
