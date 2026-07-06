@@ -8,59 +8,62 @@ import { allJobPositions } from "@/app/helpers/jobs.data";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://solvoengineers.com";
 
+  // Update this date when site content changes materially
+  const lastUpdated = new Date("2026-07-05");
+
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/projects`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/blogs`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/careers`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/methodology`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.6,
     },
@@ -69,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Service pages
   const servicePages: MetadataRoute.Sitemap = allServiceItems.map((service) => ({
     url: `${baseUrl}${service.id ? `/services/${service.id}` : ""}`,
-    lastModified: new Date(),
+    lastModified: lastUpdated,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
@@ -77,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Project pages
   const projectPages: MetadataRoute.Sitemap = allFullProjects.map((project) => ({
     url: `${baseUrl}${project.link}`,
-    lastModified: new Date(),
+    lastModified: lastUpdated,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -93,7 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Case study pages
   const caseStudyPages: MetadataRoute.Sitemap = allCaseStudies.map((caseStudy) => ({
     url: `${baseUrl}${caseStudy.link}`,
-    lastModified: new Date(),
+    lastModified: lastUpdated,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -101,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Career pages
   const careerPages: MetadataRoute.Sitemap = allJobPositions.map((job) => ({
     url: `${baseUrl}${job.link}`,
-    lastModified: new Date(),
+    lastModified: lastUpdated,
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
