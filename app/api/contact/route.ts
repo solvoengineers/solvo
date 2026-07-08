@@ -122,7 +122,7 @@ export async function POST(request: NextRequest) {
     // Environment variables
     const gmailUser = process.env.GMAIL_USER;
     const gmailPass = process.env.GMAIL_PASS;
-    const recipientEmail = process.env.RECIEVER_MAIL;
+    const recipientEmail = "contact@solvoengineers.com";
 
     if (!gmailUser || !gmailPass) {
       console.error("Missing Gmail credentials in environment variables");
