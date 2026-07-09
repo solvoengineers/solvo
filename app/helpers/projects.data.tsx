@@ -10,6 +10,7 @@ import { project8 } from "./data/projects/project8";
 import { project9 } from "./data/projects/project9";
 import { project10 } from "./data/projects/project10";
 import { project11 } from "./data/projects/project11";
+import { project12 } from "./data/projects/project12";
 
 export interface IFullProject {
   title: string;
