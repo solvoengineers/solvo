@@ -12,7 +12,7 @@ export const project20: IFullProject = {
   link: "/projects/backward-facing-step-cfd-separation-reattachment-validation",
   summary: [
     {
-      title: "Project Summary",
+      title: "",
       description: (
         <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
           <div className="flex-1 flex flex-col gap-4">
@@ -49,59 +49,37 @@ export const project20: IFullProject = {
   ],
   sections: [
     {
-      title: "Objectives and the Benchmark",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Objectives and the Benchmark
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             The aim was to build a backward-facing step simulation that reproduces
             the real flow physics and to prove it against trusted experimental
             data rather than take it on faith. The objectives were:
           </p>
           <ul className="flex flex-col gap-4">
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Model the turbulent flow over a backward-facing step at the same
-                geometry and conditions as the Driver 1985 experiment.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Model the turbulent flow over a backward-facing step at the same
+              geometry and conditions as the Driver 1985 experiment.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Capture the separation at the step, the recirculation zone behind
-                it, and the reattachment of the flow further downstream.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Capture the separation at the step, the recirculation zone behind
+              it, and the reattachment of the flow further downstream.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Measure the wall static pressure coefficient along both the
-                step-side wall and the opposite wall.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Measure the wall static pressure coefficient along both the
+              step-side wall and the opposite wall.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Compare the pressure coefficient directly against the published
-                experimental graph to validate the model.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Compare the pressure coefficient directly against the published
+              experimental graph to validate the model.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Test how sensitive the results are by changing the inlet velocity
-                and the step height by plus and minus ten percent.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Test how sensitive the results are by changing the inlet velocity
+              and the step height by plus and minus ten percent.
             </li>
           </ul>
           <p className="text-base text-footer-text font-normal font-poppins">
@@ -114,49 +92,32 @@ export const project20: IFullProject = {
       ),
     },
     {
-      title: "Computational Domain and Mesh",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Computational Domain and Mesh
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             The domain was drawn in Ansys as a two-dimensional channel with the
             step set into the floor, matching the benchmark proportions so the
             comparison would be fair. The setup was:
           </p>
           <ul className="flex flex-col gap-4">
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Step height of 1.27 cm, taken straight from the Driver benchmark.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Step height of 1.27 cm, taken straight from the Driver benchmark.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Domain eight step heights tall and twelve step heights long, so
-                the flow has room to separate and fully reattach.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Domain eight step heights tall and twelve step heights long, so the
+              flow has room to separate and fully reattach.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Named inlet, outlet, and top and bottom walls, so the boundary
-                conditions could be applied cleanly.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Named inlet, outlet, and top and bottom walls, so the boundary
+              conditions could be applied cleanly.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Edge sizing of 250 divisions along the top and bottom walls,
-                giving a mesh of about 8,032 elements and 8,440 nodes.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Edge sizing of 250 divisions along the top and bottom walls, giving
+              a mesh of about 8,032 elements and 8,440 nodes.
             </li>
           </ul>
           <p className="text-base text-footer-text font-normal font-poppins">
@@ -170,56 +131,34 @@ export const project20: IFullProject = {
       ),
     },
     {
-      title: "Solver Setup and Boundary Conditions",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Solver Setup and Boundary Conditions
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             The case was solved in Ansys Fluent as a steady, pressure-based
             simulation, with settings chosen to resolve the turbulent separated
             flow accurately:
           </p>
           <ul className="flex flex-col gap-4">
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Turbulence model: the k-omega model in its standard form, which
-                handles near-wall and separated flow well.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Turbulence model: the k-omega model in its standard form, which
+              handles near-wall and separated flow well.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Inlet: air entering at 20 m/s in the streamwise direction.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Inlet: air entering at 20 m/s in the streamwise direction.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Outlet: a pressure outlet open to the surroundings.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Outlet: a pressure outlet open to the surroundings.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Walls: no-slip top and bottom walls, including the step face.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Walls: no-slip top and bottom walls, including the step face.
             </li>
-            <li className="flex gap-2.5 text-base text-footer-text font-normal font-poppins">
-              <span className="text-primary-blue shrink-0" aria-hidden="true">
-                •
-              </span>
-              <span>
-                Numerics: a second-order upwind scheme for momentum and the
-                turbulence equations, for a more accurate solution.
-              </span>
+            <li className="text-base text-footer-text font-normal font-poppins">
+              Numerics: a second-order upwind scheme for momentum and the
+              turbulence equations, for a more accurate solution.
             </li>
           </ul>
           <p className="text-base text-footer-text font-normal font-poppins">
@@ -232,9 +171,12 @@ export const project20: IFullProject = {
       ),
     },
     {
-      title: "Velocity and Pressure Results",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Velocity and Pressure Results
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             The velocity contour, shown above, captures the whole story of the
             step in one picture. The flow arrives from the inlet at its full 20
@@ -276,9 +218,12 @@ export const project20: IFullProject = {
       ),
     },
     {
-      title: "Validation Against Driver's Experimental Data",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Validation Against Driver's Experimental Data
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             A nice-looking contour is not proof of anything on its own, so the real
             test was the wall pressure. The static pressure coefficient was
@@ -330,9 +275,12 @@ export const project20: IFullProject = {
       ),
     },
     {
-      title: "Sensitivity to Inlet Velocity and Step Height",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Sensitivity to Inlet Velocity and Step Height
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             To see how robust the result is, the inlet velocity and the step height
             were each changed by plus and minus ten percent and the pressure
@@ -360,9 +308,12 @@ export const project20: IFullProject = {
       ),
     },
     {
-      title: "Separation and Reattachment CFD at Solvo Engineers",
+      title: "",
       description: (
         <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Separation and Reattachment CFD at Solvo Engineers
+          </h3>
           <p className="text-base text-footer-text font-normal font-poppins">
             Separation, recirculation, and reattachment turn up wherever a flow
             meets a sudden change in shape, behind vehicles, over wings and flaps,
@@ -379,9 +330,9 @@ export const project20: IFullProject = {
             Fluent for internal and external flows, including diffusers, ducts,
             vehicle aerodynamics, and benchmark validation studies, alongside our
             wider CFD and FEA consulting work. If you have a flow that separates,
-            recirculates, or reattaches, and you need it modelled and verified,
-            our team can help. Reach out through our contact page and talk it
-            through with a CFD engineer.
+            recirculates, or reattaches, and you need it modelled and verified, our
+            team can help. Reach out through our contact page and talk it through
+            with a CFD engineer.
           </p>
         </div>
       ),
