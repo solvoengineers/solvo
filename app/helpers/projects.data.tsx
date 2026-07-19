@@ -18,7 +18,7 @@ import { project16 } from "./data/projects/project16";
 import { project17 } from "./data/projects/project17";
 import { project18 } from "./data/projects/project18";
 import { project19 } from "./data/projects/project19";
-import { project19 } from "./data/projects/project20";
+import { project20 } from "./data/projects/project20";
 
 
 export interface IFullProject {
