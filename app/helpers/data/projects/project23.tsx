@@ -8,7 +8,7 @@ export const project23: IFullProject = {
   description:
     "A structural FEA strength analysis of a complete 6-DOF robotic drilling arm and its bolted joints in SolidWorks Simulation, checking von Mises stress, displacement, and factor of safety under a 200 N.m drilling torque.",
   image: "/images/projects/item23/main-image.webp",
-  thumbnail: "/images/projects/item23/thumbnail.webp",
+  thumbnail: "/images/projects/item23/thumbnail.png",
   link: "/projects/structural-analysis-6-dof-robotic-drilling-arm",
   summary: [
     {
