@@ -7,7 +7,7 @@ export const project25: IFullProject = {
   description:
     "A composite FEA and explicit dynamics study of a car bonnet in ANSYS, comparing flax and jute fiber reinforced epoxy under load and impact using fiber and matrix failure criteria.",
   image: "/images/projects/item25/main-image.webp",
-  thumbnail: "/images/projects/item25/thumbnail.webp",
+  thumbnail: "/images/projects/item25/thumbnail.png",
   link: "/projects/car-bonnet-damage-analysis-ansys-composite-fea",
   summary: [
     {
