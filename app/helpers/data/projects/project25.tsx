@@ -3,7 +3,7 @@ import { IFullProject } from "../../projects.data";
 export const project25: IFullProject = {
   title: "Car Bonnet Damage Analysis Using ANSYS",
   seoTitle:
-    "Car Bonnet Damage Analysis in ANSYS | Composite FEA and Explicit Dynamics of Natural Fiber Materials",
+    "Car Bonnet Damage Analysis in ANSYS - Composite FEA and Explicit Dynamics of Natural Fiber Materials",
   description:
     "A composite FEA and explicit dynamics study of a car bonnet in ANSYS, comparing flax and jute fiber reinforced epoxy under load and impact using fiber and matrix failure criteria.",
   image: "/images/projects/item25/main-image.webp",
