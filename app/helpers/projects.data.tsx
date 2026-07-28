@@ -26,6 +26,7 @@ import { project24 } from "./data/projects/project24";
 import { project25 } from "./data/projects/project25";
 import { project26 } from "./data/projects/project26";
 import { project27 } from "./data/projects/project27";
+import { project28 } from "./data/projects/project28";
 
 
 export interface IFullProject {
@@ -72,5 +73,6 @@ export const allFullProjects: IFullProject[] = [
   project25,
   project26,
   project27,
+  project28,
 
 ];
