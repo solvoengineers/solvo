@@ -7,7 +7,7 @@ export const project27: IFullProject = {
   description:
     "A CFD HVAC study of a commercial restaurant oven, comparing a roof extractor and a wall extractor to see how well each one captures the airflow coming off the oven.",
   image: "/images/projects/item27/main-image.webp",
-  thumbnail: "/images/projects/item27/thumbnail.webp",
+  thumbnail: "/images/projects/item27/thumbnail.jpg",
   link: "/projects/hvac-cfd-airflow-restaurant-oven-roof-vs-wall-extractor",
   summary: [
     {
