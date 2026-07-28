@@ -29,6 +29,7 @@ import { project27 } from "./data/projects/project27";
 import { project28 } from "./data/projects/project28";
 
 
+
 export interface IFullProject {
   title: string;
   seoTitle: string;
