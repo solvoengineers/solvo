@@ -76,27 +76,25 @@ export const project30: IFullProject = {
     {
       title: "",
       description: (
-        <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
-          <div className="flex-1 flex flex-col gap-4">
-            <h3 className="text-primary-blue font-semibold font-poppins">
-              The Machine and Model
-            </h3>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              The machine is a two-pole, three-phase, wound-field synchronous design.
-              The stator and rotor cores are M19 electrical steel, with a model depth
-              of 45 mm. The stator carries a distributed three-phase winding with two
-              slots per pole per phase, twelve slots in total, at 180 turns per coil,
-              while the rotor carries a DC field winding of 55 turns per slot driven
-              by a 1 A field current.
-            </p>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              It was solved with the transient solver, with vector potential boundary
-              conditions on the outer region and mesh controls refining the stator
-              and rotor cores. This is the setup that lets the field, the voltage, and
-              the torque all come out of one simulation.
-            </p>
-          </div>
-          <div className="w-[29.5625rem] shrink-0 sm:w-full">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            The Machine and Model
+          </h3>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            The machine is a two-pole, three-phase, wound-field synchronous design.
+            The stator and rotor cores are M19 electrical steel, with a model depth
+            of 45 mm. The stator carries a distributed three-phase winding with two
+            slots per pole per phase, twelve slots in total, at 180 turns per coil,
+            while the rotor carries a DC field winding of 55 turns per slot driven by
+            a 1 A field current.
+          </p>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            It was solved with the transient solver, with vector potential boundary
+            conditions on the outer region and mesh controls refining the stator and
+            rotor cores. This is the setup that lets the field, the voltage, and the
+            torque all come out of one simulation.
+          </p>
+          <div className="w-[29.5625rem] sm:w-full">
             <img
               src="/images/projects/item30/content-image1.webp"
               alt="Cross-section geometry of the 2-pole 3-phase wound-field synchronous machine, showing the stator, rotor, and windings"
@@ -109,25 +107,23 @@ export const project30: IFullProject = {
     {
       title: "",
       description: (
-        <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
-          <div className="flex-1 flex flex-col gap-4">
-            <h3 className="text-primary-blue font-semibold font-poppins">
-              Magnetic Field: Flux Lines and Flux Density
-            </h3>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              With the rotor turning at 3000 rpm on open circuit, the simulation
-              gives the field that drives the machine. The flux lines show the
-              magnetic circuit closing through the stator and rotor cores and crossing
-              the airgap, with a peak flux line value of about 0.0107 Wb/m.
-            </p>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              The flux density contour at the top of this page shows how strong that
-              field is across the machine, peaking at about 0.9587 T in the core. Read
-              together, the two plots show both the shape of the magnetic circuit and
-              where the steel is working hardest.
-            </p>
-          </div>
-          <div className="w-[29.5625rem] shrink-0 sm:w-full">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Magnetic Field: Flux Lines and Flux Density
+          </h3>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            With the rotor turning at 3000 rpm on open circuit, the simulation gives
+            the field that drives the machine. The flux lines show the magnetic
+            circuit closing through the stator and rotor cores and crossing the
+            airgap, with a peak flux line value of about 0.0107 Wb/m.
+          </p>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            The flux density contour at the top of this page shows how strong that
+            field is across the machine, peaking at about 0.9587 T in the core. Read
+            together, the two plots show both the shape of the magnetic circuit and
+            where the steel is working hardest.
+          </p>
+          <div className="w-[29.5625rem] sm:w-full">
             <img
               src="/images/projects/item30/content-image2.webp"
               alt="Ansys Maxwell flux line plot of the synchronous machine, showing the magnetic circuit closing through the cores and airgap"
@@ -140,25 +136,23 @@ export const project30: IFullProject = {
     {
       title: "",
       description: (
-        <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
-          <div className="flex-1 flex flex-col gap-4">
-            <h3 className="text-primary-blue font-semibold font-poppins">
-              Airgap Flux Density and Induced Back-EMF
-            </h3>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              Plotting the flux density around a circle in the middle of the airgap
-              shows how the field is distributed from one pole to the next. That
-              airgap field is what sweeps past the stator winding as the rotor turns,
-              and its shape is what sets the shape of the induced voltage.
-            </p>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              The result is a clean three-phase set of back-EMF voltages in the stator
-              winding, peaking at about 2.50 V. This is the voltage the machine would
-              generate at this speed, and how smooth and balanced it is, is a direct
-              read on how good the magnetic design is.
-            </p>
-          </div>
-          <div className="w-[29.5625rem] shrink-0 sm:w-full">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Airgap Flux Density and Induced Back-EMF
+          </h3>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            Plotting the flux density around a circle in the middle of the airgap
+            shows how the field is distributed from one pole to the next. That airgap
+            field is what sweeps past the stator winding as the rotor turns, and its
+            shape is what sets the shape of the induced voltage.
+          </p>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            The result is a clean three-phase set of back-EMF voltages in the stator
+            winding, peaking at about 2.50 V. This is the voltage the machine would
+            generate at this speed, and how smooth and balanced it is, is a direct
+            read on how good the magnetic design is.
+          </p>
+          <div className="w-[29.5625rem] sm:w-full">
             <img
               src="/images/projects/item30/content-image3.webp"
               alt="Plot of flux density around the airgap of the synchronous machine from Ansys Maxwell"
@@ -171,26 +165,24 @@ export const project30: IFullProject = {
     {
       title: "",
       description: (
-        <div className="flex flex-row gap-11 sm:flex-col sm:gap-6">
-          <div className="flex-1 flex flex-col gap-4">
-            <h3 className="text-primary-blue font-semibold font-poppins">
-              Torque at Standstill and at Speed
-            </h3>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              The torque was then computed at standstill and at speed. At 0 rpm the
-              developed torque swings with an amplitude of about 10.78 Nm as the rotor
-              position changes, which shows how the torque depends on the angle
-              between the stator field and the rotor.
-            </p>
-            <p className="text-base text-footer-text font-normal font-poppins">
-              At 3000 rpm the machine settles to an average torque of about -9.45 Nm,
-              with the sign just showing the direction. Shifting the phase angle to
-              pi/2 drops that average to about -0.47 Nm, which is the core of how a
-              synchronous machine is controlled: the same machine gives very different
-              torque depending on where the field is aligned.
-            </p>
-          </div>
-          <div className="w-[29.5625rem] shrink-0 sm:w-full">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-blue font-semibold font-poppins">
+            Torque at Standstill and at Speed
+          </h3>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            The torque was then computed at standstill and at speed. At 0 rpm the
+            developed torque swings with an amplitude of about 10.78 Nm as the rotor
+            position changes, which shows how the torque depends on the angle between
+            the stator field and the rotor.
+          </p>
+          <p className="text-base text-footer-text font-normal font-poppins">
+            At 3000 rpm the machine settles to an average torque of about -9.45 Nm,
+            with the sign just showing the direction. Shifting the phase angle to pi/2
+            drops that average to about -0.47 Nm, which is the core of how a
+            synchronous machine is controlled: the same machine gives very different
+            torque depending on where the field is aligned.
+          </p>
+          <div className="w-[29.5625rem] sm:w-full">
             <img
               src="/images/projects/item30/content-image4.webp"
               alt="Torque versus time plot of the synchronous machine at 3000 rpm from Ansys Maxwell"
