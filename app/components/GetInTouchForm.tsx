@@ -468,7 +468,7 @@ export default function GetInTouchForm() {
               className="w-4 h-4 border border-primary-blue rounded cursor-pointer"
             />
             <span className="text-base text-primary-blue font-normal font-poppins">
-              This project required an NDA
+              This project requires an NDA
             </span>
           </label>
 
@@ -548,7 +548,7 @@ export default function GetInTouchForm() {
           disabled={isSubmitting}
         >
           <span className="text-base text-white font-normal font-poppins">
-            {isSubmitting ? "Sending..." : "Send as a message!"}
+            {isSubmitting ? "Sending..." : "Send Request!"}
           </span>
           {!isSubmitting && (
             <div className="w-6 h-6 text-white">
