@@ -27,11 +27,11 @@ export const allBlogs: IBlog[] = [
   {
     id: "1",
     title:
-      "Choosing the Best CFD Software for Engineering: A Practical Guide to Ansys, COMSOL, SolidWorks and STAR-CCM+",
+      "Best CFD Software in 2026: Ansys vs COMSOL vs STAR-CCM+ for Engineering: A Practical Guide to Ansys, COMSOL, SolidWorks and STAR-CCM+",
     seoTitle:
-      "Best CFD Software: Ansys vs COMSOL & More",
+      "Best CFD Software in 2026: Ansys vs COMSOL vs STAR-CCM+",
     description:
-      "Compare Ansys, COMSOL, SolidWorks and STAR-CCM+ side by side. A practical guide to choosing the right CFD software for your engineering projects and budget.",
+      "An engineer's comparison of Ansys Fluent, COMSOL, SolidWorks Flow Simulation and STAR-CCM+: solver strengths, licensing and which to pick for your project.",
     image: "/images/blogs/item1/main-image.webp",
     author: {
       name: "Mohsin Ali",
