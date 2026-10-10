@@ -35,8 +35,8 @@ const ClientFocusSolutions = () => {
                 >
                   At Solvo Engineers, We prioritize your unique needs,
                   delivering tailor-made solutions that align with your goals,
-                  from concepts to completion, our client-focused approch
-                  ensure:
+                  from concepts to completion, our client-focused approach
+                  ensures:
                 </span>
 
                 {/* Bullet Points List */}
