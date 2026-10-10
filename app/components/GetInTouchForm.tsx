@@ -548,7 +548,7 @@ export default function GetInTouchForm() {
           disabled={isSubmitting}
         >
           <span className="text-base text-white font-normal font-poppins">
-            {isSubmitting ? "Sending..." : "Send Request!"}
+            {isSubmitting ? "Sending..." : "Send Request"}
           </span>
           {!isSubmitting && (
             <div className="w-6 h-6 text-white">
