@@ -54,13 +54,13 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           {/* Buttons - Outside Swiper but positioned absolutely to match original location */}
           <div className="absolute bottom-0 left-0 z-10 sm:hidden transition-all duration-500 ease-in-out sm:relative sm:bottom-auto sm:left-auto sm:mt-6">
             <div className="flex flex-row items-center gap-[1.375rem] sm:gap-4 sm:w-full ">
-              {/* Place Your Order Button */}
+              {/* Get a Quote Button */}
               <Link
                 href={currentItem.placeOrderLink}
                 className="btn btn-primary"
               >
                 <span className="text-sm  text-white font-normal font-poppins">
-                  Place Your Order
+                  Get a Quote
                 </span>
                 <div className="w-6 h-6 text-white">
                   {allIcons.chevronRight(24, 24)}
@@ -113,13 +113,13 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Slider Controls */}
         <div className="absolute bottom-0 left-0 z-10  hidden sm:block  transition-all duration-500 ease-in-out sm:relative sm:bottom-auto  sm:mt-6">
           <div className=" gap-[1.375rem] sm:gap-4 w-full   grid   grid-cols-2 ">
-            {/* Place Your Order Button */}
+            {/* Get a Quote Button */}
             <Link
               href={currentItem.placeOrderLink}
               className="btn btn-primary w-full"
             >
               <span className="text-sm  text-white font-normal font-poppins">
-                Place Your Order
+                Get a Quote
               </span>
               <div className="w-6 h-6 text-white">
                 {allIcons.chevronRight(24, 24)}
